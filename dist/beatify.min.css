@@ -98,7 +98,8 @@ template { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
 
-    .btn { transition: none; } }
+    .btn { transition: none; }
+}
 
 .btn::-moz-focus-inner { padding: 0; border: 0; }
 
@@ -118,7 +119,8 @@ template { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
 
-    .input { transition: none; } }
+    .input { transition: none; }
+}
 
 input[type="date"].input,
 input[type="time"].input,
@@ -151,19 +153,23 @@ input.input[type="radio"] { display: inline; }
 
 @media (min-width: 576px) {
 
-    .container { max-width: 540px; } }
+    .container { max-width: 540px; }
+}
 
 @media (min-width: 768px) {
 
-    .container { max-width: 720px; } }
+    .container { max-width: 720px; }
+}
 
 @media (min-width: 992px) {
 
-    .container { max-width: 960px; } }
+    .container { max-width: 960px; }
+}
 
 @media (min-width: 1200px) {
 
-    .container { max-width: 1140px; } }
+    .container { max-width: 1140px; }
+}
 
 .row { margin-right: -15px; margin-left: -15px; }
 

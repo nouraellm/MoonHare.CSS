@@ -15,7 +15,7 @@
     -ms-user-select: none;
     user-select: none;
     overflow: hidden;
-    white-space: nowrap
+    white-space: nowrap;
     margin-bottom: 1em; /* Set bottom margin */
     text-align: center; /* Align Text of btn */
     transition: background-color 0.15s ease-in-out;  /* Add background color transition */
