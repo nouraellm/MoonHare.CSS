@@ -1,0 +1,29 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      
+      - name: install stylelinter
+        run: npm install --save-dev stylelint stylelint-config-standard
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUBTOKEN }}
+          stylelint: true
+          auto_fix: true
+          commit_message: "Fix code style issues with ${linter}"
