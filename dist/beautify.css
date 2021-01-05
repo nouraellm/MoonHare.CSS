@@ -20,7 +20,6 @@ html {
     -webkit-text-size-adjust: 100%;
 
     /* 2 */
-  
 }
 
 /* Sections
@@ -70,7 +69,6 @@ hr {
     overflow: visible;
 
     /* 2 */
-  
 }
 
 /**
@@ -85,7 +83,6 @@ pre {
     font-size: 1em;
 
     /* 2 */
-  
 }
 
 /* Text-level semantics
@@ -114,7 +111,6 @@ abbr[title] {
     text-decoration: underline dotted;
 
     /* 2 */
-  
 }
 
 /**
@@ -140,7 +136,6 @@ samp {
     font-size: 1em;
 
     /* 2 */
-  
 }
 
 /**
@@ -208,7 +203,6 @@ textarea {
     margin: 0;
 
     /* 2 */
-  
 }
 
 /**
@@ -301,7 +295,6 @@ legend {
     white-space: normal;
 
     /* 1 */
-  
 }
 
 /**
@@ -333,7 +326,6 @@ textarea {
     padding: 0;
 
     /* 2 */
-  
 }
 
 /**
@@ -357,7 +349,6 @@ textarea {
     outline-offset: -2px;
 
     /* 2 */
-  
 }
 
 /**
@@ -380,7 +371,6 @@ textarea {
     font: inherit;
 
     /* 2 */
-  
 }
 
 /* Interactive
@@ -491,7 +481,6 @@ template {
     transition: background-color 0.15s ease-in-out;
 
     /* Add background color transition */
-  
 }
 
 /* disable transition for devices prefers reduced motion */
@@ -881,7 +870,6 @@ input.input[type="radio"] {
     overflow-x: auto;
 
     /* make it responsive */
-  
 }
 
 .table {
