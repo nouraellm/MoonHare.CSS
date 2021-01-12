@@ -17,6 +17,9 @@ jobs:
       - name: install sass
         run:
           npm install -g sass
+
+      - name: install sass
+        run:
           sass sass:dist/css
 
       - uses: stefanzweifel/git-auto-commit-action@v4
