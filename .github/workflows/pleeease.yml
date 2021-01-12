@@ -12,8 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+
+    - name: Use NodeJS
       uses: actions/setup-node@v2.1.4
-    - run: sudo npm install -g pleeease-cli
-    - run: pleeease compile
+    
+    - name: Pleeease
+      run:
+        npm install -g pleeease-cli
+        pleeease compile
