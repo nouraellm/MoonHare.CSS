@@ -16,8 +16,7 @@ jobs:
       
       - name: install sass
         run:
-          sudo chown -R $USER /usr/local/lib/node_modules
-          npm install -g sass
+          sudo npm install -g sass
 
       - name: install sass
         run:
