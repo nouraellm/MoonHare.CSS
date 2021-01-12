@@ -8,17 +8,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Check out Git repository
-      uses: actions/checkout@v2
-
-    - name: Use NodeJS
-      uses: actions/setup-node@v2.1.4
-    
-    - name: Pleeease
-      run:
-        npm install -g pleeease-cli
-        pleeease compile
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      
+      - name: install
+        run: npm install -g pleeease-cli
+      
+      - name: Run
+        run: pleeease compile
