@@ -1,0 +1,22 @@
+{
+  "in": ["scss/beautify.scss"],
+  "out": ["dist/css/beautify.css"],
+  "browsers": ["> 5%"]
+}
+
+{
+  "sass": true
+}
+
+{
+  "autoprefixer": true,
+  "filters": true,
+  "rem": true,
+  "pseudoElements": true,
+  "opacity": true,
+
+  "import": true,
+  "mqpacker": true,
+
+  "sourcemaps": true
+}
