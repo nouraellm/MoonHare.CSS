@@ -15,5 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run
       uses: actions/setup-node@v2.1.4
-    - run: npm install -g pleeease-cli
+    - run: sudo npm install -g pleeease-cli
     - run: pleeease compile
