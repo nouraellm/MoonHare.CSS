@@ -10,13 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
       
-      - name: install
-        run: npm install -g pleeease-cli
-      
-      - name: Run
-        run: pleeease compile
+      - name: install sass
+        run:
+          npm install -g sass
+          sass sass:dist/css
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Sass build
