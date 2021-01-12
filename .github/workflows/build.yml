@@ -1,4 +1,4 @@
-name: Pleeease
+name: Build
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
 
       - name: install sass
         run:
-          sass sass:dist/css
+          sass scss:dist/css
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
