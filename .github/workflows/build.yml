@@ -13,16 +13,15 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
+      
+      - name: install sass
+        run:
+          sudo npm install -g sass
 
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@master
-        with:
-          directory: 'src'
-          output: 'dist'
+      - name: build sass
+        run:
+          sass scss:dist/css
 
-      - name: Auto committing minified files
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          repository: 'dist'
-          commit_message: "Github Action: Auto Minified JS and CSS files"
-          branch: ${{ github.ref }}
+          commit_message: Sass build
