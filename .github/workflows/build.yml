@@ -17,6 +17,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
 
+      - name:  Clean
+        run: |
+          rm dist/*
+
       - name:  Install dev dependancies
         run: |
           sudo npm install -g sass rtlcss  postcss postcss-cli autoprefixer
@@ -26,14 +30,14 @@ jobs:
           sass scss:dist/css
 
       - name: Right to left CSS
+        run: |
+          rtlcss -d dist/*
+
+      - name: Minify
         uses: nizarmah/auto-minify@master
         with:
           directory: 'dist'
 
-      - name: Minify
-        run: |
-          rtlcss -d dist/*
-
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Sass build
+          commit_message: Dist
