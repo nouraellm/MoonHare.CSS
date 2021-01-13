@@ -117,7 +117,7 @@ address {
 
 ol,
 ul {
-  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 ol,
@@ -140,7 +140,7 @@ dt {
 
 dd {
   margin-bottom: 0.5rem;
-  margin-right: 0;
+  margin-left: 0;
 }
 
 blockquote {
@@ -196,7 +196,7 @@ kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
-  direction: ltr ;
+  direction: rtl ;
   unicode-bidi: bidi-override;
 }
 
@@ -253,7 +253,7 @@ caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: #6c757d;
-  text-align: right;
+  text-align: left;
 }
 
 th {
@@ -342,7 +342,7 @@ fieldset {
 }
 
 legend {
-  float: right;
+  float: left;
   width: 100%;
   padding: 0;
   margin-bottom: 0.5rem;
@@ -355,7 +355,7 @@ legend {
   }
 }
 legend + * {
-  clear: right;
+  clear: left;
 }
 
 ::-webkit-datetime-edit-fields-wrapper,
@@ -381,7 +381,7 @@ legend + * {
 [type="url"],
 [type="email"],
 [type="number"] {
-  direction: ltr;
+  direction: rtl;
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none;
