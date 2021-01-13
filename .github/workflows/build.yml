@@ -25,10 +25,6 @@ jobs:
         run:
           sass scss:dist/css
 
-      - name: Autoprefixer
-        run: |
-          npx postcss dist/*.css --base src --use autoprefixer --dir dist/
-
       - name: Right to left CSS
         uses: nizarmah/auto-minify@master
         with:
