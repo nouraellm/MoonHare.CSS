@@ -28,7 +28,7 @@ jobs:
 
       - name: Autoprefixer
         run: |
-          npx postcss --use autoprefixer dist/*.css -d dist/
+          npx postcss dist/*.css --use autoprefixer dist/*.css -d dist/
 
       - name: Right to left CSS
         uses: nizarmah/auto-minify@master
