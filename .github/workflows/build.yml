@@ -18,14 +18,26 @@ jobs:
         uses: actions/setup-node@v2.1.4
 
       - name:  Install dev dependancies
-        run:
+        run: |
           sudo npm install -g sass rtlcss
+          npm install postcss-cli autoprefixer
+          npm install --save-dev webpack
+          npm install --save-dev webpack-cli
 
       - name: Compile CSS
         run:
           sass scss:dist/css
 
+      - name: Autoprefixer
+        run: |
+          npx postcss dist/*.css --use autoprefixer -d dist/
+
       - name: Right to left CSS
+        uses: nizarmah/auto-minify@master
+        with:
+          directory: 'dist'
+
+      - name: Minify
         run: |
           rtlcss -d dist/*
 
