@@ -20,9 +20,7 @@ jobs:
       - name:  Install dev dependancies
         run: |
           sudo npm install -g sass rtlcss
-          npm install postcss-cli autoprefixer
-          npm install --save-dev webpack
-          npm install --save-dev webpack-cli
+          npm install postcss postcss-cli autoprefixer
 
       - name: Compile CSS
         run:
