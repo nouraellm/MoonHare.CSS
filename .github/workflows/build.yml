@@ -19,7 +19,7 @@ jobs:
 
       - name:  Install dev dependancies
         run: |
-          sudo npm install -g sass rtlcss  postcss postcss-cli autoprefixer autoprefixer-cli
+          sudo npm install -g sass rtlcss  postcss postcss-cli autoprefixer
 
       - name: Compile CSS
         run:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Autoprefixer
         run: |
-          autoprefixer-cli -d dist dist/*.css
+          npx postcss dist/*.css --use autoprefixer -d dist/
 
       - name: Right to left CSS
         uses: nizarmah/auto-minify@master
