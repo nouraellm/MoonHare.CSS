@@ -27,7 +27,7 @@ jobs:
 
       - name: Right to left CSS
         run: |
-          rtlcss dist/*
+          rtlcss -d dist/*
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
