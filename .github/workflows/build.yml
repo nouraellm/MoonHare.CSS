@@ -19,7 +19,7 @@ jobs:
 
       - name:  Clean
         run: |
-          rm dist/*
+          rm dist/css/*
 
       - name:  Install dev dependancies
         run: |
