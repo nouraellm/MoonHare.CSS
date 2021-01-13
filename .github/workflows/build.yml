@@ -13,14 +13,21 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
-      
-      - name: install sass
-        run:
-          sudo npm install -g sass
 
-      - name: build sass
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+
+      - name:  Install dev dependancies
+        run:
+          sudo npm install -g sass rtlcss
+
+      - name: Compile CSS
         run:
           sass scss:dist/css
+
+      - name: Right to left CSS
+        run: |
+          rtlcss dist/*
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
