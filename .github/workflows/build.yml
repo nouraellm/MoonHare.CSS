@@ -24,6 +24,7 @@ jobs:
       - name:  Install dev dependancies
         run: |
           npm install
+          npx browserslist@latest --update-db
 
       - name: Compile CSS
         run:
