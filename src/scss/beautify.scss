@@ -1,40 +1,36 @@
 /*! 
- * Primitive UI | MIT License
+ * Beautify.css | MIT License
  *
  * A minimalist front-end design toolkit built with Sass for developing 
  * responsive, browser-consistent web apps.
  *
- * Author: Tania Rascia <hello@taniarascia.com>
- * Source: https://github.com/taniarascia/primitive
- * Documentation: https://taniarascia.github.io/primitive
+ * Author: Kavindu Santhusa
+ * Source: https://github.com/beautifycss/Beautify
+ * Documentation: https://github.com/beautifycss/Beautify
  */
 
 //==============================================================================
 // Configuration
 //==============================================================================
-
-@import 'base/variables';
-@import 'base/mixins';
+@import "functions";
+@import "variables";
 
 //==============================================================================
 // Reset
 //==============================================================================
-
-@import 'base/normalize';
-@import 'base/reset';
+@import 'reset';
 
 //==============================================================================
-// Components
+// Mixins
 //==============================================================================
-
-@import "functions";
-@import "variables";
-
 @import "mixins/lists";
 @import "mixins/breakpoints";
 @import "mixins/container";
 @import "mixins/grid";
 @import "mixins/utilities";
 
+//==============================================================================
+// Components
+//==============================================================================
 @import "containers";
 @import "grid";
