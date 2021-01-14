@@ -3,7 +3,19 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
+$background-color: transparent !default;
+$padding-x: 0.5rem !default;
+$padding-y: 0.5rem !default;
+$padding-sm-x: 0.25rem !default;
+$padding-sm-y: 0.25rem !default;
+$border-width: 1px !default;
+$border-color: lightgray !default;
+$border-lg-width: 2px !default;
+$border-lg-color: gray !default;
+$font-weight-bolder: bolder !default;
+$striped-order: odd !default;
+$striped-color: rgba(0, 0, 0, 0.05) !default;
+$hover-color: rgba(0, 0, 0, 0.075) !default;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
