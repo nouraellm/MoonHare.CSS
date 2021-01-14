@@ -37,12 +37,6 @@ $enable-important-utilities:  true !default;
 
 $variable-prefix:             null !default;
 
-// Gradient
-//
-// The gradient which is added to components if `$enable-gradients` is `true`
-// This gradient is also added to elements with `.bg-gradient`
-$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
-
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
