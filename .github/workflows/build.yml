@@ -23,20 +23,11 @@ jobs:
 
       - name:  Install dev dependancies
         run: |
-          sudo npm install -g sass rtlcss  postcss postcss-cli autoprefixer
+          npm install
 
       - name: Compile CSS
         run:
-          sass scss:dist/css
-
-      - name: Right to left CSS
-        run: |
-          rtlcss -d dist/*
-
-      - name: Minify
-        uses: nizarmah/auto-minify@master
-        with:
-          directory: 'dist'
+          npm run sass:build
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
