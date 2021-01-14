@@ -80,7 +80,7 @@
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .striped {
-  tbody tr:nth-of-type((#{$striped-order}) {
+  tbody tr:nth-of-type(#{$striped-order}) {
     background-color: #{$striped-color};
     background-color: var(--striped-color);
   }
