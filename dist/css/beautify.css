@@ -998,3 +998,78 @@ figure {
   .g-xxl-5,
   .gy-xxl-5 {
     --gutter-y: 3rem; } }
+
+.table {
+  width: 100%;
+  background-color: transparent;
+  background-color: var(--background-color); }
+  .table .th, .table .td {
+    padding: 0.5rem, 0.5rem;
+    padding: var(--padding-x), var(--padding-y);
+    border-bottom: 1px solid lightgray;
+    border-bottom: var(--border-width) solid var(--border-color); }
+  .table thead th {
+    border-bottom: 2px solid gray;
+    border-bottom: var(--border-lg-width) solid var(--border-lg-color);
+    font-weight: bolder;
+    font-weight: var(--font-weight-bolder); }
+
+.caption-top {
+  caption-side: top; }
+
+.table.sm .th, .table.sm .td {
+  padding: 0.25rem, 0.25rem;
+  padding: var(--padding-sm-x), var(--padding-sm-y); }
+
+.bordered,
+.bordered th,
+.bordered td {
+  border: 1px solid lightgray;
+  border: var(--border-width) solid var(--border-color); }
+
+.bordered thead th,
+.bordered thead td {
+  border-bottom-width: 2px;
+  border-bottom-width: var(--border-lg-width); }
+
+.borderless th,
+.borderless td,
+.borderless thead th {
+  border: 0; }
+
+.striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--striped-color); }
+
+.hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+  background-color: var(--hover-color); }
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 1399.98px) {
+  .table-responsive-xxl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; } }
