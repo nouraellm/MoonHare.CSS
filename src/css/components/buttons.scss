@@ -1,0 +1,32 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  padding: var(--pad-x, 0.5rem) var(--pad-y, 0.5rem);
+  color: black;
+  color: var(--color, black);
+  background-color: transparent;
+  background-color: var(--bg-color, transparent);
+  border: 1px solid lightgray;
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  outline: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  vertical-align: middle;
+  border-radius: 2px;
+  border-radius: var(--border-radius, 2px);
+
+  &:hover {
+    background-color: #ededed;
+    background-color: rgba(0, 0, 0, 0.075);
+    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.075));
+  }
+
+  &:focus, &:active, &.active {
+    background-color: #dbdbdb;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.15));
+  }
+}
