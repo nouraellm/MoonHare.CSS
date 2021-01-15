@@ -1,0 +1,141 @@
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-right: var(--gutter-x, 0.75rem);
+  padding-left: 0.75rem;
+  padding-left: var(--gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.row::after,
+.row::before {
+	content: " ";
+	display: table;
+}
+
+.row:after {
+	clear: both;
+}
+
+$first: true;
+@each $infix, $breakpoint in $breakpoints {
+  @if $first {
+    $infix: null;
+    $first: false;
+  } @else {
+    $infix: "-" + $infix;
+  }
+  @include media($infix, $breakpoint) {
+    .col#{$infix} {
+      flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+    }
+
+    .row-cols#{$infix}-auto > * {
+      @include make-col-auto();
+    }
+
+    @if $row-columns > 0 {
+      @for $i from 1 through $row-columns {
+        .row-cols#{$infix}-#{$i} {
+          @include row-cols($i);
+        }
+      }
+    }
+
+    .col#{$infix}-auto {
+      @include make-col-auto();
+    }
+
+    @if $columns > 0 {
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not($infix == null and $i == 0) {
+          // Avoid emitting useless .offset-0
+          .offset#{$infix}-#{$i} {
+            @include make-col-offset($i, $columns);
+          }
+        }
+      }
+    }
+
+    // Gutters
+    //
+    // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
+    @each $key, $value in $gutters {
+      .g#{$infix}-#{$key},
+      .gx#{$infix}-#{$key} {
+        margin-left: $value/-2;
+        margin-right: $value/-2;
+      }
+      .g#{$infix}-#{$key} > *,
+      .gx#{$infix}-#{$key} > * {
+        padding-left: $value/2;
+        padding-right: $value/2;
+      }
+
+      .g#{$infix}-#{$key},
+      .gy#{$infix}-#{$key} {
+        margin-top: $value * -1;
+      }
+      .g#{$infix}-#{$key} > *,
+      .gy#{$infix}-#{$key} > * {
+        margin-top: $value;
+      }
+    }
+  }
+}

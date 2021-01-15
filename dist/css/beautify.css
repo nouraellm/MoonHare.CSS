@@ -1,58 +1,116 @@
-/*! 
- * Beautify.css | MIT License
- *
- * A minimalist front-end design toolkit built with Sass for developing 
- * responsive, browser-consistent web apps.
- *
- * Author: Kavindu Santhusa
- * Source: https://github.com/beautifycss/Beautify
- * Documentation: https://github.com/beautifycss/Beautify
+/*!
+ * Beautify v1.0.0-beta1 (https://github.com/beautifycss/Beautify/)
+ * Copyright 2021-2031 Kavindu Santhusa
+ * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%; }
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
 body {
   margin: 0; }
 
+/**
+ * Render the `main` element consistently in IE.
+ */
 main {
   display: block; }
 
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
 h1 {
   font-size: 2em;
-  margin: .67em 0; }
+  margin: 0.67em 0; }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
   box-sizing: content-box;
+  /* 1 */
   height: 0;
-  overflow: visible; }
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 pre {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
 a {
   background-color: transparent; }
 
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 abbr[title] {
   border-bottom: none;
+  /* 1 */
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 b,
 strong {
   font-weight: bolder; }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
+/**
+ * Add the correct font size in all browsers.
+ */
 small {
   font-size: 80%; }
 
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 sub,
 sup {
   font-size: 75%;
@@ -61,159 +119,256 @@ sup {
   vertical-align: baseline; }
 
 sub {
-  bottom: -.25em; }
+  bottom: -0.25em; }
 
 sup {
-  top: -.5em; }
+  top: -0.5em; }
 
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
 img {
   border-style: none; }
 
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 button,
 input,
 optgroup,
 select,
 textarea {
   font-family: inherit;
+  /* 1 */
   font-size: 100%;
+  /* 1 */
   line-height: 1.15;
-  margin: 0; }
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
 
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
 button,
 input {
+  /* 1 */
   overflow: visible; }
 
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
 button,
 select {
+  /* 1 */
   text-transform: none; }
 
-[type=button],
-[type=reset],
-[type=submit],
-button {
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button; }
 
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring,
-button:-moz-focusring {
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
+/**
+ * Correct the padding in Firefox.
+ */
 fieldset {
-  padding: .35em .75em .625em; }
+  padding: 0.35em 0.75em 0.625em; }
 
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
 legend {
   box-sizing: border-box;
+  /* 1 */
   color: inherit;
+  /* 2 */
   display: table;
+  /* 1 */
   max-width: 100%;
+  /* 1 */
   padding: 0;
-  white-space: normal; }
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
 
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
 progress {
   vertical-align: baseline; }
 
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
 textarea {
   overflow: auto; }
 
-[type=checkbox],
-[type=radio] {
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
-  padding: 0; }
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-[type=search] {
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
   -webkit-appearance: textfield;
-  outline-offset: -2px; }
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
 
-[type=search]::-webkit-search-decoration {
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit; }
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
 
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
 details {
   display: block; }
 
+/*
+ * Add the correct display in all browsers.
+ */
 summary {
   display: list-item; }
 
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
 template {
   display: none; }
 
+/**
+ * Add the correct display in IE 10.
+ */
 [hidden] {
   display: none; }
-
-html {
-  box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
-
-figure {
-  margin: 0; }
+  box-sizing: border-box; }
 
 .container,
 .container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
+.container-xxl,
 .container-xl,
-.container-xxl {
+.container-lg,
+.container-md,
+.container-sm {
   width: 100%;
+  padding-right: 0.75rem;
   padding-right: var(--gutter-x, 0.75rem);
+  padding-left: 0.75rem;
   padding-left: var(--gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto; }
 
 @media (min-width: 576px) {
-  .container, .container-sm {
+  .container-sm, .container {
     max-width: 540px; } }
 
 @media (min-width: 768px) {
-  .container, .container-sm, .container-md {
+  .container-md, .container-sm, .container {
     max-width: 720px; } }
 
 @media (min-width: 992px) {
-  .container, .container-sm, .container-md, .container-lg {
+  .container-lg, .container-md, .container-sm, .container {
     max-width: 960px; } }
 
 @media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px; } }
 
 @media (min-width: 1400px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px; } }
 
 .row {
-  --gutter-x: 1.5rem;
-  --gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--gutter-y) * -1);
-  margin-right: calc(var(--gutter-x) / -2);
-  margin-left: calc(var(--gutter-x) / -2); }
-  .row > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--gutter-x) / 2);
-    padding-left: calc(var(--gutter-x) / 2);
-    margin-top: var(--gutter-y); }
+  margin-right: -0.75rem;
+  margin-left: -0.75rem; }
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
+
+.row::after,
+.row::before {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
 
 .col {
   flex: 1 0 0%; }
@@ -333,175 +488,111 @@ figure {
 
 .g-0,
 .gx-0 {
-  --gutter-x: 0; }
+  margin-left: 0;
+  margin-right: 0; }
+
+.g-0 > *,
+.gx-0 > * {
+  padding-left: 0;
+  padding-right: 0; }
 
 .g-0,
 .gy-0 {
-  --gutter-y: 0; }
+  margin-top: 0; }
+
+.g-0 > *,
+.gy-0 > * {
+  margin-top: 0; }
 
 .g-1,
 .gx-1 {
-  --gutter-x: 0.25rem; }
+  margin-left: -0.125rem;
+  margin-right: -0.125rem; }
+
+.g-1 > *,
+.gx-1 > * {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem; }
 
 .g-1,
 .gy-1 {
-  --gutter-y: 0.25rem; }
+  margin-top: -0.25rem; }
+
+.g-1 > *,
+.gy-1 > * {
+  margin-top: 0.25rem; }
 
 .g-2,
 .gx-2 {
-  --gutter-x: 0.5rem; }
+  margin-left: -0.25rem;
+  margin-right: -0.25rem; }
+
+.g-2 > *,
+.gx-2 > * {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem; }
 
 .g-2,
 .gy-2 {
-  --gutter-y: 0.5rem; }
+  margin-top: -0.5rem; }
+
+.g-2 > *,
+.gy-2 > * {
+  margin-top: 0.5rem; }
 
 .g-3,
 .gx-3 {
-  --gutter-x: 1rem; }
+  margin-left: -0.5rem;
+  margin-right: -0.5rem; }
+
+.g-3 > *,
+.gx-3 > * {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
 
 .g-3,
 .gy-3 {
-  --gutter-y: 1rem; }
+  margin-top: -1rem; }
+
+.g-3 > *,
+.gy-3 > * {
+  margin-top: 1rem; }
 
 .g-4,
 .gx-4 {
-  --gutter-x: 1.5rem; }
+  margin-left: -0.75rem;
+  margin-right: -0.75rem; }
+
+.g-4 > *,
+.gx-4 > * {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem; }
 
 .g-4,
 .gy-4 {
-  --gutter-y: 1.5rem; }
+  margin-top: -1.5rem; }
+
+.g-4 > *,
+.gy-4 > * {
+  margin-top: 1.5rem; }
 
 .g-5,
 .gx-5 {
-  --gutter-x: 3rem; }
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+
+.g-5 > *,
+.gx-5 > * {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
 
 .g-5,
 .gy-5 {
-  --gutter-y: 3rem; }
+  margin-top: -3rem; }
 
-@media (min-width: 576px) {
-  .col-sm {
-    flex: 1 0 0%; }
-  .row-cols-sm-auto > * {
-    flex: 0 0 auto;
-    width: auto; }
-  .row-cols-sm-1 > * {
-    flex: 0 0 auto;
-    width: 100%; }
-  .row-cols-sm-2 > * {
-    flex: 0 0 auto;
-    width: 50%; }
-  .row-cols-sm-3 > * {
-    flex: 0 0 auto;
-    width: 33.33333%; }
-  .row-cols-sm-4 > * {
-    flex: 0 0 auto;
-    width: 25%; }
-  .row-cols-sm-5 > * {
-    flex: 0 0 auto;
-    width: 20%; }
-  .row-cols-sm-6 > * {
-    flex: 0 0 auto;
-    width: 16.66667%; }
-  .col-sm-auto {
-    flex: 0 0 auto;
-    width: auto; }
-  .col-sm-1 {
-    flex: 0 0 auto;
-    width: 8.33333%; }
-  .col-sm-2 {
-    flex: 0 0 auto;
-    width: 16.66667%; }
-  .col-sm-3 {
-    flex: 0 0 auto;
-    width: 25%; }
-  .col-sm-4 {
-    flex: 0 0 auto;
-    width: 33.33333%; }
-  .col-sm-5 {
-    flex: 0 0 auto;
-    width: 41.66667%; }
-  .col-sm-6 {
-    flex: 0 0 auto;
-    width: 50%; }
-  .col-sm-7 {
-    flex: 0 0 auto;
-    width: 58.33333%; }
-  .col-sm-8 {
-    flex: 0 0 auto;
-    width: 66.66667%; }
-  .col-sm-9 {
-    flex: 0 0 auto;
-    width: 75%; }
-  .col-sm-10 {
-    flex: 0 0 auto;
-    width: 83.33333%; }
-  .col-sm-11 {
-    flex: 0 0 auto;
-    width: 91.66667%; }
-  .col-sm-12 {
-    flex: 0 0 auto;
-    width: 100%; }
-  .offset-sm-0 {
-    margin-left: 0; }
-  .offset-sm-1 {
-    margin-left: 8.33333%; }
-  .offset-sm-2 {
-    margin-left: 16.66667%; }
-  .offset-sm-3 {
-    margin-left: 25%; }
-  .offset-sm-4 {
-    margin-left: 33.33333%; }
-  .offset-sm-5 {
-    margin-left: 41.66667%; }
-  .offset-sm-6 {
-    margin-left: 50%; }
-  .offset-sm-7 {
-    margin-left: 58.33333%; }
-  .offset-sm-8 {
-    margin-left: 66.66667%; }
-  .offset-sm-9 {
-    margin-left: 75%; }
-  .offset-sm-10 {
-    margin-left: 83.33333%; }
-  .offset-sm-11 {
-    margin-left: 91.66667%; }
-  .g-sm-0,
-  .gx-sm-0 {
-    --gutter-x: 0; }
-  .g-sm-0,
-  .gy-sm-0 {
-    --gutter-y: 0; }
-  .g-sm-1,
-  .gx-sm-1 {
-    --gutter-x: 0.25rem; }
-  .g-sm-1,
-  .gy-sm-1 {
-    --gutter-y: 0.25rem; }
-  .g-sm-2,
-  .gx-sm-2 {
-    --gutter-x: 0.5rem; }
-  .g-sm-2,
-  .gy-sm-2 {
-    --gutter-y: 0.5rem; }
-  .g-sm-3,
-  .gx-sm-3 {
-    --gutter-x: 1rem; }
-  .g-sm-3,
-  .gy-sm-3 {
-    --gutter-y: 1rem; }
-  .g-sm-4,
-  .gx-sm-4 {
-    --gutter-x: 1.5rem; }
-  .g-sm-4,
-  .gy-sm-4 {
-    --gutter-y: 1.5rem; }
-  .g-sm-5,
-  .gx-sm-5 {
-    --gutter-x: 3rem; }
-  .g-sm-5,
-  .gy-sm-5 {
-    --gutter-y: 3rem; } }
+.g-5 > *,
+.gy-5 > * {
+  margin-top: 3rem; }
 
 @media (min-width: 768px) {
   .col-md {
@@ -592,40 +683,88 @@ figure {
     margin-left: 91.66667%; }
   .g-md-0,
   .gx-md-0 {
-    --gutter-x: 0; }
+    margin-left: 0;
+    margin-right: 0; }
+  .g-md-0 > *,
+  .gx-md-0 > * {
+    padding-left: 0;
+    padding-right: 0; }
   .g-md-0,
   .gy-md-0 {
-    --gutter-y: 0; }
+    margin-top: 0; }
+  .g-md-0 > *,
+  .gy-md-0 > * {
+    margin-top: 0; }
   .g-md-1,
   .gx-md-1 {
-    --gutter-x: 0.25rem; }
+    margin-left: -0.125rem;
+    margin-right: -0.125rem; }
+  .g-md-1 > *,
+  .gx-md-1 > * {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem; }
   .g-md-1,
   .gy-md-1 {
-    --gutter-y: 0.25rem; }
+    margin-top: -0.25rem; }
+  .g-md-1 > *,
+  .gy-md-1 > * {
+    margin-top: 0.25rem; }
   .g-md-2,
   .gx-md-2 {
-    --gutter-x: 0.5rem; }
+    margin-left: -0.25rem;
+    margin-right: -0.25rem; }
+  .g-md-2 > *,
+  .gx-md-2 > * {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
   .g-md-2,
   .gy-md-2 {
-    --gutter-y: 0.5rem; }
+    margin-top: -0.5rem; }
+  .g-md-2 > *,
+  .gy-md-2 > * {
+    margin-top: 0.5rem; }
   .g-md-3,
   .gx-md-3 {
-    --gutter-x: 1rem; }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem; }
+  .g-md-3 > *,
+  .gx-md-3 > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   .g-md-3,
   .gy-md-3 {
-    --gutter-y: 1rem; }
+    margin-top: -1rem; }
+  .g-md-3 > *,
+  .gy-md-3 > * {
+    margin-top: 1rem; }
   .g-md-4,
   .gx-md-4 {
-    --gutter-x: 1.5rem; }
+    margin-left: -0.75rem;
+    margin-right: -0.75rem; }
+  .g-md-4 > *,
+  .gx-md-4 > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
   .g-md-4,
   .gy-md-4 {
-    --gutter-y: 1.5rem; }
+    margin-top: -1.5rem; }
+  .g-md-4 > *,
+  .gy-md-4 > * {
+    margin-top: 1.5rem; }
   .g-md-5,
   .gx-md-5 {
-    --gutter-x: 3rem; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  .g-md-5 > *,
+  .gx-md-5 > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
   .g-md-5,
   .gy-md-5 {
-    --gutter-y: 3rem; } }
+    margin-top: -3rem; }
+  .g-md-5 > *,
+  .gy-md-5 > * {
+    margin-top: 3rem; } }
 
 @media (min-width: 992px) {
   .col-lg {
@@ -716,40 +855,88 @@ figure {
     margin-left: 91.66667%; }
   .g-lg-0,
   .gx-lg-0 {
-    --gutter-x: 0; }
+    margin-left: 0;
+    margin-right: 0; }
+  .g-lg-0 > *,
+  .gx-lg-0 > * {
+    padding-left: 0;
+    padding-right: 0; }
   .g-lg-0,
   .gy-lg-0 {
-    --gutter-y: 0; }
+    margin-top: 0; }
+  .g-lg-0 > *,
+  .gy-lg-0 > * {
+    margin-top: 0; }
   .g-lg-1,
   .gx-lg-1 {
-    --gutter-x: 0.25rem; }
+    margin-left: -0.125rem;
+    margin-right: -0.125rem; }
+  .g-lg-1 > *,
+  .gx-lg-1 > * {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem; }
   .g-lg-1,
   .gy-lg-1 {
-    --gutter-y: 0.25rem; }
+    margin-top: -0.25rem; }
+  .g-lg-1 > *,
+  .gy-lg-1 > * {
+    margin-top: 0.25rem; }
   .g-lg-2,
   .gx-lg-2 {
-    --gutter-x: 0.5rem; }
+    margin-left: -0.25rem;
+    margin-right: -0.25rem; }
+  .g-lg-2 > *,
+  .gx-lg-2 > * {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
   .g-lg-2,
   .gy-lg-2 {
-    --gutter-y: 0.5rem; }
+    margin-top: -0.5rem; }
+  .g-lg-2 > *,
+  .gy-lg-2 > * {
+    margin-top: 0.5rem; }
   .g-lg-3,
   .gx-lg-3 {
-    --gutter-x: 1rem; }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem; }
+  .g-lg-3 > *,
+  .gx-lg-3 > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   .g-lg-3,
   .gy-lg-3 {
-    --gutter-y: 1rem; }
+    margin-top: -1rem; }
+  .g-lg-3 > *,
+  .gy-lg-3 > * {
+    margin-top: 1rem; }
   .g-lg-4,
   .gx-lg-4 {
-    --gutter-x: 1.5rem; }
+    margin-left: -0.75rem;
+    margin-right: -0.75rem; }
+  .g-lg-4 > *,
+  .gx-lg-4 > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
   .g-lg-4,
   .gy-lg-4 {
-    --gutter-y: 1.5rem; }
+    margin-top: -1.5rem; }
+  .g-lg-4 > *,
+  .gy-lg-4 > * {
+    margin-top: 1.5rem; }
   .g-lg-5,
   .gx-lg-5 {
-    --gutter-x: 3rem; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  .g-lg-5 > *,
+  .gx-lg-5 > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
   .g-lg-5,
   .gy-lg-5 {
-    --gutter-y: 3rem; } }
+    margin-top: -3rem; }
+  .g-lg-5 > *,
+  .gy-lg-5 > * {
+    margin-top: 3rem; } }
 
 @media (min-width: 1200px) {
   .col-xl {
@@ -840,40 +1027,88 @@ figure {
     margin-left: 91.66667%; }
   .g-xl-0,
   .gx-xl-0 {
-    --gutter-x: 0; }
+    margin-left: 0;
+    margin-right: 0; }
+  .g-xl-0 > *,
+  .gx-xl-0 > * {
+    padding-left: 0;
+    padding-right: 0; }
   .g-xl-0,
   .gy-xl-0 {
-    --gutter-y: 0; }
+    margin-top: 0; }
+  .g-xl-0 > *,
+  .gy-xl-0 > * {
+    margin-top: 0; }
   .g-xl-1,
   .gx-xl-1 {
-    --gutter-x: 0.25rem; }
+    margin-left: -0.125rem;
+    margin-right: -0.125rem; }
+  .g-xl-1 > *,
+  .gx-xl-1 > * {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem; }
   .g-xl-1,
   .gy-xl-1 {
-    --gutter-y: 0.25rem; }
+    margin-top: -0.25rem; }
+  .g-xl-1 > *,
+  .gy-xl-1 > * {
+    margin-top: 0.25rem; }
   .g-xl-2,
   .gx-xl-2 {
-    --gutter-x: 0.5rem; }
+    margin-left: -0.25rem;
+    margin-right: -0.25rem; }
+  .g-xl-2 > *,
+  .gx-xl-2 > * {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
   .g-xl-2,
   .gy-xl-2 {
-    --gutter-y: 0.5rem; }
+    margin-top: -0.5rem; }
+  .g-xl-2 > *,
+  .gy-xl-2 > * {
+    margin-top: 0.5rem; }
   .g-xl-3,
   .gx-xl-3 {
-    --gutter-x: 1rem; }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem; }
+  .g-xl-3 > *,
+  .gx-xl-3 > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   .g-xl-3,
   .gy-xl-3 {
-    --gutter-y: 1rem; }
+    margin-top: -1rem; }
+  .g-xl-3 > *,
+  .gy-xl-3 > * {
+    margin-top: 1rem; }
   .g-xl-4,
   .gx-xl-4 {
-    --gutter-x: 1.5rem; }
+    margin-left: -0.75rem;
+    margin-right: -0.75rem; }
+  .g-xl-4 > *,
+  .gx-xl-4 > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
   .g-xl-4,
   .gy-xl-4 {
-    --gutter-y: 1.5rem; }
+    margin-top: -1.5rem; }
+  .g-xl-4 > *,
+  .gy-xl-4 > * {
+    margin-top: 1.5rem; }
   .g-xl-5,
   .gx-xl-5 {
-    --gutter-x: 3rem; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  .g-xl-5 > *,
+  .gx-xl-5 > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
   .g-xl-5,
   .gy-xl-5 {
-    --gutter-y: 3rem; } }
+    margin-top: -3rem; }
+  .g-xl-5 > *,
+  .gy-xl-5 > * {
+    margin-top: 3rem; } }
 
 @media (min-width: 1400px) {
   .col-xxl {
@@ -964,112 +1199,85 @@ figure {
     margin-left: 91.66667%; }
   .g-xxl-0,
   .gx-xxl-0 {
-    --gutter-x: 0; }
+    margin-left: 0;
+    margin-right: 0; }
+  .g-xxl-0 > *,
+  .gx-xxl-0 > * {
+    padding-left: 0;
+    padding-right: 0; }
   .g-xxl-0,
   .gy-xxl-0 {
-    --gutter-y: 0; }
+    margin-top: 0; }
+  .g-xxl-0 > *,
+  .gy-xxl-0 > * {
+    margin-top: 0; }
   .g-xxl-1,
   .gx-xxl-1 {
-    --gutter-x: 0.25rem; }
+    margin-left: -0.125rem;
+    margin-right: -0.125rem; }
+  .g-xxl-1 > *,
+  .gx-xxl-1 > * {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem; }
   .g-xxl-1,
   .gy-xxl-1 {
-    --gutter-y: 0.25rem; }
+    margin-top: -0.25rem; }
+  .g-xxl-1 > *,
+  .gy-xxl-1 > * {
+    margin-top: 0.25rem; }
   .g-xxl-2,
   .gx-xxl-2 {
-    --gutter-x: 0.5rem; }
+    margin-left: -0.25rem;
+    margin-right: -0.25rem; }
+  .g-xxl-2 > *,
+  .gx-xxl-2 > * {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
   .g-xxl-2,
   .gy-xxl-2 {
-    --gutter-y: 0.5rem; }
+    margin-top: -0.5rem; }
+  .g-xxl-2 > *,
+  .gy-xxl-2 > * {
+    margin-top: 0.5rem; }
   .g-xxl-3,
   .gx-xxl-3 {
-    --gutter-x: 1rem; }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem; }
+  .g-xxl-3 > *,
+  .gx-xxl-3 > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   .g-xxl-3,
   .gy-xxl-3 {
-    --gutter-y: 1rem; }
+    margin-top: -1rem; }
+  .g-xxl-3 > *,
+  .gy-xxl-3 > * {
+    margin-top: 1rem; }
   .g-xxl-4,
   .gx-xxl-4 {
-    --gutter-x: 1.5rem; }
+    margin-left: -0.75rem;
+    margin-right: -0.75rem; }
+  .g-xxl-4 > *,
+  .gx-xxl-4 > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
   .g-xxl-4,
   .gy-xxl-4 {
-    --gutter-y: 1.5rem; }
+    margin-top: -1.5rem; }
+  .g-xxl-4 > *,
+  .gy-xxl-4 > * {
+    margin-top: 1.5rem; }
   .g-xxl-5,
   .gx-xxl-5 {
-    --gutter-x: 3rem; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+  .g-xxl-5 > *,
+  .gx-xxl-5 > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
   .g-xxl-5,
   .gy-xxl-5 {
-    --gutter-y: 3rem; } }
-
-.table {
-  width: 100%;
-  background-color: transparent;
-  background-color: var(--background-color); }
-  .table .th, .table .td {
-    padding: 0.5rem, 0.5rem;
-    padding: var(--padding-x), var(--padding-y);
-    border-bottom: 1px solid lightgray;
-    border-bottom: var(--border-width) solid var(--border-color); }
-  .table thead th {
-    border-bottom: 2px solid gray;
-    border-bottom: var(--border-lg-width) solid var(--border-lg-color);
-    font-weight: bolder;
-    font-weight: var(--font-weight-bolder); }
-
-.caption-top {
-  caption-side: top; }
-
-.table.sm .th, .table.sm .td {
-  padding: 0.25rem, 0.25rem;
-  padding: var(--padding-sm-x), var(--padding-sm-y); }
-
-.bordered,
-.bordered th,
-.bordered td {
-  border: 1px solid lightgray;
-  border: var(--border-width) solid var(--border-color); }
-
-.bordered thead th,
-.bordered thead td {
-  border-bottom-width: 2px;
-  border-bottom-width: var(--border-lg-width); }
-
-.borderless th,
-.borderless td,
-.borderless thead th {
-  border: 0; }
-
-.striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-  background-color: var(--striped-color); }
-
-.hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075);
-  background-color: var(--hover-color); }
-
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; }
-
-@media (max-width: 575.98px) {
-  .table-responsive-sm {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; } }
-
-@media (max-width: 767.98px) {
-  .table-responsive-md {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; } }
-
-@media (max-width: 991.98px) {
-  .table-responsive-lg {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; } }
-
-@media (max-width: 1199.98px) {
-  .table-responsive-xl {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; } }
-
-@media (max-width: 1399.98px) {
-  .table-responsive-xxl {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; } }
+    margin-top: -3rem; }
+  .g-xxl-5 > *,
+  .gy-xxl-5 > * {
+    margin-top: 3rem; } }
