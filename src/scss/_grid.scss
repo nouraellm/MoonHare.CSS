@@ -40,6 +40,33 @@
   }
 }
 
+.row {
+  --bs-gutter-x: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.row::after,
+.row::before {
+	content: " ";
+	display: table;
+}
+
+.row:after {
+	clear: both;
+}
+
 $first: true;
 @each $infix, $breakpoint in $breakpoints {
   @if $first {
