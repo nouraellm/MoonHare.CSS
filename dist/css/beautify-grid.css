@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: var(--font-sans-serif);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -152,7 +152,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--bs-font-monospace);
+  font-family: var(--font-monospace);
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override; }
@@ -347,8 +347,8 @@ progress {
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--gutter-x, 0.75rem);
+  padding-left: var(--gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto; }
 
