@@ -1,8 +1,7 @@
 /*!
- * Bootstrap Grid v5.0.0-beta1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Beautify Grid v1.0.0-beta1 (https://github.com/beautifycss/Beautify/)
+ * Copyright 2021-2031 Kavindu Santhusa
+ * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
 
 $include-column-box-sizing: true !default;
@@ -18,6 +17,7 @@ $include-column-box-sizing: true !default;
 
 @import "vendor/rfs";
 
+@import "reboot";
 @import "containers";
 @import "grid";
 
