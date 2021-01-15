@@ -29,7 +29,7 @@
   }
 }
 
-@mixin media($infix: null, $breakpoint) {
+@mixin media($infix, $breakpoint) {
   @if $infix {
     @media (min-width: $breakpoint) {
       @content;
