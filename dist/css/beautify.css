@@ -1453,3 +1453,36 @@ template {
   .g-xxl-5 > *,
   .gy-xxl-5 > * {
     margin-top: 3rem; } }
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  /* Add some padding */
+  color: black;
+  color: var(--color, black);
+  background-color: transparent;
+  /* Add a background color */
+  background-color: var(--bg-color, transparent);
+  border: 1px solid lightgray;
+  /* Set border to invisible */
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  outline: none;
+  /* Remove border on select */
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  /* Align Text of btn*/
+  transition: all 0.15s ease-in-out;
+  /* Add background color transition */
+  vertical-align: middle;
+  border-radius: 2px;
+  border-radius: var(--border-radius, 2px); }
+  .btn:hover {
+    background-color: #ededed;
+    background-color: rgba(0, 0, 0, 0.07);
+    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.07)); }
+  .btn:focus, .btn:active, .btn.active {
+    background-color: #dbdbdb;
+    background-color: rgba(0, 0, 0, 0.14);
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.14)); }
