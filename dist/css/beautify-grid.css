@@ -1,5 +1,5 @@
 /*!
- * Beautify v1.0.0-beta1 (https://github.com/beautifycss/Beautify/)
+ * Beautify Grid v1.0.0-beta1 (https://github.com/beautifycss/Beautify/)
  * Copyright 2021-2031 Kavindu Santhusa
  * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
@@ -1116,31 +1116,3 @@ template, [hidden] {
     margin-top: -3rem; }
   .g-xxl-5 > *, .gy-xxl-5 > * {
     margin-top: 3rem; } }
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
-  padding: var(--pad-x, 0.5rem) var(--pad-y, 0.5rem);
-  color: black;
-  color: var(--color, black);
-  background-color: transparent;
-  background-color: var(--bg-color, transparent);
-  border: 1px solid #d9d9d9;
-  border: var(--border-width, 1px) solid var(--border-color, #d9d9d9);
-  outline: none;
-  user-select: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-  transition: all 0.15s ease-in-out;
-  vertical-align: middle;
-  border-radius: 2px;
-  border-radius: var(--border-radius, 2px); }
-  .btn:hover {
-    background-color: #f2f2f2;
-    background-color: rgba(0, 0, 0, 0.05);
-    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05)); }
-  .btn:focus, .btn:active, .btn.active {
-    background-color: #e6e6e6;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.1)); }
