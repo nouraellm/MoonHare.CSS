@@ -39,7 +39,6 @@
     max-width: 1320px; } }
 
 .row {
-  --bs-gutter-x: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-right: -0.75rem;
