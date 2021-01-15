@@ -3,10 +3,10 @@
  * Copyright 2021-2031 Kavindu Santhusa
  * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
- 
- @import "variables";
- 
- @import "mixins/grid";
- 
- @import "grid";
- 
+
+@import "variables";
+
+@import "mixins/grid";
+
+@import "reboot";
+@import "grid";
