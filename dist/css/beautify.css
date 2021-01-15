@@ -1457,7 +1457,7 @@ template {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  padding: var(--pad-x, 0.5rem) var(--pad-y, 1rem);
+  padding: var(--pad-x, 0.5rem) var(--pad-y, 0.5rem);
   color: black;
   color: var(--color, black);
   background-color: transparent;
@@ -1475,9 +1475,9 @@ template {
   border-radius: var(--border-radius, 2px); }
   .btn:hover {
     background-color: #ededed;
-    background-color: rgba(0, 0, 0, 0.07);
-    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.07)); }
+    background-color: rgba(0, 0, 0, 0.075);
+    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.075)); }
   .btn:focus, .btn:active, .btn.active {
     background-color: #dbdbdb;
-    background-color: rgba(0, 0, 0, 0.14);
-    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.14)); }
+    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.15)); }
