@@ -6,8 +6,8 @@
   color: var(--color, black);
   background-color: transparent;
   background-color: var(--bg-color, transparent);
-  border: 1px solid lightgray;
-  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  border: 1px solid #d9d9d9;
+  border: var(--border-width, 1px) solid var(--border-color, #d9d9d9);
   outline: none;
   user-select: none;
   overflow: hidden;
@@ -19,14 +19,14 @@
   border-radius: var(--border-radius, 2px);
 
   &:hover {
-    background-color: #ededed;
-    background-color: rgba(0, 0, 0, 0.075);
-    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.075));
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05));
   }
 
   &:focus, &:active, &.active {
-    background-color: #dbdbdb;
-    background-color: rgba(0, 0, 0, 0.15);
-    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.15));
+    background-color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.10);
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.10));
   }
 }
