@@ -1234,3 +1234,34 @@ template, [hidden] {
   .table-responsive-xxl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; } }
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  padding: var(--alert-pad-y, 1rem) var(--alert-pad-x, 1rem);
+  margin-bottom: 1rem;
+  margin-bottom: var(--alert-margin-bottom, 1rem);
+  border: 1px solid transparent;
+  border: var(--alert-border-width, 1px) solid var(--alert-border-color, transparent);
+  border-radius: 0.125rem;
+  border-radius: var(--alert-border-radius, 0.125rem); }
+
+.alert-heading {
+  color: inherit; }
+
+.alert-link {
+  color: inherit;
+  font-weight: 700;
+  font-weight: var(--alert-link-font-weight, 700); }
+
+.alert-dismissible {
+  padding-right: 3rem;
+  padding-right: var(--alert-dismissible-padding-r, 3rem); }
+  .alert-dismissible .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    z-index: calc(var(--stretched-link-z-index ,1) + 1);
+    padding: 1.25rem 1rem;
+    padding: calc(var(--alert-pad-y, 1rem)*1.25) var(--alert-pad-x, 1rem); }
