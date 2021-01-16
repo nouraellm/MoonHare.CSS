@@ -71,6 +71,7 @@
 @media (prefers-reduced-motion: reduce) {
   .spinner-border,
   .spinner-grow {
-    animation-duration: $spinner-animation-speed * 2;
+    animation-duration: 0.375s;
+    animation-duration: calc(var(--spinner-animation-speed, 0.75s) / 2);
   }
 }
