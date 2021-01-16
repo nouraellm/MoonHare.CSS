@@ -1178,7 +1178,7 @@ template, [hidden] {
   caption-side: top; }
 
 /* Condensed table w/ half padding */
-.table-sm th, .table-sm td {
+.sm th, .sm td {
   padding: 0.25em;
   padding: var(--pad-sm-x, 0.25rem) var(--pad-sm-y, 0.25rem); }
 
