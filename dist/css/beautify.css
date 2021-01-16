@@ -1265,3 +1265,124 @@ template, [hidden] {
     z-index: calc(var(--stretched-link-z-index ,1) + 1);
     padding: 1.25rem 1rem;
     padding: calc(var(--alert-pad-y, 1rem)*1.25) var(--alert-pad-x, 1rem); }
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  padding: var(--badge-pad-y, 0.35em) var(--badge-pad-x, 0.65em);
+  font-size: 0.75em;
+  font-size: var(--badge-font-size, 0.75em);
+  font-weight: 700;
+  font-weight: var(--badge-font-weight, 700);
+  line-height: 1;
+  color: transparent;
+  color: var(--badge-color, transparent);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.125rem;
+  border-radius: var(--badge-border-radius, 0.125rem); }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle; }
+  .btn-group > .btn,
+  .btn-group-vertical > .btn {
+    position: relative;
+    flex: 1 1 auto; }
+  .btn-group > .btn-check:checked + .btn,
+  .btn-group > .btn-check:focus + .btn,
+  .btn-group > .btn:hover,
+  .btn-group > .btn:focus,
+  .btn-group > .btn:active,
+  .btn-group > .btn.active,
+  .btn-group-vertical > .btn-check:checked + .btn,
+  .btn-group-vertical > .btn-check:focus + .btn,
+  .btn-group-vertical > .btn:hover,
+  .btn-group-vertical > .btn:focus,
+  .btn-group-vertical > .btn:active,
+  .btn-group-vertical > .btn.active {
+    z-index: 1; }
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .btn-toolbar .input-group {
+    width: auto; }
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: -1px;
+  margin-left: calc((-1) * var(--btn-border-width)); }
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.btn-group-sm > .btn {
+  padding: 0.25rem 0.5rem;
+  padding: var(--btn-sm-pad-y, 0.25rem) var(--btn-sm-pad-y, 0.5rem);
+  font-size: 0.875rem;
+  font-size: var(--btn-sm-font-size, 0.875rem); }
+
+.btn-group-lg > .btn {
+  padding: 0.5rem 1rem;
+  padding: var(--btn-lg-pad-y, 0.5rem) var(--btn-lg-pad-y, 1rem);
+  font-size: 1.25rem;
+  font-size: var(--btn-lg-font-size, 1.25rem); }
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem; } }
+
+.progress {
+  display: flex;
+  height: 1rem;
+  height: var(--progress-height, 1rem);
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-size: var(--progress-font-size, 0.75rem);
+  background-color: #e9ecef;
+  background-color: var(--progress-bg-color, #e9ecef);
+  border-radius: 0.125rem;
+  border-radius: var(--progress-border-radius, 0.125rem); }
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: transparent;
+  color: var(--progress-bar-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0d6efd;
+  background-color: var(--progress-bar-bg, #0d6efd);
+  transition: width 0.6s ease;
+  transition: var(--progress-bar-transition, width 0.6s ease); }
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: var(--gradient-striped, linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent));
+  background-size: 1rem 1rem;
+  background-size: var(--progress-height, 1rem) var(--progress-height, 1rem); }
+
+.progress-bar-animated {
+  animation: 1s linear infinite progress-bar-stripes;
+  animation: var(--progress-bar-animation-timing, 1s) linear infinite progress-bar-stripes; }
