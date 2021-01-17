@@ -18,12 +18,12 @@
     border-color: color-lightness($hex, $hover-color-darken-percentage);
   }
   .#{$name}-focus-background:focus {
-    background-color: color-lightness($hex, $hover-color-darken-percentage);
+    background-color: color-lightness($hex, $focus-color-darken-percentage);
   }
   .#{$name}-focus-text:focus {
-    color: color-lightness($hex, $hover-color-darken-percentage);
+    color: color-lightness($hex, $focus-color-darken-percentage);
   }
   .#{$name}-focus-border:focus {
-    border-color: color-lightness($hex, $hover-color-darken-percentage);
+    border-color: color-lightness($hex, $focus-color-darken-percentage);
   }
 }
