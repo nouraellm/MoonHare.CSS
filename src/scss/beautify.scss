@@ -5,17 +5,9 @@
  * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
  
+@import "variables";
+@import "functions";
+
 @import "reset";
 @import "grid";
-@import "components/buttons";
-@import "components/button-groups";
-@import "components/tables";
-@import "components/alerts";
-@import "components/badges";
-@import "components/button-groups";
-@import "components/progress";
-@import "components/breadcrumbs";
-@import "components/forms";
-@import "components/list-groups";
-@import "components/pagination";
-@import "components/spinners";
+@import "colors";
