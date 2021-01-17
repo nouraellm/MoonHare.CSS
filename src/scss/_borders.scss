@@ -1,0 +1,13 @@
+$sides: "", top, right, bottom, left;
+@each $side in $sides{
+  border.dotted-#{$side} {border-style: dotted;}
+  border.dashed-#{$side} {border-style: dashed;}
+  border.solid-#{$side} {border-style: solid;}
+  border.double-#{$side} {border-style: double;}
+  border.groove-#{$side} {border-style: groove;}
+  border.ridge-#{$side} {border-style: ridge;}
+  border.inset-#{$side} {border-style: inset;}
+  border.outset-#{$side} {border-style: outset;}
+  border.none-#{$side} {border-style: none;}
+  border.hidden-#{$side} {border-style: hidden;}
+}
