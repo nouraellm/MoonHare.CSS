@@ -1,1 +1,24 @@
+.topnav {
+  overflow: hidden;
+  background-color: $background-color;
+  background-color: var(--background-color, $background-color);
+  padding: $topnav-pad;
+  padding: var(--topnav-pad-y, $topnav-pad-y) var(--topnav-pad-x, $topnav-pad-x);
+}
 
+.topnav .toggle-icon,
+.topnav .item {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: var(--topnav-item-pad-y, $topnav-item-pad-y) var(--topnav-item-pad-x, $topnav-item-pad-x);
+  text-decoration: none;
+  font-size: $topnav-item-font-size;
+  font-size: var(--topnav-item-font-size, $topnav-item-font-size);
+}
+
+.topnav .item:hover {
+  background-color: $background-hover-color;
+  background-color: var(--background-hover-color, $background-hover-color);
+}
