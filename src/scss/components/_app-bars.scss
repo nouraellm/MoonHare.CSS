@@ -2,7 +2,7 @@
   overflow: hidden;
   background-color: $background-color;
   background-color: var(--background-color, $background-color);
-  padding: $topnav-pad;
+  padding: $topnav-pad-y $topnav-pad-x;
   padding: var(--topnav-pad-y, $topnav-pad-y) var(--topnav-pad-x, $topnav-pad-x);
 }
 
@@ -12,6 +12,7 @@
   display: block;
   color: black;
   text-align: center;
+  padding: $topnav-item-pad-y $topnav-item-pad-x;
   padding: var(--topnav-item-pad-y, $topnav-item-pad-y) var(--topnav-item-pad-x, $topnav-item-pad-x);
   text-decoration: none;
   font-size: $topnav-item-font-size;
