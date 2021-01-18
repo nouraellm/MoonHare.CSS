@@ -4923,3 +4923,30 @@ template, [hidden] {
     margin-top: -3rem; }
   .g-xxl-5 > *, .gy-xxl-5 > * {
     margin-top: 3rem; } }
+
+.input {
+  padding: 0.75rem 0.75rem;
+  padding: var(--input-pad-y, 0.75rem) var(--input-pad-x, 0.75rem);
+  border: 1px solid lightgray;
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  font-size: 1rem;
+  font-size: var(--input-font-size, 1rem); }
+  .input:focus {
+    border-color: lightgray;
+    border-color: var(--border-focus-color, lightgray); }
+  .input:invalid {
+    border-color: lightgray;
+    border-color: var(--border-invalid-color, lightgray); }
+  .input:valid {
+    border-color: green;
+    border-color: var(--border-valid-color, green); }
+  .input.leading-icon {
+    background-position: 0.75rem 0.75rem;
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+    padding-left: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size)); }
+  .input.trailing-icon {
+    background-position: 0.75rem 0.75rem;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem;
+    padding-right: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size)); }
