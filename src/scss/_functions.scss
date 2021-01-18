@@ -1,6 +1,0 @@
-@function color-lightness($color, $value){
-    @if lightness($color)>=$value {
-        @return darken($color, $value);
-    }
-    @return lighten($color, $value);
-}
