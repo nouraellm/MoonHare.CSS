@@ -2,8 +2,8 @@
   display: inline-block;
   padding: $pad-y $pad-x;
   padding: var(--pad-y, $pad-y) var(--pad-x, $pad-x);
-  background-color: $background;
-  background-color: var(--background-color, $background);
+  background-color: $background-color;
+  background-color: var(--background-color, $background-color);
   border: $border-width solid $border-color;
   border: var(--border-width, $border-width) solid var(--border-color, $border-color);
   outline: none;
@@ -16,6 +16,13 @@
   font-size: var(--font-size, $font-size);
   min-width: $min-width;
   min-width: var(--min-width, $min-width);
+
+  &.icon {
+    background-position: $pad-y $pad-x;
+    background-repeat: no-repeat;
+    padding-left: $pad-x *2 +$font-size;
+    padding-left: calc(var(--pad-x, $pad-x) *2 +var(--font-size, $font-size));
+  }
 
   &:hover {
     background-color: #f2f2f2;
