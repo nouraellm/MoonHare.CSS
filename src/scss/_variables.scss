@@ -144,14 +144,17 @@ $colors: (
 
 $hover-color-darken-percentage: 5;
 $focus-color-darken-percentage: 10;
-
+$pad-y: 0.75em;
+$pad-x: 0.75rem;
+$background-color: transparent;
+$min-width: 4rem;
 $border-width: 1px;
 $border-color: lightgray;
 $border-hover-color: lightgray;
 $border-focus-color: lightgray;
 $border-invalid-color: lightgray;
 $border-valid-color: green;
-
+$font-size: 1rem;
 $input-pad-y: 0.75rem;
 $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
