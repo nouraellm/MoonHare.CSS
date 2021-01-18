@@ -4974,3 +4974,63 @@ template, [hidden] {
       right: 0;
       padding: 0.75rem 0.75rem;
       padding: var(--alert-pad-y, 0.75rem) var(--alert-pad-x, 0.75rem); }
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 0.75rem;
+  padding: var(--pad-y, 0.75em) var(--pad-x, 0.75rem);
+  background-color: transparent;
+  background-color: var(--background-color, transparent);
+  border: 1px solid lightgray;
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  outline: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-size: var(--font-size, 1rem);
+  min-width: 4rem;
+  min-width: var(--min-width, 4rem); }
+  .btn.icon {
+    background-position: 0.75em 0.75rem;
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+    padding-left: calc(var(--pad-x, $pad-x) *2 +var(--font-size, $font-size)); }
+  .btn:hover {
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05)); }
+  .btn:focus, .btn:active, .btn.active {
+    background-color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.1)); }
+
+.dropdown {
+  position: absolute;
+  display: inline-block; }
+
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  background-color: var(--background-color, transparent);
+  border: 1px solid lightgray;
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  z-index: 1; }
+  .dropdown .content item {
+    color: black;
+    padding: 0.75em 0.75rem;
+    padding: var(--pad-y, 0.75em) var(--pad-x, 0.75rem);
+    text-decoration: none;
+    display: block; }
+    .dropdown .content item:hover {
+      background-color: #f2f2f2;
+      background-color: rgba(0, 0, 0, 0.05);
+      background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05)); }
+
+.dropdown.hover-event:hover .content {
+  display: block; }
+
+.dropdown.focus-event:focus .content {
+  display: block; }
