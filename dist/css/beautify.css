@@ -4950,3 +4950,27 @@ template, [hidden] {
     background-repeat: no-repeat;
     padding-right: 2.5rem;
     padding-right: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size)); }
+
+.alert {
+  position: relative;
+  padding: 0.75rem 0.75rem;
+  padding: var(--alert-pad-y, 0.75rem) var(--alert-pad-x, 0.75rem);
+  border: 1px solid lightgray;
+  border: var(--border-width, 1px) solid var(--border-color, lightgray);
+  font-size: 1rem;
+  font-size: var(--alert-font-size, 1rem); }
+  .alert.alert .heading {
+    color: inherit; }
+  .alert.alert .link {
+    color: inherit;
+    font-weight: 700;
+    font-weight: var(--alert-link-font-weight, 700); }
+  .alert.alert.dismissible {
+    padding-right: 2.5rem;
+    padding-right: calc(var(--alert-pad-x, $alert-pad-x) *2 +var(--alert-font-size, $alert-font-size)); }
+    .alert.alert.dismissible.close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.75rem 0.75rem;
+      padding: var(--alert-pad-y, 0.75rem) var(--alert-pad-x, 0.75rem); }
