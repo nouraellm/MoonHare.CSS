@@ -13,7 +13,7 @@
 
   &.alert .link {
     color: inherit;
-    font-weight: 700;
+    font-weight: $alert-link-font-weight;
     font-weight: var(--alert-link-font-weight, 700);
   }
 
