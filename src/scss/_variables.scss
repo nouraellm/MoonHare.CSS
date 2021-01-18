@@ -147,7 +147,9 @@ $focus-color-darken-percentage: 10;
 
 $border-width: 1px;
 $border-color: lightgray;
-$border-invalid-color: red;
+$border-hover-color: lightgray;
+$border-focus-color: lightgray;
+$border-invalid-color: lightgray;
 $border-valid-color: green;
 
 $input-pad-y: 0.75rem;
