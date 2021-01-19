@@ -4,18 +4,21 @@
   @each $color_type, $color_value in $color {
     @if $color_type == "base" {
       .#{$color_name} {
-        background-color: $color_value !important;
+        background-color: $color_value;
       }
       .#{$color_name}-text {
-        color: $color_value !important;
+        color: $color_value;
+      }
+      .#{$color_name}-border {
+        border-color: $color_value;
       }
     }
     @else if $color_name != "shades" {
       .#{$color_name}.#{$color_type} {
-        background-color: $color_value !important;
+        background-color: $color_value;
       }
       .#{$color_name}-text.text-#{$color_type} {
-        color: $color_value !important;
+        color: $color_value;
       }
     }
   }
@@ -24,9 +27,9 @@
 // Shade classes
 @each $color, $color_value in $shades {
   .#{$color} {
-    background-color: $color_value !important;
+    background-color: $color_value;
   }
   .#{$color}-text {
-    color: $color_value !important;
+    color: $color_value;
   }
 }
