@@ -1,7 +1,6 @@
 @each $name, $hex in $colors {
   .#{$name}-background {
     background-color: $hex;
-    color: contrast-color(#hex);
   }
   .#{$name}-text {
     color: $hex;
@@ -11,7 +10,6 @@
   }
   .hover-#{$name}-background:hover {
     background-color: $hex;
-    color: contrast-color(#hex);
   }
   .hover-#{$name}-text:hover {
     color: $hex;
@@ -21,7 +19,6 @@
   }
   .focus-#{$name}-background:focus {
     background-color: $hex;
-    color: contrast-color(#hex);
   }
   .focus-#{$name}-text:focus {
     color: $hex;
@@ -31,7 +28,6 @@
   }
   .active-#{$name}-background:active {
     background-color: $hex;
-    color: contrast-color(#hex);
   }
   .active-#{$name}-text:active {
     color: $hex;
