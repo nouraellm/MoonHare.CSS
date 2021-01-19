@@ -20,13 +20,13 @@
   &.leading-icon{
       background-position: $input-pad-y $input-pad-x;
       background-repeat: no-repeat;
-      padding-left: $input-pad-x *2 +$input-font-size;
+      padding-left: $input-pad-x*2+$input-font-size;
       padding-left: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size));
   }
   &.trailing-icon{
       background-position: $input-pad-y $input-pad-x;
       background-repeat: no-repeat;
-      padding-right: $input-pad-x *2 +$input-font-size;
+      padding-right: $input-pad-x*2+$input-font-size;
       padding-right: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size));
   }
 }
