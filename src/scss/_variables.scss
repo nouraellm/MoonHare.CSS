@@ -1,401 +1,260 @@
-//
-//
-//  𝗖 𝗢 𝗟 𝗢 𝗥
-//  v 1.7.0
-//
-//  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-//  General
-//  ───────────────────────────────────
-
-$oc-white:         #ffffff;
-$oc-black:         #000000;
-
-
-//  Gray
-//  ───────────────────────────────────
-
-$oc-gray-list: (
-  "0": #f8f9fa,
-  "1": #f1f3f5,
-  "2": #e9ecef,
-  "3": #dee2e6,
-  "4": #ced4da,
-  "5": #adb5bd,
-  "6": #868e96,
-  "7": #495057,
-  "8": #343a40,
-  "9": #212529
-);
-
-$oc-gray-0: map-get($oc-gray-list, "0");
-$oc-gray-1: map-get($oc-gray-list, "1");
-$oc-gray-2: map-get($oc-gray-list, "2");
-$oc-gray-3: map-get($oc-gray-list, "3");
-$oc-gray-4: map-get($oc-gray-list, "4");
-$oc-gray-5: map-get($oc-gray-list, "5");
-$oc-gray-6: map-get($oc-gray-list, "6");
-$oc-gray-7: map-get($oc-gray-list, "7");
-$oc-gray-8: map-get($oc-gray-list, "8");
-$oc-gray-9: map-get($oc-gray-list, "9");
-
-
-//  Red
-//  ───────────────────────────────────
-
-$oc-red-list: (
-  "0": #fff5f5,
-  "1": #ffe3e3,
-  "2": #ffc9c9,
-  "3": #ffa8a8,
-  "4": #ff8787,
-  "5": #ff6b6b,
-  "6": #fa5252,
-  "7": #f03e3e,
-  "8": #e03131,
-  "9": #c92a2a
-);
-
-$oc-red-0: map-get($oc-red-list, "0");
-$oc-red-1: map-get($oc-red-list, "1");
-$oc-red-2: map-get($oc-red-list, "2");
-$oc-red-3: map-get($oc-red-list, "3");
-$oc-red-4: map-get($oc-red-list, "4");
-$oc-red-5: map-get($oc-red-list, "5");
-$oc-red-6: map-get($oc-red-list, "6");
-$oc-red-7: map-get($oc-red-list, "7");
-$oc-red-8: map-get($oc-red-list, "8");
-$oc-red-9: map-get($oc-red-list, "9");
-
-
-//  Pink
-//  ───────────────────────────────────
-
-$oc-pink-list: (
-  "0": #fff0f6,
-  "1": #ffdeeb,
-  "2": #fcc2d7,
-  "3": #faa2c1,
-  "4": #f783ac,
-  "5": #f06595,
-  "6": #e64980,
-  "7": #d6336c,
-  "8": #c2255c,
-  "9": #a61e4d
-);
-
-$oc-pink-0: map-get($oc-pink-list, "0");
-$oc-pink-1: map-get($oc-pink-list, "1");
-$oc-pink-2: map-get($oc-pink-list, "2");
-$oc-pink-3: map-get($oc-pink-list, "3");
-$oc-pink-4: map-get($oc-pink-list, "4");
-$oc-pink-5: map-get($oc-pink-list, "5");
-$oc-pink-6: map-get($oc-pink-list, "6");
-$oc-pink-7: map-get($oc-pink-list, "7");
-$oc-pink-8: map-get($oc-pink-list, "8");
-$oc-pink-9: map-get($oc-pink-list, "9");
-
-
-//  Grape
-//  ───────────────────────────────────
-
-$oc-grape-list: (
-  "0": #f8f0fc,
-  "1": #f3d9fa,
-  "2": #eebefa,
-  "3": #e599f7,
-  "4": #da77f2,
-  "5": #cc5de8,
-  "6": #be4bdb,
-  "7": #ae3ec9,
-  "8": #9c36b5,
-  "9": #862e9c
-);
-
-$oc-grape-0: map-get($oc-grape-list, "0");
-$oc-grape-1: map-get($oc-grape-list, "1");
-$oc-grape-2: map-get($oc-grape-list, "2");
-$oc-grape-3: map-get($oc-grape-list, "3");
-$oc-grape-4: map-get($oc-grape-list, "4");
-$oc-grape-5: map-get($oc-grape-list, "5");
-$oc-grape-6: map-get($oc-grape-list, "6");
-$oc-grape-7: map-get($oc-grape-list, "7");
-$oc-grape-8: map-get($oc-grape-list, "8");
-$oc-grape-9: map-get($oc-grape-list, "9");
-
-
-//  Violet
-//  ───────────────────────────────────
-
-$oc-violet-list: (
-  "0": #f3f0ff,
-  "1": #e5dbff,
-  "2": #d0bfff,
-  "3": #b197fc,
-  "4": #9775fa,
-  "5": #845ef7,
-  "6": #7950f2,
-  "7": #7048e8,
-  "8": #6741d9,
-  "9": #5f3dc4
-);
-
-$oc-violet-0: map-get($oc-violet-list, "0");
-$oc-violet-1: map-get($oc-violet-list, "1");
-$oc-violet-2: map-get($oc-violet-list, "2");
-$oc-violet-3: map-get($oc-violet-list, "3");
-$oc-violet-4: map-get($oc-violet-list, "4");
-$oc-violet-5: map-get($oc-violet-list, "5");
-$oc-violet-6: map-get($oc-violet-list, "6");
-$oc-violet-7: map-get($oc-violet-list, "7");
-$oc-violet-8: map-get($oc-violet-list, "8");
-$oc-violet-9: map-get($oc-violet-list, "9");
-
-
-//  Indigo
-//  ───────────────────────────────────
-
-$oc-indigo-list: (
-  "0": #edf2ff,
-  "1": #dbe4ff,
-  "2": #bac8ff,
-  "3": #91a7ff,
-  "4": #748ffc,
-  "5": #5c7cfa,
-  "6": #4c6ef5,
-  "7": #4263eb,
-  "8": #3b5bdb,
-  "9": #364fc7
-);
-
-$oc-indigo-0: map-get($oc-indigo-list, "0");
-$oc-indigo-1: map-get($oc-indigo-list, "1");
-$oc-indigo-2: map-get($oc-indigo-list, "2");
-$oc-indigo-3: map-get($oc-indigo-list, "3");
-$oc-indigo-4: map-get($oc-indigo-list, "4");
-$oc-indigo-5: map-get($oc-indigo-list, "5");
-$oc-indigo-6: map-get($oc-indigo-list, "6");
-$oc-indigo-7: map-get($oc-indigo-list, "7");
-$oc-indigo-8: map-get($oc-indigo-list, "8");
-$oc-indigo-9: map-get($oc-indigo-list, "9");
-
-
-//  Blue
-//  ───────────────────────────────────
-
-$oc-blue-list: (
-  "0": #e7f5ff,
-  "1": #d0ebff,
-  "2": #a5d8ff,
-  "3": #74c0fc,
-  "4": #4dabf7,
-  "5": #339af0,
-  "6": #228be6,
-  "7": #1c7ed6,
-  "8": #1971c2,
-  "9": #1864ab
-);
-
-$oc-blue-0: map-get($oc-blue-list, "0");
-$oc-blue-1: map-get($oc-blue-list, "1");
-$oc-blue-2: map-get($oc-blue-list, "2");
-$oc-blue-3: map-get($oc-blue-list, "3");
-$oc-blue-4: map-get($oc-blue-list, "4");
-$oc-blue-5: map-get($oc-blue-list, "5");
-$oc-blue-6: map-get($oc-blue-list, "6");
-$oc-blue-7: map-get($oc-blue-list, "7");
-$oc-blue-8: map-get($oc-blue-list, "8");
-$oc-blue-9: map-get($oc-blue-list, "9");
-
-
-//  Cyan
-//  ───────────────────────────────────
-
-$oc-cyan-list: (
-  "0": #e3fafc,
-  "1": #c5f6fa,
-  "2": #99e9f2,
-  "3": #66d9e8,
-  "4": #3bc9db,
-  "5": #22b8cf,
-  "6": #15aabf,
-  "7": #1098ad,
-  "8": #0c8599,
-  "9": #0b7285
-);
-
-$oc-cyan-0: map-get($oc-cyan-list, "0");
-$oc-cyan-1: map-get($oc-cyan-list, "1");
-$oc-cyan-2: map-get($oc-cyan-list, "2");
-$oc-cyan-3: map-get($oc-cyan-list, "3");
-$oc-cyan-4: map-get($oc-cyan-list, "4");
-$oc-cyan-5: map-get($oc-cyan-list, "5");
-$oc-cyan-6: map-get($oc-cyan-list, "6");
-$oc-cyan-7: map-get($oc-cyan-list, "7");
-$oc-cyan-8: map-get($oc-cyan-list, "8");
-$oc-cyan-9: map-get($oc-cyan-list, "9");
-
-
-//  Teal
-//  ───────────────────────────────────
-
-$oc-teal-list: (
-  "0": #e6fcf5,
-  "1": #c3fae8,
-  "2": #96f2d7,
-  "3": #63e6be,
-  "4": #38d9a9,
-  "5": #20c997,
-  "6": #12b886,
-  "7": #0ca678,
-  "8": #099268,
-  "9": #087f5b
-);
-
-$oc-teal-0: map-get($oc-teal-list, "0");
-$oc-teal-1: map-get($oc-teal-list, "1");
-$oc-teal-2: map-get($oc-teal-list, "2");
-$oc-teal-3: map-get($oc-teal-list, "3");
-$oc-teal-4: map-get($oc-teal-list, "4");
-$oc-teal-5: map-get($oc-teal-list, "5");
-$oc-teal-6: map-get($oc-teal-list, "6");
-$oc-teal-7: map-get($oc-teal-list, "7");
-$oc-teal-8: map-get($oc-teal-list, "8");
-$oc-teal-9: map-get($oc-teal-list, "9");
-
-
-//  Green
-//  ───────────────────────────────────
-
-$oc-green-list: (
-  "0": #ebfbee,
-  "1": #d3f9d8,
-  "2": #b2f2bb,
-  "3": #8ce99a,
-  "4": #69db7c,
-  "5": #51cf66,
-  "6": #40c057,
-  "7": #37b24d,
-  "8": #2f9e44,
-  "9": #2b8a3e
-);
-
-$oc-green-0: map-get($oc-green-list, "0");
-$oc-green-1: map-get($oc-green-list, "1");
-$oc-green-2: map-get($oc-green-list, "2");
-$oc-green-3: map-get($oc-green-list, "3");
-$oc-green-4: map-get($oc-green-list, "4");
-$oc-green-5: map-get($oc-green-list, "5");
-$oc-green-6: map-get($oc-green-list, "6");
-$oc-green-7: map-get($oc-green-list, "7");
-$oc-green-8: map-get($oc-green-list, "8");
-$oc-green-9: map-get($oc-green-list, "9");
-
-
-//  Lime
-//  ───────────────────────────────────
-
-$oc-lime-list: (
-  "0": #f4fce3,
-  "1": #e9fac8,
-  "2": #d8f5a2,
-  "3": #c0eb75,
-  "4": #a9e34b,
-  "5": #94d82d,
-  "6": #82c91e,
-  "7": #74b816,
-  "8": #66a80f,
-  "9": #5c940d
-);
-
-$oc-lime-0: map-get($oc-lime-list, "0");
-$oc-lime-1: map-get($oc-lime-list, "1");
-$oc-lime-2: map-get($oc-lime-list, "2");
-$oc-lime-3: map-get($oc-lime-list, "3");
-$oc-lime-4: map-get($oc-lime-list, "4");
-$oc-lime-5: map-get($oc-lime-list, "5");
-$oc-lime-6: map-get($oc-lime-list, "6");
-$oc-lime-7: map-get($oc-lime-list, "7");
-$oc-lime-8: map-get($oc-lime-list, "8");
-$oc-lime-9: map-get($oc-lime-list, "9");
-
-
-//  Yellow
-//  ───────────────────────────────────
-
-$oc-yellow-list: (
-  "0": #fff9db,
-  "1": #fff3bf,
-  "2": #ffec99,
-  "3": #ffe066,
-  "4": #ffd43b,
-  "5": #fcc419,
-  "6": #fab005,
-  "7": #f59f00,
-  "8": #f08c00,
-  "9": #e67700
-);
-
-$oc-yellow-0: map-get($oc-yellow-list, "0");
-$oc-yellow-1: map-get($oc-yellow-list, "1");
-$oc-yellow-2: map-get($oc-yellow-list, "2");
-$oc-yellow-3: map-get($oc-yellow-list, "3");
-$oc-yellow-4: map-get($oc-yellow-list, "4");
-$oc-yellow-5: map-get($oc-yellow-list, "5");
-$oc-yellow-6: map-get($oc-yellow-list, "6");
-$oc-yellow-7: map-get($oc-yellow-list, "7");
-$oc-yellow-8: map-get($oc-yellow-list, "8");
-$oc-yellow-9: map-get($oc-yellow-list, "9");
-
-
-//  Orange
-//  ───────────────────────────────────
-
-$oc-orange-list: (
-  "0": #fff4e6,
-  "1": #ffe8cc,
-  "2": #ffd8a8,
-  "3": #ffc078,
-  "4": #ffa94d,
-  "5": #ff922b,
-  "6": #fd7e14,
-  "7": #f76707,
-  "8": #e8590c,
-  "9": #d9480f
-);
-
-$oc-orange-0: map-get($oc-orange-list, "0");
-$oc-orange-1: map-get($oc-orange-list, "1");
-$oc-orange-2: map-get($oc-orange-list, "2");
-$oc-orange-3: map-get($oc-orange-list, "3");
-$oc-orange-4: map-get($oc-orange-list, "4");
-$oc-orange-5: map-get($oc-orange-list, "5");
-$oc-orange-6: map-get($oc-orange-list, "6");
-$oc-orange-7: map-get($oc-orange-list, "7");
-$oc-orange-8: map-get($oc-orange-list, "8");
-$oc-orange-9: map-get($oc-orange-list, "9");
-
-
-//  Color list
-//  ───────────────────────────────────
-
-$oc-color-spectrum:   9;
-
-$oc-color-list: (
-  $oc-gray-list:      "gray",
-  $oc-red-list:      "red",
-  $oc-pink-list:      "pink",
-  $oc-grape-list:      "grape",
-  $oc-violet-list:      "violet",
-  $oc-indigo-list:      "indigo",
-  $oc-blue-list:      "blue",
-  $oc-cyan-list:      "cyan",
-  $oc-teal-list:      "teal",
-  $oc-green-list:      "green",
-  $oc-lime-list:      "lime",
-  $oc-yellow-list:      "yellow",
-  $oc-orange-list:      "orange"
+$colors: (
+red-50            :  #FFEBEE             ,
+red-100           :   #FFCDD2            ,
+red-200           :   #EF9A9A            ,
+red-300           :   #E57373            ,
+red-400           :   #EF5350            ,
+red-500           :   #F44336            ,
+red-600           :   #E53935            ,
+red-700           :   #D32F2F            ,
+red-800           :   #C62828            ,
+red-900           :   #B71C1C            ,
+red-A100          :    #FF8A80           ,
+red-A200          :    #FF5252           ,
+red-A400          :    #FF1744           ,
+red-A700          :    #D50000           ,
+pink-50           :   #FCE4EC            ,
+pink-100          :    #F8BBD0           ,
+pink-200          :    #F48FB1           ,
+pink-300          :    #F06292           ,
+pink-400          :    #EC407A           ,
+pink-500          :    #E91E63           ,
+pink-600          :    #D81B60           ,
+pink-700          :    #C2185B           ,
+pink-800          :    #AD1457           ,
+pink-900          :    #880E4F           ,
+pink-A100         :     #FF80AB          ,
+pink-A200         :     #FF4081          ,
+pink-A400         :     #F50057          ,
+pink-A700         :     #C51162          ,
+purple-50         :     #F3E5F5          ,
+purple-100        :      #E1BEE7         ,
+purple-200        :      #CE93D8         ,
+purple-300        :      #BA68C8         ,
+purple-400        :      #AB47BC         ,
+purple-500        :      #9C27B0         ,
+purple-600        :      #8E24AA         ,
+purple-700        :      #7B1FA2         ,
+purple-800        :      #6A1B9A         ,
+purple-900        :      #4A148C         ,
+purple-A100       :       #EA80FC        ,
+purple-A200       :       #E040FB        ,
+purple-A400       :       #D500F9        ,
+purple-A700       :       #AA00FF        ,
+deeppurple-50     :         #EDE7F6      ,
+deeppurple-100    :          #D1C4E9     ,
+deeppurple-200    :          #B39DDB     ,
+deeppurple-300    :          #9575CD     ,
+deeppurple-400    :          #7E57C2     ,
+deeppurple-500    :          #673AB7     ,
+deeppurple-600    :          #5E35B1     ,
+deeppurple-700    :          #512DA8     ,
+deeppurple-800    :          #4527A0     ,
+deeppurple-900    :          #311B92     ,
+deeppurple-A100   :           #B388FF    ,
+deeppurple-A200   :           #7C4DFF    ,
+deeppurple-A400   :           #651FFF    ,
+deeppurple-A700   :           #6200EA    ,
+indigo-50         :     #E8EAF6          ,
+indigo-100        :      #C5CAE9         ,
+indigo-200        :      #9FA8DA         ,
+indigo-300        :      #7986CB         ,
+indigo-400        :      #5C6BC0         ,
+indigo-500        :      #3F51B5         ,
+indigo-600        :      #3949AB         ,
+indigo-700        :      #303F9F         ,
+indigo-800        :      #283593         ,
+indigo-900        :      #1A237E         ,
+indigo-A100       :       #8C9EFF        ,
+indigo-A200       :       #536DFE        ,
+indigo-A400       :       #3D5AFE        ,
+indigo-A700       :       #304FFE        ,
+blue-50           :   #E3F2FD            ,
+blue-100          :    #BBDEFB           ,
+blue-200          :    #90CAF9           ,
+blue-300          :    #64B5F6           ,
+blue-400          :    #42A5F5           ,
+blue-500          :    #2196F3           ,
+blue-600          :    #1E88E5           ,
+blue-700          :    #1976D2           ,
+blue-800          :    #1565C0           ,
+blue-900          :    #0D47A1           ,
+blue-A100         :     #82B1FF          ,
+blue-A200         :     #448AFF          ,
+blue-A400         :     #2979FF          ,
+blue-A700         :     #2962FF          ,
+lightblue-50      :        #E1F5FE       ,
+lightblue-100     :         #B3E5FC      ,
+lightblue-200     :         #81D4FA      ,
+lightblue-300     :         #4FC3F7      ,
+lightblue-400     :         #29B6F6      ,
+lightblue-500     :         #03A9F4      ,
+lightblue-600     :         #039BE5      ,
+lightblue-700     :         #0288D1      ,
+lightblue-800     :         #0277BD      ,
+lightblue-900     :         #01579B      ,
+lightblue-A100    :          #80D8FF     ,
+lightblue-A200    :          #40C4FF     ,
+lightblue-A400    :          #00B0FF     ,
+lightblue-A700    :          #0091EA     ,
+cyan-50           :   #E0F7FA            ,
+cyan-100          :    #B2EBF2           ,
+cyan-200          :    #80DEEA           ,
+cyan-300          :    #4DD0E1           ,
+cyan-400          :    #26C6DA           ,
+cyan-500          :    #00BCD4           ,
+cyan-600          :    #00ACC1           ,
+cyan-700          :    #0097A7           ,
+cyan-800          :    #00838F           ,
+cyan-900          :    #006064           ,
+cyan-A100         :     #84FFFF          ,
+cyan-A200         :     #18FFFF          ,
+cyan-A400         :     #00E5FF          ,
+cyan-A700         :     #00B8D4          ,
+teal-50           :   #E0F2F1            ,
+teal-100          :    #B2DFDB           ,
+teal-200          :    #80CBC4           ,
+teal-300          :    #4DB6AC           ,
+teal-400          :    #26A69A           ,
+teal-500          :    #009688           ,
+teal-600          :    #00897B           ,
+teal-700          :    #00796B           ,
+teal-800          :    #00695C           ,
+teal-900          :    #004D40           ,
+teal-A100         :     #A7FFEB          ,
+teal-A200         :     #64FFDA          ,
+teal-A400         :     #1DE9B6          ,
+teal-A700         :     #00BFA5          ,
+green-50          :    #E8F5E9           ,
+green-100         :     #C8E6C9          ,
+green-200         :     #A5D6A7          ,
+green-300         :     #81C784          ,
+green-400         :     #66BB6A          ,
+green-500         :     #4CAF50          ,
+green-600         :     #43A047          ,
+green-700         :     #388E3C          ,
+green-800         :     #2E7D32          ,
+green-900         :     #1B5E20          ,
+green-A100        :      #B9F6CA         ,
+green-A200        :      #69F0AE         ,
+green-A400        :      #00E676         ,
+green-A700        :      #00C853         ,
+lightgreen-50     :         #F1F8E9      ,
+lightgreen-100    :          #DCEDC8     ,
+lightgreen-200    :          #C5E1A5     ,
+lightgreen-300    :          #AED581     ,
+lightgreen-400    :          #9CCC65     ,
+lightgreen-500    :          #8BC34A     ,
+lightgreen-600    :          #7CB342     ,
+lightgreen-700    :          #689F38     ,
+lightgreen-800    :          #558B2F     ,
+lightgreen-900    :          #33691E     ,
+lightgreen-A100   :           #CCFF90    ,
+lightgreen-A200   :           #B2FF59    ,
+lightgreen-A400   :           #76FF03    ,
+lightgreen-A700   :           #64DD17    ,
+lime-50           :   #F9FBE7            ,
+lime-100          :    #F0F4C3           ,
+lime-200          :    #E6EE9C           ,
+lime-300          :    #DCE775           ,
+lime-400          :    #D4E157           ,
+lime-500          :    #CDDC39           ,
+lime-600          :    #C0CA33           ,
+lime-700          :    #AFB42B           ,
+lime-800          :    #9E9D24           ,
+lime-900          :    #827717           ,
+lime-A100         :     #F4FF81          ,
+lime-A200         :     #EEFF41          ,
+lime-A400         :     #C6FF00          ,
+lime-A700         :     #AEEA00          ,
+yellow-50         :     #FFFDE7          ,
+yellow-100        :      #FFF9C4         ,
+yellow-200        :      #FFF59D         ,
+yellow-300        :      #FFF176         ,
+yellow-400        :      #FFEE58         ,
+yellow-500        :      #FFEB3B         ,
+yellow-600        :      #FDD835         ,
+yellow-700        :      #FBC02D         ,
+yellow-800        :      #F9A825         ,
+yellow-900        :      #F57F17         ,
+yellow-A100       :       #FFFF8D        ,
+yellow-A200       :       #FFFF00        ,
+yellow-A400       :       #FFEA00        ,
+yellow-A700       :       #FFD600        ,
+amber-50          :    #FFF8E1           ,
+amber-100         :     #FFECB3          ,
+amber-200         :     #FFE082          ,
+amber-300         :     #FFD54F          ,
+amber-400         :     #FFCA28          ,
+amber-500         :     #FFC107          ,
+amber-600         :     #FFB300          ,
+amber-700         :     #FFA000          ,
+amber-800         :     #FF8F00          ,
+amber-900         :     #FF6F00          ,
+amber-A100        :      #FFE57F         ,
+amber-A200        :      #FFD740         ,
+amber-A400        :      #FFC400         ,
+amber-A700        :      #FFAB00         ,
+orange-50         :     #FFF3E0          ,
+orange-100        :      #FFE0B2         ,
+orange-200        :      #FFCC80         ,
+orange-300        :      #FFB74D         ,
+orange-400        :      #FFA726         ,
+orange-500        :      #FF9800         ,
+orange-600        :      #FB8C00         ,
+orange-700        :      #F57C00         ,
+orange-800        :      #EF6C00         ,
+orange-900        :      #E65100         ,
+orange-A100       :       #FFD180        ,
+orange-A200       :       #FFAB40        ,
+orange-A400       :       #FF9100        ,
+orange-A700       :       #FF6D00        ,
+deeporange-50     :         #FBE9E7      ,
+deeporange-100    :          #FFCCBC     ,
+deeporange-200    :          #FFAB91     ,
+deeporange-300    :          #FF8A65     ,
+deeporange-400    :          #FF7043     ,
+deeporange-500    :          #FF5722     ,
+deeporange-600    :          #F4511E     ,
+deeporange-700    :          #E64A19     ,
+deeporange-800    :          #D84315     ,
+deeporange-900    :          #BF360C     ,
+deeporange-A100   :           #FF9E80    ,
+deeporange-A200   :           #FF6E40    ,
+deeporange-A400   :           #FF3D00    ,
+deeporange-A700   :           #DD2C00    ,
+brown-50          :    #EFEBE9           ,
+brown-100         :     #D7CCC8          ,
+brown-200         :     #BCAAA4          ,
+brown-300         :     #A1887F          ,
+brown-400         :     #8D6E63          ,
+brown-500         :     #795548          ,
+brown-600         :     #6D4C41          ,
+brown-700         :     #5D4037          ,
+brown-800         :     #4E342E          ,
+brown-900         :     #3E2723          ,
+gray-50           :   #FAFAFA            ,
+gray-100          :    #F5F5F5           ,
+gray-200          :    #EEEEEE           ,
+gray-300          :    #E0E0E0           ,
+gray-400          :    #BDBDBD           ,
+gray-500          :    #9E9E9E           ,
+gray-600          :    #757575           ,
+gray-700          :    #616161           ,
+gray-800          :    #424242           ,
+gray-900          :    #212121           ,
+bluegray-50       :       #ECEFF1        ,
+bluegray-100      :        #CFD8DC       ,
+bluegray-200      :        #B0BEC5       ,
+bluegray-300      :        #90A4AE       ,
+bluegray-400      :        #78909C       ,
+bluegray-500      :        #607D8B       ,
+bluegray-600      :        #546E7A       ,
+bluegray-700      :        #455A64       ,
+bluegray-800      :        #37474F       ,
+bluegray-900      :        #263238       ,
+black             : #000000              ,
+white             : #FFFFFF
 );
 
 $pad-y: 0.75em;
