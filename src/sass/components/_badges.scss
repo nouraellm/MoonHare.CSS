@@ -1,5 +1,5 @@
 // Badges
-span.badge {
+.badge {
   min-width: 3rem;
   padding: 0 6px;
   margin-left: 14px;
@@ -28,7 +28,7 @@ span.badge {
 }
 
 // Special cases
-nav ul a span.badge {
+nav ul a .badge {
   display: inline-block;
   float: none;
   margin-left: 4px;
@@ -38,17 +38,17 @@ nav ul a span.badge {
 }
 
 // Line height centering
-.collection-item span.badge {
+.collection-item .badge {
   margin-top: calc(#{$collection-line-height / 2} - #{$badge-height / 2});
 }
-.collapsible span.badge {
+.collapsible .badge {
   margin-left: auto;
 }
-.sidenav span.badge {
+.sidenav .badge {
   margin-top: calc(#{$sidenav-line-height / 2} - #{$badge-height / 2});
 }
 
-table span.badge {
+table .badge {
   display: inline-block;
   float: none;
   margin-left: auto;
