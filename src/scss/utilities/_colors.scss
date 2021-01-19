@@ -1,6 +1,7 @@
 @each $name, $hex in $colors {
   .#{$name}-background {
     background-color: $hex;
+    color: contrast-color(#hex);
   }
   .#{$name}-text {
     color: $hex;
@@ -8,22 +9,34 @@
   .#{$name}-border {
     border-color: $hex;
   }
-  .#{$name}-hover-background:hover {
-    background-color: color-lightness($hex, $hover-color-darken-percentage);
+  .hover-#{$name}-background:hover {
+    background-color: $hex;
+    color: contrast-color(#hex);
   }
-  .#{$name}-hover-text:hover {
-    color: color-lightness($hex, $hover-color-darken-percentage);
+  .hover-#{$name}-text:hover {
+    color: $hex;
   }
-  .#{$name}-hover-border:hover {
-    border-color: color-lightness($hex, $hover-color-darken-percentage);
+  .hover-#{$name}-border:hover {
+    border-color: $hex;
   }
-  .#{$name}-focus-background:focus {
-    background-color: color-lightness($hex, $focus-color-darken-percentage);
+  .focus-#{$name}-background:focus {
+    background-color: $hex;
+    color: contrast-color(#hex);
   }
-  .#{$name}-focus-text:focus {
-    color: color-lightness($hex, $focus-color-darken-percentage);
+  .focus-#{$name}-text:focus {
+    color: $hex;
   }
-  .#{$name}-focus-border:focus {
-    border-color: color-lightness($hex, $focus-color-darken-percentage);
+  .focus-#{$name}-border:focus {
+    border-color: $hex;
+  }
+  .active-#{$name}-background:active {
+    background-color: $hex;
+    color: contrast-color(#hex);
+  }
+  .active-#{$name}-text:active {
+    color: $hex;
+  }
+  .active-#{$name}-border:active {
+    border-color: $hex;
   }
 }
