@@ -19,7 +19,7 @@
   &.icon {
     background-position: $pad-y $pad-x;
     background-repeat: no-repeat;
-    padding-left: $pad-x *2 +$font-size;
+    padding-left: $pad-x*2+$font-size;
     padding-left: calc(var(--pad-x, $pad-x) *2 +var(--font-size, $font-size));
   }
 
