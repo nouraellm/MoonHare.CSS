@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  padding: $button-padding;
+  -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+  background-color: transparent;
+  border: $button-border;
+  outline: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-size: $button-font-size;
+  transition: background-color .2s ease-out;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  &:focus {
+    background-color: #e6e6e6;
+  }
+}
