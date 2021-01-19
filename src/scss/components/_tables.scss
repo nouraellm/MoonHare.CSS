@@ -1,0 +1,129 @@
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.table {
+  display: table;
+  background-color: transparent;
+  background-color: var(--bg-color, transparent);
+  color: black;
+  color: var(--color, black);
+  vertical-align: top;
+  margin-bottom: var(--margin-bottom, 1rem);
+
+  th, td {
+    padding: 0.5rem 1rem;
+    padding: var(--pad-x, 0.5rem) var(--pad-y, 1rem);
+    vertical-align: top;
+    border-bottom: 1px solid lightgray;
+    border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid gray;
+    border-bottom: var(--header-border-width, 2px) solid var(--head-border-color, gray);
+    font-weight: bolder;
+  }
+
+  > tbody + tbody {
+    border-top: 2px solid gray;
+    border-top: var(--header-border-width, 2px) solid var(--head-border-color, gray);
+  }
+}
+
+/* Change placement of captions with a class */
+
+.caption-top {
+  caption-side: top;
+}
+
+/* Condensed table w/ half padding */
+
+.sm {
+  th, td {
+    padding: 0.25em;
+    padding: var(--pad-sm-x, 0.25rem) var(--pad-sm-y, 0.25rem);
+  }
+}
+
+.bordered {
+  border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
+
+  th, td {
+    border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
+  }
+
+  thead {
+    th, td {
+      border-bottom-width: 2px;
+      border-bottom-width: var(--header-border-width, 2px);
+    }
+  }
+}
+
+.borderless {
+  th, td, thead th, tbody + tbody {
+    border: 0;
+  }
+}
+
+.striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+
+  /* hsl(0, 0%, 95%) */
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--striped-bg-color, rgba(0, 0, 0, 0.05));
+}
+
+.table.hover tbody tr:hover {
+  background-color: #ececec;
+
+  /* hsl(0, 0%, 92.5%) */
+  background-color: rgba(0, 0, 0, 0.075);
+  background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.075));
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+}
+
+@media (max-width: 576px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1200px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1400px) {
+  .table-responsive-xxl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

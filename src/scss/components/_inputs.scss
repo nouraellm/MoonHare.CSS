@@ -1,0 +1,32 @@
+.input {
+  padding: $input-pad-y $input-pad-x;
+  padding: var(--input-pad-y, $input-pad-y) var(--input-pad-x, $input-pad-x);
+  border: $border-width solid $border-color;
+  border: var(--border-width, $border-width) solid var(--border-color, $border-color);
+  font-size: $input-font-size;
+  font-size: var(--input-font-size, $input-font-size);
+  &:focus {
+      border-color: $border-focus-color;
+      border-color: var(--border-focus-color, $border-focus-color);
+  }
+  &:invalid {
+      border-color: $border-invalid-color;
+      border-color: var(--border-invalid-color, $border-invalid-color);
+  }
+  &:valid {
+      border-color: $border-valid-color;
+      border-color: var(--border-valid-color, $border-valid-color);
+  }
+  &.leading-icon{
+      background-position: $input-pad-y $input-pad-x;
+      background-repeat: no-repeat;
+      padding-left: $input-pad-x *2 +$input-font-size;
+      padding-left: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size));
+  }
+  &.trailing-icon{
+      background-position: $input-pad-y $input-pad-x;
+      background-repeat: no-repeat;
+      padding-right: $input-pad-x *2 +$input-font-size;
+      padding-right: calc(var(--input-pad-x, $input-pad-x) *2 +var(--input-font-size, $input-font-size));
+  }
+}
