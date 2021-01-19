@@ -18,7 +18,7 @@
   }
 
   &.alert.dismissible {
-    padding-right: $alert-pad-x *2 +$alert-font-size;
+    padding-right: $alert-pad-x*2+$alert-font-size;
     padding-right: calc(var(--alert-pad-x, $alert-pad-x) *2 +var(--alert-font-size, $alert-font-size));
 
     &.close {
