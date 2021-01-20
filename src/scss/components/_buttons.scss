@@ -13,6 +13,7 @@
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
+  min-width: $button-min-width;
 
   &:hover {
     background-color: #f2f2f2;
@@ -25,41 +26,4 @@
     background-color: rgba(0, 0, 0, 0.10);
     background-color: var(--button-active-background-color, rgba(0, 0, 0, 0.10));
   }
-}
-
-.dropdown {
-  position: absolute;
-  display: inline-block;
-}
-
-
-.dropdown .content {
-  display: none;
-  position: absolute;
-  background-color: $dropdown-background-color;
-  background-color: var(--dropdown-background-color, $dropdown-background-color);
-  border: $dropdown-border-width solid $dropdown-border-color;
-  border: var(--dropdown-border-width, $dropdown-border-width) solid var(--dropdown-border-color, $dropdown-border-color);
-  z-index: 1;
-
-  item {
-    color: black;
-    padding: $dropdown-pad-y $dropdown-pad-x;
-    padding: var(--dropdown-pad-y, $dropdown-pad-y) var(--dropdown-pad-x, $dropdown-pad-x);
-    text-decoration: none;
-    display: block;
-
-    &:hover {
-      background-color: #f2f2f2;
-      background-color: rgba(0, 0, 0, 0.05);
-      background-color: var(--dropdown-hover-background-color, rgba(0, 0, 0, 0.05));
-    }
-  }
-}
-
-.dropdown.hover-event:hover .content {
-  display: block;
-}
-.dropdown.focus-event:focus .content {
-  display: block;
 }
