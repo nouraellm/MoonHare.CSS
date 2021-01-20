@@ -258,7 +258,7 @@ $colors: (
   white: #ffffff,
 );
 
-//Buttons
+// Buttons
 $button-min-width: 3rem;
 $button-pad-y: 0.375rem;
 $button-pad-x: 0.75rem;
@@ -278,6 +278,14 @@ $toggle-button-pad-x: $button-pad-x*3/4;
 $toggle-button-pad-y: $toggle-button-pad-x;
 $toggle-button-font-size: $button-font-size*1.125;
 
+// Cards
+$card-pad-y: 0.75rem;
+$card-pad-x: 0.75rem;
+$card-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+$card-hover-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+$card-background-color: transparent;
+$card-border-width: 1px;
+$card-border-color: map-get($colors, gray-500);
 
 $pad-y: 0.75em;
 $pad-x: 0.75rem;
