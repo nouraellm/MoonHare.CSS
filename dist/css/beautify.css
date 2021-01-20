@@ -10397,10 +10397,8 @@ template, [hidden] {
   overflow: hidden;
   white-space: nowrap;
   vertical-align: middle;
-  font-size: 1rem;
-  font-size: var(--font-size, 1rem);
-  min-width: 4rem;
-  min-width: var(--min-width, 4rem); }
+  text-align: center;
+  text-decoration: none; }
   .btn.icon {
     background-position: 0.75em 0.75rem;
     background-repeat: no-repeat;
