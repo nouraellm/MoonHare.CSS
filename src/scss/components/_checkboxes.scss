@@ -1,0 +1,21 @@
+.checkbox {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid lightgray;
+  /* content: "dddddddd"; */
+  position: relative;
+
+  &:before {
+    font: inherit;
+    background-color: transparent;
+    color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:checked:before {
+    content: "\2713";
+  }
+}
