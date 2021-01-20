@@ -11,10 +11,8 @@
   overflow: hidden;
   white-space: nowrap;
   vertical-align: middle;
-  font-size: $font-size;
-  font-size: var(--font-size, $font-size);
-  min-width: $min-width;
-  min-width: var(--min-width, $min-width);
+  text-align: center;
+  text-decoration: none;
 
   &.icon {
     background-position: $pad-y $pad-x;
