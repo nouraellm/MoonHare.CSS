@@ -306,7 +306,12 @@ $input-pad-y: 0.75rem;
 $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
 $input-border-width: 1px;
-$input-border-color: map-get($colors, gray-500);
+$input-border-color: map-get($colors, gray-50);
 $input-border-focus-color: map-get($colors, gray-50);
 $input-border-valid-color: map-get($colors, green-50);
 $input-border-invalid-color: map-get($colors, red-50);
+
+$checkbox-background-color: transparent;
+$checkbox-border-width: 1px;
+$checkbox-border-color: map-get($colors, gray-500);
+$checkbox-focus-background-color: map-get($colors, gray-50);
