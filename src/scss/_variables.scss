@@ -315,8 +315,10 @@ $checkbox-background-color: transparent;
 $checkbox-border-width: 1px;
 $checkbox-border-color: map-get($colors, gray-500);
 $checkbox-focus-background-color: map-get($colors, gray-50);
+$checkbox-checked-background-color: map-get($colors, black);
 
 $radio-background-color: transparent;
 $radio-border-width: 1px;
 $radio-border-color: map-get($colors, gray-500);
 $radio-focus-background-color: map-get($colors, gray-50);
+$radio-checked-background-color: map-get($colors, black);

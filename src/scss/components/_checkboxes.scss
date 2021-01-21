@@ -1,0 +1,33 @@
+.checkbox {
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    display: inline-block;
+    font-size: 1rem;
+    width:1rem;
+    height:1rem;
+    background-color: $checkbox-background-color;
+    background-color: var(--checkbox-background-color, $checkbox-background-color);
+    border: $checkbox-border-width solid $checkbox-border-color;
+    border: var(--checkbox-border-width, $checkbox-border-width) solid var(--checkbox-border-color, $checkbox-border-color);
+    vertical-align: middle;
+  }
+
+  &:hover input ~ .checkmark,
+  &:focus input ~ .checkmark{
+    background-color: $checkbox-focus-background-color;
+    background-color: var(--checkbox-focus-background-color, $checkbox-focus-background-color);
+  }
+
+  input:checked ~ .checkmark {
+    background-color: $checkbox-checked-background-color;
+    background-color: var(--checkbox-checked-background-color, $checkbox-checked-background-color);
+  }
+}

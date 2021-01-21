@@ -1,0 +1,36 @@
+.radio {
+  display: block;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .mark {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.3rem;
+    background-clip: content-box;
+    background-color: $radio-background-color;
+    background-color: var(--radio-background-color, $radio-background-color);
+    border: $radio-border-width solid $radio-border-color;
+    border: var(--radio-border-width, $radio-border-width) solid var(--radio-border-color, $radio-border-color);
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &:hover input ~ .mark,
+  &:focus input ~ .mark {
+    background-color: $radio-focus-background-color;
+    background-color: var(--radio-focus-background-color, $radio-focus-background-color);
+  }
+
+  input:checked ~ .mark {
+    background-color: $radio-checked-background-color;
+    background-color: var(--radio-checked-background-color, $radio-checked-background-color);
+  }
+}
