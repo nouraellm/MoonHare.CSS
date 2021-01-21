@@ -23,6 +23,7 @@
     vertical-align: middle;
   }
 
+  &:hover input ~ .mark,
   &:focus input ~ .mark {
     background-color: $radio-focus-background-color;
     background-color: var(--radio-focus-background-color, $radio-focus-background-color);
