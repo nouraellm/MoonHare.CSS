@@ -307,5 +307,6 @@ $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
 $input-border-width: 1px;
 $input-border-color: map-get($colors, gray-500);
+$input-focus-border-color: map-get($colors, gray-50);
 $input-valid-border-color: map-get($colors, green-50);
 $input-invalid-border-color: map-get($colors, red-50);
