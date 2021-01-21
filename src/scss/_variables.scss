@@ -281,8 +281,6 @@ $toggle-button-font-size: $button-font-size*1.125;
 // Cards
 $card-pad-y: 0.75rem;
 $card-pad-x: 0.75rem;
-$card-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-$card-hover-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 $card-background-color: transparent;
 $card-border-width: 1px;
 $card-border-color: map-get($colors, gray-500);
