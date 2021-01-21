@@ -307,18 +307,16 @@ $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
 $input-border-width: 1px;
 $input-border-color: map-get($colors, gray-50);
-$input-border-focus-color: map-get($colors, gray-100);
+$input-border-focus-color: map-get($colors, gray-50);
 $input-border-valid-color: map-get($colors, green-50);
 $input-border-invalid-color: map-get($colors, red-50);
 
-// Check Box
 $checkbox-background-color: transparent;
 $checkbox-border-width: 1px;
 $checkbox-border-color: map-get($colors, gray-500);
-$checkbox-border-focus-color: map-get($colors, gray-600);
+$checkbox-focus-background-color: map-get($colors, gray-50);
 
-// Radio Button
 $radio-background-color: transparent;
 $radio-border-width: 1px;
 $radio-border-color: map-get($colors, gray-500);
-$radio-border-focus-color: map-get($colors, gray-600);
+$radio-focus-background-color: map-get($colors, gray-50);
