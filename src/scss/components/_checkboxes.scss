@@ -17,6 +17,7 @@
     background-color: var(--checkbox-background-color, $checkbox-background-color);
     border: $checkbox-border-width solid $checkbox-border-color;
     border: var(--checkbox-border-width, $checkbox-border-width) solid var(--checkbox-border-color, $checkbox-border-color);
+    vertical-align: middle;
   }
 
   &:hover input ~ .checkmark,
