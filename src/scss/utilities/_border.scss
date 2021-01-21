@@ -1,1 +1,14 @@
+$sides: "", "-top", "-right", "-bottom", "-left";
 
+@each $side in $sides{
+  .dotted#{$side} {border-#{$size}-style: dotted;}
+  .dashed-#{$size} {border-#{$size}-style: dashed;}
+  .solid-#{$size} {border-#{$size}-style: solid;}
+  .double-#{$size} {border-#{$size}-style: double;}
+  .groove-#{$size} {border-#{$size}-style: groove;}
+  .ridge-#{$size} {border-#{$size}-style: ridge;}
+  .inset-#{$size} {border-#{$size}-style: inset;}
+  .outset-#{$size} {border-#{$size}-style: outset;}
+  .none-#{$size} {border-#{$size}-style: none;}
+  .hidden-#{$size} {border-#{$size}-style: hidden;}
+}
