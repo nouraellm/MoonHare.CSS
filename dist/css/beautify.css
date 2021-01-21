@@ -10410,15 +10410,17 @@ template, [hidden] {
     background-color: var(--button-active-background-color, rgba(0, 0, 0, 0.1)); }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  perspective: 1000px;
   background-color: transparent;
   background-color: var(--card-background-color, transparent);
   border: 1px solid #9e9e9e;
-  border: var(--card-border-width, 1px) solid var(--card-border-color, #9e9e9e); }
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  border: var(--card-border-width, 1px) solid var(--card-border-color, #9e9e9e);
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word; }
+  .card > hr {
+    margin-right: 0;
+    margin-left: 0; }
   .card .content {
     padding: 0.75rem 0.75rem;
     padding: var(--card-pad-y, 0.75rem) var(--card-pad-x, 0.75rem); }
