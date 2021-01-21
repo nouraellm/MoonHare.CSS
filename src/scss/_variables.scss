@@ -285,6 +285,11 @@ $card-background-color: transparent;
 $card-border-width: 1px;
 $card-border-color: map-get($colors, gray-500);
 
+// Images
+$card-pad: 0.3rem;
+$card-border-width: 1px;
+$card-border-color: map-get($colors, gray-500);
+
 $pad-y: 0.75em;
 $pad-x: 0.75rem;
 $background-color: transparent;
