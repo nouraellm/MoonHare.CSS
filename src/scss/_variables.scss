@@ -270,9 +270,9 @@ $button-border-color: map-get($colors, gray-500);
 $outline-button-pad-y: $button-pad-y;
 $outline-button-pad-x: $button-pad-x;
 
-$text-button-pad-y: $button-pad-y;
-$text-button-pad-x: $button-pad-x/2;
-$text-button-font-size: $button-font-size;
+$thumbnail-button-pad-y: $button-pad-y;
+$thumbnail-button-pad-x: $button-pad-x/2;
+$thumbnail-button-font-size: $button-font-size;
 
 $toggle-button-pad-x: $button-pad-x*3/4;
 $toggle-button-pad-y: $toggle-button-pad-x;
