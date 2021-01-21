@@ -3,6 +3,33 @@
  * Copyright 2021-2031 Kavindu Santhusa
  * Licensed under MIT (https://github.com/beautifycss/Beautify/blob/main/LICENSE)
  */
+.align-baseline {
+  vertical-align: baseline; }
+
+.align-top {
+  vertical-align: top; }
+
+.align-middle {
+  vertical-align: middle; }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+.align-text-bottom {
+  vertical-align: text-bottom; }
+
+.align-text-top {
+  vertical-align: text-top; }
+
+.float-start {
+  float: left; }
+
+.float-end {
+  float: right; }
+
+.float-none {
+  float: none; }
+
 .red-50,
 .hover-red-50:hover,
 .focus-red-50:focus,
