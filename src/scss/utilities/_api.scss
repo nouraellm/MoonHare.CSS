@@ -55,7 +55,7 @@
 }
 
 @each $key, $utility in $utilities {
-  @include generate-utility($utility, null);
+  @include generate-utility($utility, "");
 }
 
 // Print utilities
