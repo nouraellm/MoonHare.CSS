@@ -270,9 +270,9 @@ $button-border-color: map-get($colors, gray-500);
 $outline-button-pad-y: $button-pad-y;
 $outline-button-pad-x: $button-pad-x;
 
-$thumbnail-button-pad-y: $button-pad-y;
-$thumbnail-button-pad-x: $button-pad-x/2;
-$thumbnail-button-font-size: $button-font-size;
+$text-button-pad-y: $button-pad-y;
+$text-button-pad-x: $button-pad-x/2;
+$text-button-font-size: $button-font-size;
 
 $toggle-button-pad-x: $button-pad-x*3/4;
 $toggle-button-pad-y: $toggle-button-pad-x;
@@ -286,9 +286,9 @@ $card-border-width: 1px;
 $card-border-color: map-get($colors, gray-500);
 
 // Images
-$card-pad: 0.3rem;
-$card-border-width: 1px;
-$card-border-color: map-get($colors, gray-500);
+$thumbnail-pad: 0.3rem;
+$thumbnail-border-width: 1px;
+$thumbnail-border-color: map-get($colors, gray-500);
 
 $pad-y: 0.75em;
 $pad-x: 0.75rem;
