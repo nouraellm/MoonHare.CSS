@@ -1,0 +1,5 @@
+$sides: "", "-top", "-right", "-bottom", "-left";
+
+@each $side in $sides{
+  .auto#{$side}-margin {margin-#{$side}: auto;}
+}
