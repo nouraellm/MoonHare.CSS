@@ -290,6 +290,17 @@ $thumbnail-pad: 0.3rem;
 $thumbnail-border-width: 1px;
 $thumbnail-border-color: map-get($colors, gray-500);
 
+// Tables
+$table-pad-y: 0.375rem;
+$table-pad-x: 0.75rem;
+$table-background-color: transparent;
+$table-striped-background-color: map-get($colors, gray-50);
+$table-hover-background-color: map-get($colors, gray-100);
+$table-border-width: 1px;
+$table-border-color: map-get($colors, gray-500);
+$table-header-border-width: 2px;
+$table-header-border-color: map-get($colors, gray-600);
+
 $pad-y: 0.75em;
 $pad-x: 0.75rem;
 $background-color: transparent;
