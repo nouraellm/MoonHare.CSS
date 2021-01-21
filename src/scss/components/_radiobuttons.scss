@@ -1,0 +1,32 @@
+.radio {
+  display: block;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    padding: 0.25rem;
+    background-clip: content-box;
+    background-color: $checkbox-background-color;
+    background-color: var(--radio-background-color, $radio-background-color);
+    border: $radio-border-width solid $radio-border-color;
+    border: var(--radio-border-width, $radio-border-width) solid var(--radio-border-color, $radio-border-color);
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &:hover input ~ .checkmark {
+  }
+
+  input:checked ~ .checkmark {
+    background-color: gray;
+  }
+}
