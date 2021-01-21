@@ -1,11 +1,17 @@
 .card {
-  box-shadow: $card-shadow;
   transition: 0.3s;
-  perspective: 1000px;
   background-color: $card-background-color;
   background-color: var(--card-background-color, $card-background-color);
   border: $card-border-width solid $card-border-color;
   border: var(--card-border-width, $card-border-width) solid var(--card-border-color, $card-border-color);
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
   &:hover {
     box-shadow: $card-hover-shadow;
