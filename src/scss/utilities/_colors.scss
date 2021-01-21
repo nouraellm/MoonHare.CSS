@@ -1,5 +1,10 @@
 @each $name, $hex in $colors {
-  .#{$name}-background {
+  .#{$name},
+  .hover-#{$name}:hover,
+  .focus-#{$name}:focus,
+  .active-#{$name}:active,
+  .active-#{$name}:active,
+  {
     background-color: $hex;
   }
   .#{$name}-text {
