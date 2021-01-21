@@ -1,14 +1,28 @@
 $sides: "", "-top", "-right", "-bottom", "-left";
 
 @each $side in $sides{
-  .dotted#{$side} {border-#{$size}-style: dotted;}
-  .dashed-#{$size} {border-#{$size}-style: dashed;}
-  .solid-#{$size} {border-#{$size}-style: solid;}
-  .double-#{$size} {border-#{$size}-style: double;}
-  .groove-#{$size} {border-#{$size}-style: groove;}
-  .ridge-#{$size} {border-#{$size}-style: ridge;}
-  .inset-#{$size} {border-#{$size}-style: inset;}
-  .outset-#{$size} {border-#{$size}-style: outset;}
-  .none-#{$size} {border-#{$size}-style: none;}
-  .hidden-#{$size} {border-#{$size}-style: hidden;}
+  .dotted#{$side}-border {border-#{$side}-style: dotted;}
+  .dashed-#{$side}-border {border-#{$side}-style: dashed;}
+  .solid-#{$side}-border {border-#{$side}-style: solid;}
+  .double-#{$side}-border {border-#{$side}-style: double;}
+  .groove-#{$side}-border {border-#{$side}-style: groove;}
+  .ridge-#{$side}-border {border-#{$side}-style: ridge;}
+  .inset-#{$side}-border {border-#{$side}-style: inset;}
+  .outset-#{$side}-border {border-#{$side}-style: outset;}
+  .none-#{$side}-border {border-#{$side}-style: none;}
+  .hidden-#{$side}-border {border-#{$side}-style: hidden;}
+  
+  .thin-#{$side}-border {border-#{$side}-width: thin;}
+  .medium-#{$side}-border {border-#{$side}-width: medium;}
+  .thick-#{$side}-border {border-#{$side}-width: thick;}
 }
+.round {border-radius: 50%;}
+.half-round {border-radius: 25%;}
+.round {border-top-left-radius: 50%;}
+.half-round {border-top-left-radius: 25%;}
+.round {border-top-right-radius: 50%;}
+.half-round {border-top-right-radius: 25%;}
+.round {border-bottom-left-radius: 50%;}
+.half-round {border-bottom-left-radius: 25%;}
+.round {border-bottom-right-radius: 50%;}
+.half-round {border-bottom-right-radius: 25%;}
