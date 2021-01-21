@@ -23,7 +23,7 @@
   &:hover input ~ .checkmark,
   &:focus input ~ .checkmark{
     background-color: $checkbox-focus-background-color;
-    background-color: var(--checkbox-focus-background-color, $checkbox-hover-background-color);
+    background-color: var(--checkbox-focus-background-color, $checkbox-focus-background-color);
   }
 
   input:checked ~ .checkmark {
