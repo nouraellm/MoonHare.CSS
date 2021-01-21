@@ -301,22 +301,11 @@ $table-border-color: map-get($colors, gray-500);
 $table-header-border-width: 2px;
 $table-header-border-color: map-get($colors, gray-600);
 
-$pad-y: 0.75em;
-$pad-x: 0.75rem;
-$background-color: transparent;
-$min-width: 4rem;
-$border-width: 1px;
-$border-color: lightgray;
-$border-hover-color: lightgray;
-$border-focus-color: lightgray;
-$border-invalid-color: lightgray;
-$border-valid-color: green;
-$font-size: 1rem;
+// Input
 $input-pad-y: 0.75rem;
 $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
-
-$alert-pad-y: 0.75rem;
-$alert-pad-x: 0.75rem;
-$alert-font-size: 1rem;
-$alert-link-font-weight: 700;
+$input-border-width: 1px;
+$input-border-color: map-get($colors, gray-500);
+$input-valid-border-color: map-get($colors, green-50);
+$input-invalid-border-color: map-get($colors, red-50);
