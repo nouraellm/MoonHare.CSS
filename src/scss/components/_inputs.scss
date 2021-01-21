@@ -1,0 +1,25 @@
+.input {
+  padding: $input-pad-y $input-pad-x;
+  padding: var(--input-pad-y, $input-pad-y) var(--input-pad-x, $input-pad-x);
+  border: $input-border-width solid $input-border-color;
+  border: var(--input-border-width, $input-border-width) solid var(--input-border-color, $input-border-color);
+  font-size: $input-font-size;
+  font-size: var(--input-font-size, $input-font-size);
+  &:focus {
+      border-color: $input-border-focus-color;
+      border-color: var(--input-border-focus-color, $input-border-focus-color);
+  }
+  &:invalid {
+      border-color: $input-border-invalid-color;
+      border-color: var(--input-border-invalid-color, $input-border-invalid-color);
+  }
+  &:valid {
+      border-color: $input-border-valid-color;
+      border-color: var(--input-border-valid-color, $input-border-valid-color);
+  }
+}
+
+textarea.input {
+  height: auto;
+  resize: vertical;
+}

@@ -1,0 +1,32 @@
+.alert {
+  position: relative;
+  padding: $alert-pad-y $alert-pad-x;
+  padding: var(--alert-pad-y, $alert-pad-y) var(--alert-pad-x, $alert-pad-x);
+  border: $border-width solid $border-color;
+  border: var(--border-width, $border-width) solid var(--border-color, $border-color);
+  font-size: $alert-font-size;
+  font-size: var(--alert-font-size, $alert-font-size);
+
+  &.alert .heading {
+    color: inherit;
+  }
+
+  &.alert .link {
+    color: inherit;
+    font-weight: $alert-link-font-weight;
+    font-weight: var(--alert-link-font-weight, 700);
+  }
+
+  &.alert.dismissible {
+    padding-right: $alert-pad-x*2+$alert-font-size;
+    padding-right: calc(var(--alert-pad-x, $alert-pad-x) *2 +var(--alert-font-size, $alert-font-size));
+
+    &.close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: $alert-pad-y $alert-pad-x;
+      padding: var(--alert-pad-y, $alert-pad-y) var(--alert-pad-x, $alert-pad-x);
+    }
+  }
+}

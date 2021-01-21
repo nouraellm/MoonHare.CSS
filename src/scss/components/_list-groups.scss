@@ -1,0 +1,104 @@
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+  border-radius: 0.125rem;
+  border-radius: var(--list-group-border-radius, 0.125rem);
+}
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: #495057;
+  color: var(--list-group-action-color, #495057);
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  // Hover state
+  &:hover,
+  &:focus {
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    color: #495057;
+    color: var(--list-group-action-hover-color, #495057);
+    text-decoration: none;
+    background-color: #f8f9fa;
+    background-color: var(--list-group-hover-bg, #f8f9fa);
+  }
+
+  &:active {
+    color: #212529;
+    color: var(--list-group-action-active-color, #212529);
+    background-color: #e9ecef;
+    background-color: var(--list-group-action-active-bg, #e9ecef);
+  }
+}
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  padding: var(--list-group-item-padding-y, 0.5rem)
+    var(--list-group-item-padding-x, 1rem);
+  text-decoration: none;
+  text-decoration: var(--link-decoration, none);
+  background-color: transparent;
+  background-color: var(--list-group-bg, transparent);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: var(--list-group-border-width, 1px) solid
+    var(--list-group-border-color, rgba(0, 0, 0, 0.125));
+
+  &:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &:last-child {
+    border-top-bottom-radius: inherit;
+    border-top-bottom-radius: inherit;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: #6c757d;
+    color: var(--list-group-disabled-color, #6c757d);
+    pointer-events: none;
+    background-color: transparent;
+    background-color: var(--list-group-disabled-bg, transparent);
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: white;
+    color: var(--list-group-active-color, white);
+    background-color: #0d6efd;
+    background-color: var(--list-group-active-bg, #0d6efd);
+    border-color: #0d6efd;
+    border-color: var(--list-group-active-border-color, #0d6efd);
+  }
+
+  & + & {
+    border-top-width: 0;
+
+    &.active {
+      margin-top: -1px;
+      margin-top: calc(var(--list-group-border-width, 1px) * -1);
+      border-top-width: 1px;
+      border-top-width: var(--list-group-border-width, 1px);
+    }
+  }
+}

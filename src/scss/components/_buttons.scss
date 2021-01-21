@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: $button-pad-y $button-pad-x;
+  padding: var(--button-pad-y, $button-pad-y) var(--button-pad-x, $button-pad-x);
+  background-color: $button-background-color;
+  background-color: var(--button-background-color, $button-background-color);
+  border: $button-border-width solid $button-border-color;
+  border: var(--button-border-width, $button-border-width) solid var(--button-border-color, $button-border-color);
+  outline: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  min-width: $button-min-width;
+
+  &:hover {
+    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--button-hover-background-color, rgba(0, 0, 0, 0.05));
+  }
+
+  &:focus, &:active, &.active {
+    background-color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.10);
+    background-color: var(--button-active-background-color, rgba(0, 0, 0, 0.10));
+  }
+}

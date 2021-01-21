@@ -1,0 +1,101 @@
+.table {
+  display: table;
+  background-color: $table-background-color;
+  background-color: var(--table-background-color, $table-background-color);
+  vertical-align: top;
+
+  th, td {
+    padding: $table-pad-y $table-pad-x;
+    padding: var(--table-pad-y, $table-pad-y) var(--table-pad-x, $table-pad-x);
+    vertical-align: top;
+    border-bottom: $table-border-width solid $table-border-color;
+    border-bottom: var(--table-border-width, $table-border-width) solid var(--table-border-color, $table-border-color);
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: $table-header-border-width solid $table-header-border-color;
+    border-bottom: var(--table-header-border-width, $table-header-border-width) solid var(--table-header-border-color, $table-header-border-color);
+    font-weight: bold;
+  }
+
+  &.bordered,
+  &.bordered th,
+  &.bordered td {
+    border: $table-border-width solid $table-border-color;
+    border: var(--table-border-width, $table-border-width) solid var(--table-border-color, $table-border-color);
+  }
+  &.bordered thead {
+    th, td {
+      border-bottom-width: $table-header-border-width;
+      border-bottom-width: var(--table-header-border-width, $table-header-border-width);
+    }
+  }
+
+  &.borderless,
+  &.borderless td,
+  &.borderless th {
+      border: 0;
+  }
+
+  &.odd-striped tbody tr:nth-of-type(odd) {
+    background-color: $table-striped-background-color;
+    background-color: var(--table-striped-background-color, $table-striped-background-color);
+  }
+
+  &.even-striped tbody tr:nth-of-type(even) {
+    background-color: $table-striped-background-color;
+    background-color: var(--table-striped-background-color, $table-striped-background-color);
+  }
+
+  &.hover tbody tr:hover {
+    background-color: $table-hover-background-color;
+    background-color: var(--table-hover-background-color, $table-hover-background-color);
+  }
+
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+}
+
+@media (max-width: 576px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1200px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1400px) {
+  .table-responsive-xxl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
