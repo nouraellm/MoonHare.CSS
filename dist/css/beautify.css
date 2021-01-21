@@ -10424,3 +10424,13 @@ template, [hidden] {
   .card .content {
     padding: 0.75rem 0.75rem;
     padding: var(--card-pad-y, 0.75rem) var(--card-pad-x, 0.75rem); }
+
+.image {
+  max-width: 100%;
+  height: auto; }
+
+.thumbnail {
+  border: 1px solid #9e9e9e;
+  border: var(--thumbnail-border-width, 1px) solid var(--thumbnail-border-color, #9e9e9e);
+  padding: 0.3rem;
+  padding: var(--thumbnail-pad, 0.3rem); }
