@@ -13,10 +13,6 @@
     margin-left: 0;
   }
 
-  &:hover {
-    box-shadow: $card-hover-shadow;
-  }
-
   .content{
     padding: $card-pad-y $card-pad-x;
     padding: var(--card-pad-y, $card-pad-y) var(--card-pad-x, $card-pad-x);
