@@ -69,260 +69,42 @@
   }
 
   
-  @for $i from 1 through $columns {
-    .col#{$name}-#{$i} {
-      flex: 0 0 auto;
-      width: 100*$i/$columns;
-    }
+  @for $i from 1 through $row-columns {
     .row-cols-#{$name}-#{$i} > * {
       flex: 0 0 auto;
       width: 100*$i/$columns;
     }
   }
-}
-
-
-
-
-.row-cols-1 > * {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.row-cols-2 > * {
-  flex: 0 0 auto;
-  width: 50%;
-}
-
-.row-cols-3 > * {
-  flex: 0 0 auto;
-  width: 33.33333%;
-}
-
-.row-cols-4 > * {
-  flex: 0 0 auto;
-  width: 25%;
-}
-
-.row-cols-5 > * {
-  flex: 0 0 auto;
-  width: 20%;
-}
-
-.row-cols-6 > * {
-  flex: 0 0 auto;
-  width: 16.66667%;
-}
-
-.col-auto {
-  flex: 0 0 auto;
-  width: auto;
-}
-
-.col-1 {
-  flex: 0 0 auto;
-  width: 8.33333%;
-}
-
-.col-2 {
-  flex: 0 0 auto;
-  width: 16.66667%;
-}
-
-.col-3 {
-  flex: 0 0 auto;
-  width: 25%;
-}
-
-.col-4 {
-  flex: 0 0 auto;
-  width: 33.33333%;
-}
-
-.col-5 {
-  flex: 0 0 auto;
-  width: 41.66667%;
-}
-
-.col-6 {
-  flex: 0 0 auto;
-  width: 50%;
-}
-
-.col-7 {
-  flex: 0 0 auto;
-  width: 58.33333%;
-}
-
-.col-8 {
-  flex: 0 0 auto;
-  width: 66.66667%;
-}
-
-.col-9 {
-  flex: 0 0 auto;
-  width: 75%;
-}
-
-.col-10 {
-  flex: 0 0 auto;
-  width: 83.33333%;
-}
-
-.col-11 {
-  flex: 0 0 auto;
-  width: 91.66667%;
-}
-
-.col-12 {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.offset-1 {
-  margin-left: 8.33333%;
-}
-
-.offset-2 {
-  margin-left: 16.66667%;
-}
-
-.offset-3 {
-  margin-left: 25%;
-}
-
-.offset-4 {
-  margin-left: 33.33333%;
-}
-
-.offset-5 {
-  margin-left: 41.66667%;
-}
-
-.offset-6 {
-  margin-left: 50%;
-}
-
-.offset-7 {
-  margin-left: 58.33333%;
-}
-
-.offset-8 {
-  margin-left: 66.66667%;
-}
-
-.offset-9 {
-  margin-left: 75%;
-}
-
-.offset-10 {
-  margin-left: 83.33333%;
-}
-
-.offset-11 {
-  margin-left: 91.66667%;
-}
-
-.g-0, .gx-0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.g-0 > *, .gx-0 > * {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.g-0, .gy-0, .g-0 > *, .gy-0 > * {
-  margin-top: 0;
-}
-
-.g-1, .gx-1 {
-  margin-left: -0.125rem;
-  margin-right: -0.125rem;
-}
-
-.g-1 > *, .gx-1 > * {
-  padding-left: 0.125rem;
-  padding-right: 0.125rem;
-}
-
-.g-1, .gy-1 {
-  margin-top: -0.25rem;
-}
-
-.g-1 > *, .gy-1 > * {
-  margin-top: 0.25rem;
-}
-
-.g-2, .gx-2 {
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
-}
-
-.g-2 > *, .gx-2 > * {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.g-2, .gy-2 {
-  margin-top: -0.5rem;
-}
-
-.g-2 > *, .gy-2 > * {
-  margin-top: 0.5rem;
-}
-
-.g-3, .gx-3 {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
-
-.g-3 > *, .gx-3 > * {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.g-3, .gy-3 {
-  margin-top: -1rem;
-}
-
-.g-3 > *, .gy-3 > * {
-  margin-top: 1rem;
-}
-
-.g-4, .gx-4 {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-}
-
-.g-4 > *, .gx-4 > * {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.g-4, .gy-4 {
-  margin-top: -1.5rem;
-}
-
-.g-4 > *, .gy-4 > * {
-  margin-top: 1.5rem;
-}
-
-.g-5, .gx-5 {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-.g-5 > *, .gx-5 > * {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.g-5, .gy-5 {
-  margin-top: -3rem;
-}
-
-.g-5 > *, .gy-5 > * {
-  margin-top: 3rem;
+  @for $i from 1 through $columns {
+    .col#{$name}-#{$i} {
+      flex: 0 0 auto;
+      width: 100*$i/$columns;
+    }
+    .offset#{$name}-#{$i} {
+      margin-left: 100*$i/$columns;
+    }
+    .offset#{$name}-#{$i} {
+      margin-left: 100*$i/$columns;
+    }
+  }
+  @each $i, $gutter in $gutters {
+    .g-#{$name}-#{$i},
+    .gx-#{$name}-#{$i}{
+      margin-left: -$gutter/2;
+      margin-right: -$gutter/2;
+    }
+    .g-#{$name}-#{$i} > *,
+    .gx-#{$name}-#{$i} > *{
+      padding-left: $gutter/2;
+      padding-right: $gutter/2;
+    }
+    .g-#{$name}-#{$i},
+    .gy-#{$name}-#{$i}{
+      margin-top: -$gutter;
+    }
+    .g-#{$name}-#{$i} > *,
+    .gy-#{$name}-#{$i} > *{
+      margin-top: $gutter;
+    }
+  }
 }
