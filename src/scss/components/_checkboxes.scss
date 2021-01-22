@@ -1,19 +1,38 @@
 .checkbox {
   appearance: none;
-  width: 18rem;
-  height: 18rem;
-  border: 1px solid gray;
+  width: $check-width;
+  width: var(--check-width, $check-width);
+  height: $check-height;
+  height: var(--check-height, $check-height);
+  border: $checkbox-border-width solid $checkbox-border-color;
+  border: var(--checkbox-border-width, $checkbox-border-width) solid var(--checkbox-border-color, $checkbox-border-color);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  &:checked {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ctext x='2' y='13'%3E&%23x2713;%3C/text%3E%3C/svg%3E");
+  &:hover {
+    background-color: $checkbox-hover-background-color;
+    background-color: var(--checkbox-hover-background-color, $checkbox-hover-background-color);
+  }
+
+  &:checked,
+  &:indeterminate {
     background-color: $checkbox-checked-background-color;
     background-color: var(--checkbox-checked-background-color, $checkbox-checked-background-color);
   }
 
-  &:hover {
-    background-color: $checkbox-focus-background-color;
-    background-color: var(--checkbox-focus-background-color, $checkbox-focus-background-color);
+  &:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E");
+  }
+
+  &:indeterminate {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath stroke='%23000' stroke-width='3' d='M6 10h8'/%3E%3C/svg%3E");
+  }
+  
+  &.light:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E");
+  }
+
+  &.light:indeterminate {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M6 10h8'/%3E%3C/svg%3E");
   }
 }
