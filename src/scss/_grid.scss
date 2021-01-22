@@ -67,12 +67,23 @@
   .col#{$name} {
     flex: 1 0 0%;
   }
-
-  
+  .row-cols#{$name}-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
   @for $i from 1 through $row-columns {
     .row-cols-#{$name}-#{$i} > * {
       flex: 0 0 auto;
       width: 100*$i/$columns;
+    }
+  }
+  .col#{$name}-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  @if $name!=""{
+    .offset#{$name}-0 {
+      margin-left: 0;
     }
   }
   @for $i from 1 through $columns {
