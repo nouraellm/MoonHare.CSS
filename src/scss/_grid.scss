@@ -1,6 +1,6 @@
 @mixin media($name, $breakpoint) {
   @if $name != "" {
-    @media #{$breakpoint} { @content; }
+    @media (min-width: #{$breakpoint}) { @content; }
   }
   @else {
     @content;
@@ -73,6 +73,7 @@
 }
 
 @each $name, $breakpoint in $breakpoints{
+  @include media($name, $breakpoint){
   .col#{$name} {
     flex: 1 0 0%;
   }
@@ -127,4 +128,4 @@
       margin-top: $gutter;
     }
   }
-}
+}}
