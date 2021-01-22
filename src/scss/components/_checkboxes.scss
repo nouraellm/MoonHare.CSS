@@ -1,33 +1,19 @@
 .checkbox {
-  user-select: none;
+  appearance: none;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid gray;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
-  input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-
-  .checkmark {
-    display: inline-block;
-    font-size: 1rem;
-    width:1rem;
-    height:1rem;
-    background-color: $checkbox-background-color;
-    background-color: var(--checkbox-background-color, $checkbox-background-color);
-    border: $checkbox-border-width solid $checkbox-border-color;
-    border: var(--checkbox-border-width, $checkbox-border-width) solid var(--checkbox-border-color, $checkbox-border-color);
-    vertical-align: middle;
-  }
-
-  &:hover input ~ .checkmark,
-  &:focus input ~ .checkmark{
-    background-color: $checkbox-focus-background-color;
-    background-color: var(--checkbox-focus-background-color, $checkbox-focus-background-color);
-  }
-
-  input:checked ~ .checkmark {
+  &:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ctext x='2' y='13'%3E&%23x2713;%3C/text%3E%3C/svg%3E");
     background-color: $checkbox-checked-background-color;
     background-color: var(--checkbox-checked-background-color, $checkbox-checked-background-color);
+  }
+
+  &:hover {
+    background-color: $checkbox-focus-background-color;
+    background-color: var(--checkbox-focus-background-color, $checkbox-focus-background-color);
   }
 }
