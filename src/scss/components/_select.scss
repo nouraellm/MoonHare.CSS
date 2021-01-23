@@ -11,7 +11,8 @@
   background-repeat: no-repeat;
   background-position: right;
   vertical-align: middle;
-  
+  min-width: $select-min-width;
+  max-width: $select-max-width;
 
   &:hover {
     background-image: url("data:image/svg+xml,#{$select-icon}"),
