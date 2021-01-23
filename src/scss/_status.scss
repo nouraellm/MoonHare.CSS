@@ -1,1 +1,24 @@
+input:hover,
+table.hover tbody tr:hover,
+button:hover,
+radiobutton:hover,
+select:hover,
+check:hover {
+  url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+}
 
+input:focus,
+button:focus,
+radiobutton:focus,
+select:focus,
+check:focus {
+  url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+}
+
+input:active,
+button:active,
+radiobutton:active,
+select:active,
+check:active {
+  url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+}
