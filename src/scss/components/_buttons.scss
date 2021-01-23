@@ -1,74 +1,29 @@
-.btn {
+.button {
   display: inline-block;
-  padding: $pad-y $pad-x;
-  padding: var(--pad-y, $pad-y) var(--pad-x, $pad-x);
-  background-color: $background-color;
-  background-color: var(--background-color, $background-color);
-  border: $border-width solid $border-color;
-  border: var(--border-width, $border-width) solid var(--border-color, $border-color);
+  padding: $button-pad-y $button-pad-x;
+  padding: var(--button-pad-y, $button-pad-y) var(--button-pad-x, $button-pad-x);
+  background-color: $button-background-color;
+  background-color: var(--button-background-color, $button-background-color);
+  border: $button-border-width solid $button-border-color;
+  border: var(--button-border-width, $button-border-width) solid var(--button-border-color, $button-border-color);
   outline: none;
   user-select: none;
   overflow: hidden;
   white-space: nowrap;
   vertical-align: middle;
-  font-size: $font-size;
-  font-size: var(--font-size, $font-size);
-  min-width: $min-width;
-  min-width: var(--min-width, $min-width);
-
-  &.icon {
-    background-position: $pad-y $pad-x;
-    background-repeat: no-repeat;
-    padding-left: $pad-x *2 +$font-size;
-    padding-left: calc(var(--pad-x, $pad-x) *2 +var(--font-size, $font-size));
-  }
+  text-align: center;
+  text-decoration: none;
+  min-width: $button-min-width;
 
   &:hover {
     background-color: #f2f2f2;
     background-color: rgba(0, 0, 0, 0.05);
-    background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05));
+    background-color: var(--button-hover-background-color, rgba(0, 0, 0, 0.05));
   }
 
   &:focus, &:active, &.active {
     background-color: #e6e6e6;
     background-color: rgba(0, 0, 0, 0.10);
-    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.10));
+    background-color: var(--button-active-background-color, rgba(0, 0, 0, 0.10));
   }
-}
-
-.dropdown {
-  position: absolute;
-  display: inline-block;
-}
-
-
-.dropdown .content {
-  display: none;
-  position: absolute;
-  background-color: $background-color;
-  background-color: var(--background-color, $background-color);
-  border: $border-width solid $border-color;
-  border: var(--border-width, $border-width) solid var(--border-color, $border-color);
-  z-index: 1;
-
-  item {
-    color: black;
-    padding: $pad-y $pad-x;
-    padding: var(--pad-y, $pad-y) var(--pad-x, $pad-x);
-    text-decoration: none;
-    display: block;
-
-    &:hover {
-      background-color: #f2f2f2;
-      background-color: rgba(0, 0, 0, 0.05);
-      background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.05));
-    }
-  }
-}
-
-.dropdown.hover-event:hover .content {
-  display: block;
-}
-.dropdown.focus-event:focus .content {
-  display: block;
 }

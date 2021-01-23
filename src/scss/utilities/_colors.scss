@@ -1,29 +1,25 @@
 @each $name, $hex in $colors {
-  .#{$name}-background {
+  .#{$name},
+  .hover-#{$name}:hover,
+  .focus-#{$name}:focus,
+  .active-#{$name}:active,
+  table.#{$name} th,
+  table.#{$name} td,
+  table.hover-#{$name} tbody tr:hover,
+  .even-striped.stripe-#{$name} tbody tr:nth-of-type(even),
+  .odd-striped.stripe-#{$name} tbody tr:nth-of-type(odd) {
     background-color: $hex;
   }
-  .#{$name}-text {
+  .#{$name}-text,
+  .hover-#{$name}-text:hover,
+  .focus-#{$name}-text:focus,
+  .active-#{$name}-text:active {
     color: $hex;
   }
-  .#{$name}-border {
+  .#{$name}-border,
+  .hover-#{$name}-border:hover,
+  .focus-#{$name}-border:focus,
+  .active-#{$name}-border:active {
     border-color: $hex;
-  }
-  .#{$name}-hover-background:hover {
-    background-color: color-lightness($hex, $hover-color-darken-percentage);
-  }
-  .#{$name}-hover-text:hover {
-    color: color-lightness($hex, $hover-color-darken-percentage);
-  }
-  .#{$name}-hover-border:hover {
-    border-color: color-lightness($hex, $hover-color-darken-percentage);
-  }
-  .#{$name}-focus-background:focus {
-    background-color: color-lightness($hex, $focus-color-darken-percentage);
-  }
-  .#{$name}-focus-text:focus {
-    color: color-lightness($hex, $focus-color-darken-percentage);
-  }
-  .#{$name}-focus-border:focus {
-    border-color: color-lightness($hex, $focus-color-darken-percentage);
   }
 }

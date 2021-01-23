@@ -1,21 +1,15 @@
-/* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .table {
   display: table;
-  background-color: transparent;
-  background-color: var(--bg-color, transparent);
-  color: black;
-  color: var(--color, black);
+  background-color: $table-background-color;
+  background-color: var(--table-background-color, $table-background-color);
   vertical-align: top;
-  margin-bottom: var(--margin-bottom, 1rem);
 
   th, td {
-    padding: 0.5rem 1rem;
-    padding: var(--pad-x, 0.5rem) var(--pad-y, 1rem);
+    padding: $table-pad-y $table-pad-x;
+    padding: var(--table-pad-y, $table-pad-y) var(--table-pad-x, $table-pad-x);
     vertical-align: top;
-    border-bottom: 1px solid lightgray;
-    border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
+    border-bottom: $table-border-width solid $table-border-color;
+    border-bottom: var(--table-border-width, $table-border-width) solid var(--table-border-color, $table-border-color);
   }
 
   > tbody {
@@ -24,67 +18,45 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid gray;
-    border-bottom: var(--header-border-width, 2px) solid var(--head-border-color, gray);
-    font-weight: bolder;
+    border-bottom: $table-header-border-width solid $table-header-border-color;
+    border-bottom: var(--table-header-border-width, $table-header-border-width) solid var(--table-header-border-color, $table-header-border-color);
+    font-weight: bold;
   }
 
-  > tbody + tbody {
-    border-top: 2px solid gray;
-    border-top: var(--header-border-width, 2px) solid var(--head-border-color, gray);
+  &.bordered,
+  &.bordered th,
+  &.bordered td {
+    border: $table-border-width solid $table-border-color;
+    border: var(--table-border-width, $table-border-width) solid var(--table-border-color, $table-border-color);
   }
-}
-
-/* Change placement of captions with a class */
-
-.caption-top {
-  caption-side: top;
-}
-
-/* Condensed table w/ half padding */
-
-.sm {
-  th, td {
-    padding: 0.25em;
-    padding: var(--pad-sm-x, 0.25rem) var(--pad-sm-y, 0.25rem);
-  }
-}
-
-.bordered {
-  border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
-
-  th, td {
-    border-bottom: var(--border-width, 1px) solid var(--border-color, lightgray);
-  }
-
-  thead {
+  &.bordered thead {
     th, td {
-      border-bottom-width: 2px;
-      border-bottom-width: var(--header-border-width, 2px);
+      border-bottom-width: $table-header-border-width;
+      border-bottom-width: var(--table-header-border-width, $table-header-border-width);
     }
   }
-}
 
-.borderless {
-  th, td, thead th, tbody + tbody {
-    border: 0;
+  &.borderless,
+  &.borderless td,
+  &.borderless th {
+      border: 0;
   }
-}
 
-.striped tbody tr:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  &.odd-striped tbody tr:nth-of-type(odd) {
+    background-color: $table-striped-background-color;
+    background-color: var(--table-striped-background-color, $table-striped-background-color);
+  }
 
-  /* hsl(0, 0%, 95%) */
-  background-color: rgba(0, 0, 0, 0.05);
-  background-color: var(--striped-bg-color, rgba(0, 0, 0, 0.05));
-}
+  &.even-striped tbody tr:nth-of-type(even) {
+    background-color: $table-striped-background-color;
+    background-color: var(--table-striped-background-color, $table-striped-background-color);
+  }
 
-.table.hover tbody tr:hover {
-  background-color: #ececec;
+  &.hover tbody tr:hover {
+    background-color: $table-hover-background-color;
+    background-color: var(--table-hover-background-color, $table-hover-background-color);
+  }
 
-  /* hsl(0, 0%, 92.5%) */
-  background-color: rgba(0, 0, 0, 0.075);
-  background-color: var(--hover-bg-color, rgba(0, 0, 0, 0.075));
 }
 
 .table-responsive {

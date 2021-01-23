@@ -1,0 +1,56 @@
+.radiobutton {
+  appearance: none;
+  width: $radiobutton-width;
+  width: var(--radiobutton-width, $radiobutton-width);
+  height: $radiobutton-height;
+  height: var(--radiobutton-height, $radiobutton-height);
+  border: $radiobutton-border-width solid $radiobutton-border-color;
+  border: var(--radiobutton-border-width, $radiobutton-border-width) solid
+    var(--radiobutton-border-color, $radiobutton-border-color);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+
+  &:checked {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+  }
+
+  &:checked:hover {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+  }
+
+  &:checked:focus {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+  }
+
+  &:checked:active {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+  }
+
+  .light-effect {
+    &:checked {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay-image}");
+    }
+
+    &:checked:hover {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay-image}");
+    }
+
+    &:checked:focus {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay-image}");
+    }
+
+    &:checked:active {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+    }
+  }
+}
