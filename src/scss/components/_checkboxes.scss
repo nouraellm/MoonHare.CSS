@@ -5,81 +5,82 @@
   height: $check-height;
   height: var(--check-height, $check-height);
   border: $checkbox-border-width solid $checkbox-border-color;
-  border: var(--checkbox-border-width, $checkbox-border-width) solid var(--checkbox-border-color, $checkbox-border-color);
+  border: var(--checkbox-border-width, $checkbox-border-width) solid
+    var(--checkbox-border-color, $checkbox-border-color);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
   &:checked {
     background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$dark-selected-overlay}");
+      url("data:image/svg+xml,#{$dark-selected-overlay}");
   }
   &:indeterminate {
     background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$dark-selected-overlay}");
+      url("data:image/svg+xml,#{$dark-selected-overlay}");
   }
 
   &:checked:hover {
     background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$dark-hover-overlay}");
+      url("data:image/svg+xml,#{$dark-hover-overlay}");
   }
   &:indeterminate:hover {
     background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$dark-hover-overlay}");
+      url("data:image/svg+xml,#{$dark-hover-overlay}");
   }
-  
+
   &:checked:focus {
     background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$dark-focus-overlay}");
+      url("data:image/svg+xml,#{$dark-focus-overlay}");
   }
   &:indeterminate:focus {
     background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$dark-focus-overlay}");
+      url("data:image/svg+xml,#{$dark-focus-overlay}");
   }
 
   &:checked:active {
     background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$dark-pressed-overlay}");
+      url("data:image/svg+xml,#{$dark-pressed-overlay}");
   }
   &:indeterminate:active {
     background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$dark-pressed-overlay}");
-  }
-  
-  .light-effect{
-  &:checked {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$light-selected-overlay}");
-  }
-  &:indeterminate {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$light-selected-overlay}");
+      url("data:image/svg+xml,#{$dark-pressed-overlay}");
   }
 
-  &:checked:hover {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$light-hover-overlay}");
-  }
-  &:indeterminate:hover {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$light-hover-overlay}");
-  }
-  
-  &:checked:focus {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$light-focus-overlay}");
-  }
-  &:indeterminate:focus {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$light-focus-overlay}");
-  }
+  .light-effect {
+    &:checked {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay}");
+    }
+    &:indeterminate {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay}");
+    }
 
-  &:checked:active {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-                      url("data:image/svg+xml,#{$light-pressed-overlay}");
-  }
-  &:indeterminate:active {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-                      url("data:image/svg+xml,#{$light-pressed-overlay}");
-  }
+    &:checked:hover {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay}");
+    }
+    &:indeterminate:hover {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay}");
+    }
+
+    &:checked:focus {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay}");
+    }
+    &:indeterminate:focus {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay}");
+    }
+
+    &:checked:active {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay}");
+    }
+    &:indeterminate:active {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay}");
+    }
   }
 }
