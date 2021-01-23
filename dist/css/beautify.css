@@ -7511,15 +7511,6 @@ template, [hidden] {
   border: var(--input-border-width, 1px) solid var(--input-border-color, #fafafa);
   font-size: 1rem;
   font-size: var(--input-font-size, 1rem); }
-  .input:focus {
-    border-color: #fafafa;
-    border-color: var(--input-border-focus-color, #fafafa); }
-  .input:invalid {
-    border-color: #ffebee;
-    border-color: var(--input-border-invalid-color, #ffebee); }
-  .input:valid {
-    border-color: #e8f5e9;
-    border-color: var(--input-border-valid-color, #e8f5e9); }
 
 textarea.input {
   height: auto;
