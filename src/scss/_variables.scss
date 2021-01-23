@@ -375,7 +375,6 @@ $input-border-focus-color: map-get($colors, gray-50);
 $input-border-valid-color: map-get($colors, green-50);
 $input-border-invalid-color: map-get($colors, red-50);
 
-$checkbox-background-color: transparent;
 $checkbox-border-width: 1px;
 $checkbox-border-color: map-get($colors, gray-500);
 $checkbox-width: 1.125rem;
@@ -385,8 +384,9 @@ $checkbox-indeterminate-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
 $checkbox-checked-icon-light: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
 $checkbox-indeterminate-icon-light: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
 
-$radio-background-color: transparent;
-$radio-border-width: 1px;
-$radio-border-color: map-get($colors, gray-500);
-$radio-focus-background-color: map-get($colors, gray-50);
-$radio-checked-background-color: map-get($colors, black);
+$radiobutton-border-width: 1px;
+$radiobutton-border-color: map-get($colors, gray-500);
+$radiobutton-width: 1.125rem;
+$radiobutton-height: 1.125rem;
+$radiobutton-checked-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23000'/%3E%3C/svg%3E";
+$radiobutton-checked-icon-light: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23fff'/%3E%3C/svg%3E";
