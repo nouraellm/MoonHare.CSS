@@ -1,3 +1,24 @@
+$dark-hover-overlay: 4%;
+$dark-focus-overlay: 12%;
+$dark-selected-overlay: 8%;
+$dark-activated-overlay: 12%;
+$dark-pressed-overlay: 12%;
+$dark-dragged-overlay: 8%;
+
+$light-hover-overlay: 8%;
+$light-focus-overlay: 24%;
+$light-selected-overlay: 16%;
+$light-activated-overlay: 24%;
+$light-pressed-overlay: 32%;
+$light-dragged-overlay: 16%;
+
+$image-hover-overlay: 12%;
+$image-focus-overlay: 36%;
+$image-selected-overlay: 24%;
+$image-activated-overlay: 36%;
+$image-pressed-overlay: 48%;
+$image-dragged-overlay: 32%;
+
 // Grid
 $breakpoints: (
   "" : 0,
