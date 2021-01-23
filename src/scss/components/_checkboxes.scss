@@ -9,6 +9,7 @@
     var(--checkbox-border-color, $checkbox-border-color);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  vertical-align: middle;
 
   &:checked {
     background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
