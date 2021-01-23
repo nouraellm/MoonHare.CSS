@@ -1,3 +1,67 @@
+$dark-hover-overlay: 4%;
+$dark-focus-overlay: 12%;
+$dark-selected-overlay: 8%;
+$dark-activated-overlay: 12%;
+$dark-pressed-overlay: 12%;
+$dark-dragged-overlay: 8%;
+
+$light-hover-overlay: 8%;
+$light-focus-overlay: 24%;
+$light-selected-overlay: 16%;
+$light-activated-overlay: 24%;
+$light-pressed-overlay: 32%;
+$light-dragged-overlay: 16%;
+
+$image-hover-overlay: 12%;
+$image-focus-overlay: 36%;
+$image-selected-overlay: 24%;
+$image-activated-overlay: 36%;
+$image-pressed-overlay: 48%;
+$image-dragged-overlay: 32%;
+
+$overlay-base: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(r,g,b,a);'></svg>";
+
+$dark-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-hover-overlay/100%});'%3E%3C/svg%3E";
+$dark-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-focus-overlay/100%});'%3E%3C/svg%3E";
+$dark-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-selected-overlay/100%});'%3E%3C/svg%3E";
+$dark-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-activated-overlay/100%});'%3E%3C/svg%3E";
+$dark-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-pressed-overlay/100%});'%3E%3C/svg%3E";
+$dark-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-dragged-overlay/100%});'%3E%3C/svg%3E";
+
+$light-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-hover-overlay/100%});'%3E%3C/svg%3E";
+$light-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-focus-overlay/100%});'%3E%3C/svg%3E";
+$light-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-selected-overlay/100%});'%3E%3C/svg%3E";
+$light-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-activated-overlay/100%});'%3E%3C/svg%3E";
+$light-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-pressed-overlay/100%});'%3E%3C/svg%3E";
+$light-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-dragged-overlay/100%});'%3E%3C/svg%3E";
+
+$image-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-hover-overlay/100%});'%3E%3C/svg%3E";
+$image-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-focus-overlay/100%});'%3E%3C/svg%3E";
+$image-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-selected-overlay/100%});'%3E%3C/svg%3E";
+$image-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-activated-overlay/100%});'%3E%3C/svg%3E";
+$image-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-pressed-overlay/100%});'%3E%3C/svg%3E";
+$image-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-dragged-overlay/100%});'%3E%3C/svg%3E";
+
+// Grid
+$breakpoints: (
+  "" : 0,
+  sm : 576px,
+  md : 768px,
+  lg : 992px,
+  xl : 1200px,
+  xxl: 1400px
+);
+$columns: 12;
+$row-columns: 6;
+$gutters: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+);
+
 //Colors
 $colors: (
   red-50: #ffebee,
@@ -306,7 +370,36 @@ $input-pad-y: 0.75rem;
 $input-pad-x: 0.75rem;
 $input-font-size: 1rem;
 $input-border-width: 1px;
-$input-border-color: map-get($colors, gray-500);
+$input-border-color: map-get($colors, gray-50);
 $input-border-focus-color: map-get($colors, gray-50);
 $input-border-valid-color: map-get($colors, green-50);
 $input-border-invalid-color: map-get($colors, red-50);
+
+// Check Box
+$checkbox-border-width: 1px;
+$checkbox-border-color: map-get($colors, gray-500);
+$checkbox-width: 1.125rem;
+$checkbox-height: 1.125rem;
+$checkbox-checked-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-indeterminate-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-checked-light-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-indeterminate-light-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+
+// Radio Button
+$radiobutton-border-width: 1px;
+$radiobutton-border-color: map-get($colors, gray-500);
+$radiobutton-width: 1.125rem;
+$radiobutton-height: 1.125rem;
+$radiobutton-checked-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23000'/%3E%3C/svg%3E";
+$radiobutton-checked-light-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23fff'/%3E%3C/svg%3E";
+
+// Select
+$select-pad-y: 0.375rem;
+$select-pad-x: 0.75rem;
+$select-min-width: 5.25rem;
+$select-max-width: 13.125rem;
+$select-font-size: 1rem;
+$select-border-width: 1px;
+$select-border-color: map-get($colors, gray-500);
+$select-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'%3E%3Cpath d='M2 5l6 6 6-6'/%3E%3C/svg%3E";
+$select-light-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'%3E%3Cpath fill='%23fff' d='M2 5l6 6 6-6'/%3E%3C/svg%3E";

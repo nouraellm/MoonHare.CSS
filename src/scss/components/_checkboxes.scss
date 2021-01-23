@@ -1,0 +1,87 @@
+.checkbox {
+  appearance: none;
+  width: $checkbox-width;
+  width: var(--checkbox-width, $checkbox-width);
+  height: $checkbox-height;
+  height: var(--checkbox-height, $checkbox-height);
+  border: $checkbox-border-width solid $checkbox-border-color;
+  border: var(--checkbox-border-width, $checkbox-border-width) solid
+    var(--checkbox-border-color, $checkbox-border-color);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+
+  &:checked {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+  }
+  &:indeterminate {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+  }
+
+  &:checked:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+  }
+  &:indeterminate:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+  }
+
+  &:checked:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+  }
+  &:indeterminate:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+  }
+
+  &:checked:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+  }
+  &:indeterminate:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+  }
+
+  .light-effect {
+    &:checked {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay-image}");
+    }
+    &:indeterminate {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay-image}");
+    }
+
+    &:checked:hover {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay-image}");
+    }
+    &:indeterminate:hover {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay-image}");
+    }
+
+    &:checked:focus {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay-image}");
+    }
+    &:indeterminate:focus {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay-image}");
+    }
+
+    &:checked:active {
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+    }
+    &:indeterminate:active {
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+    }
+  }
+}

@@ -1,37 +1,24 @@
 @each $name, $hex in $colors {
-  .#{$name}-background {
+  .#{$name},
+  .hover-#{$name}:hover,
+  .focus-#{$name}:focus,
+  .active-#{$name}:active,
+  table.#{$name} th,
+  table.#{$name} td,
+  table.hover-#{$name} tbody tr:hover,
+  .even-striped.stripe-#{$name} tbody tr:nth-of-type(even),
+  .odd-striped.stripe-#{$name} tbody tr:nth-of-type(odd) {
     background-color: $hex;
   }
-  .#{$name}-text {
-    color: $hex;
-  }
-  .#{$name}-border {
-    border-color: $hex;
-  }
-  .hover-#{$name}-background:hover {
-    background-color: $hex;
-  }
-  .hover-#{$name}-text:hover {
-    color: $hex;
-  }
-  .hover-#{$name}-border:hover {
-    border-color: $hex;
-  }
-  .focus-#{$name}-background:focus {
-    background-color: $hex;
-  }
-  .focus-#{$name}-text:focus {
-    color: $hex;
-  }
-  .focus-#{$name}-border:focus {
-    border-color: $hex;
-  }
-  .active-#{$name}-background:active {
-    background-color: $hex;
-  }
+  .#{$name}-text,
+  .hover-#{$name}-text:hover,
+  .focus-#{$name}-text:focus,
   .active-#{$name}-text:active {
     color: $hex;
   }
+  .#{$name}-border,
+  .hover-#{$name}-border:hover,
+  .focus-#{$name}-border:focus,
   .active-#{$name}-border:active {
     border-color: $hex;
   }
