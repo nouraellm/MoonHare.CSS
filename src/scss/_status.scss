@@ -1,0 +1,61 @@
+.input:hover,
+.table.hover tbody tr:hover,
+.button:hover,
+.radiobutton:hover,
+.select:hover,
+.check:hover {
+  background-image: url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+}
+
+.input:focus,
+.button:focus,
+.radiobutton:focus,
+.select:focus,
+.check:focus {
+  background-image: url("data:image/svg+xml,#{$dark-focus-overlay-image}");
+}
+
+.input:active,
+.button:active,
+.radiobutton:active,
+.select:active,
+.check:active {
+  background-image: url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+}
+
+.input.light-effect:hover,
+.table.light-effect.hover tbody tr:hover,
+.button.light-effect:hover,
+.radiobutton.light-effect:hover,
+.select.light-effect:hover,
+.check.light-effect:hover {
+  background-image: url("data:image/svg+xml,#{$light-hover-overlay-image}");
+}
+
+.input.light-effect:focus,
+.button.light-effect:focus,
+.radiobutton.light-effect:focus,
+.select.light-effect:focus,
+.check.light-effect:focus {
+  background-image: url("data:image/svg+xml,#{$light-focus-overlay-image}");
+}
+
+.input.light-effect:active,
+.button.light-effect:active,
+.radiobutton.light-effect:active,
+.select.light-effect:active,
+.check.light-effect:active {
+  background-image: url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+}
+
+.image-effect:hover{
+  background-image: url("data:image/svg+xml,#{$image-hover-overlay-image}");
+}
+
+.image-effect:focus{
+  background-image: url("data:image/svg+xml,#{$image-focus-overlay-image}");
+}
+
+.image-effect:active{
+  background-image: url("data:image/svg+xml,#{$image-pressed-overlay-image}");
+}
