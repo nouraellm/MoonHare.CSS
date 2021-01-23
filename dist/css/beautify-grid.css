@@ -80,7 +80,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -319,13 +320,16 @@ template, [hidden] {
     max-width: 1320px; } }
 
 .row {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-right: -0.75rem;
   margin-left: -0.75rem; }
   .row > * {
     box-sizing: border-box;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 100%;
     max-width: 100%;
     padding-right: 0.75rem;
@@ -337,42 +341,52 @@ template, [hidden] {
     clear: both; }
 
 .col {
-  flex: 1 0 0%; }
+  -ms-flex: 1 0 0%;
+      flex: 1 0 0%; }
 
 .row-cols-auto > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto; }
 
 .row-cols--1 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 8.33333; }
 
 .row-cols--2 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 16.66667; }
 
 .row-cols--3 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 25; }
 
 .row-cols--4 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 33.33333; }
 
 .row-cols--5 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 41.66667; }
 
 .row-cols--6 > * {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 50; }
 
 .col-auto {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto; }
 
 .col-1 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 8.33333; }
 
 .offset-1 {
@@ -382,7 +396,8 @@ template, [hidden] {
   margin-left: 8.33333; }
 
 .col-2 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 16.66667; }
 
 .offset-2 {
@@ -392,7 +407,8 @@ template, [hidden] {
   margin-left: 16.66667; }
 
 .col-3 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 25; }
 
 .offset-3 {
@@ -402,7 +418,8 @@ template, [hidden] {
   margin-left: 25; }
 
 .col-4 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 33.33333; }
 
 .offset-4 {
@@ -412,7 +429,8 @@ template, [hidden] {
   margin-left: 33.33333; }
 
 .col-5 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 41.66667; }
 
 .offset-5 {
@@ -422,7 +440,8 @@ template, [hidden] {
   margin-left: 41.66667; }
 
 .col-6 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 50; }
 
 .offset-6 {
@@ -432,7 +451,8 @@ template, [hidden] {
   margin-left: 50; }
 
 .col-7 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 58.33333; }
 
 .offset-7 {
@@ -442,7 +462,8 @@ template, [hidden] {
   margin-left: 58.33333; }
 
 .col-8 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 66.66667; }
 
 .offset-8 {
@@ -452,7 +473,8 @@ template, [hidden] {
   margin-left: 66.66667; }
 
 .col-9 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 75; }
 
 .offset-9 {
@@ -462,7 +484,8 @@ template, [hidden] {
   margin-left: 75; }
 
 .col-10 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 83.33333; }
 
 .offset-10 {
@@ -472,7 +495,8 @@ template, [hidden] {
   margin-left: 83.33333; }
 
 .col-11 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 91.66667; }
 
 .offset-11 {
@@ -482,7 +506,8 @@ template, [hidden] {
   margin-left: 91.66667; }
 
 .col-12 {
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 100; }
 
 .offset-12 {
@@ -601,112 +626,133 @@ template, [hidden] {
 
 @media (min-width: 576px) {
   .colsm {
-    flex: 1 0 0%; }
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%; }
   .row-colssm-auto > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .row-cols-sm-1 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .row-cols-sm-2 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .row-cols-sm-3 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .row-cols-sm-4 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .row-cols-sm-5 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .row-cols-sm-6 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .colsm-auto {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .offsetsm-0 {
     margin-left: 0; }
   .colsm-1 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .offsetsm-1 {
     margin-left: 8.33333; }
   .offsetsm-1 {
     margin-left: 8.33333; }
   .colsm-2 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .offsetsm-2 {
     margin-left: 16.66667; }
   .offsetsm-2 {
     margin-left: 16.66667; }
   .colsm-3 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .offsetsm-3 {
     margin-left: 25; }
   .offsetsm-3 {
     margin-left: 25; }
   .colsm-4 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .offsetsm-4 {
     margin-left: 33.33333; }
   .offsetsm-4 {
     margin-left: 33.33333; }
   .colsm-5 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .offsetsm-5 {
     margin-left: 41.66667; }
   .offsetsm-5 {
     margin-left: 41.66667; }
   .colsm-6 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .offsetsm-6 {
     margin-left: 50; }
   .offsetsm-6 {
     margin-left: 50; }
   .colsm-7 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 58.33333; }
   .offsetsm-7 {
     margin-left: 58.33333; }
   .offsetsm-7 {
     margin-left: 58.33333; }
   .colsm-8 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 66.66667; }
   .offsetsm-8 {
     margin-left: 66.66667; }
   .offsetsm-8 {
     margin-left: 66.66667; }
   .colsm-9 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 75; }
   .offsetsm-9 {
     margin-left: 75; }
   .offsetsm-9 {
     margin-left: 75; }
   .colsm-10 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 83.33333; }
   .offsetsm-10 {
     margin-left: 83.33333; }
   .offsetsm-10 {
     margin-left: 83.33333; }
   .colsm-11 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 91.66667; }
   .offsetsm-11 {
     margin-left: 91.66667; }
   .offsetsm-11 {
     margin-left: 91.66667; }
   .colsm-12 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 100; }
   .offsetsm-12 {
     margin-left: 100; }
@@ -799,112 +845,133 @@ template, [hidden] {
 
 @media (min-width: 768px) {
   .colmd {
-    flex: 1 0 0%; }
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%; }
   .row-colsmd-auto > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .row-cols-md-1 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .row-cols-md-2 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .row-cols-md-3 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .row-cols-md-4 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .row-cols-md-5 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .row-cols-md-6 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .colmd-auto {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .offsetmd-0 {
     margin-left: 0; }
   .colmd-1 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .offsetmd-1 {
     margin-left: 8.33333; }
   .offsetmd-1 {
     margin-left: 8.33333; }
   .colmd-2 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .offsetmd-2 {
     margin-left: 16.66667; }
   .offsetmd-2 {
     margin-left: 16.66667; }
   .colmd-3 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .offsetmd-3 {
     margin-left: 25; }
   .offsetmd-3 {
     margin-left: 25; }
   .colmd-4 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .offsetmd-4 {
     margin-left: 33.33333; }
   .offsetmd-4 {
     margin-left: 33.33333; }
   .colmd-5 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .offsetmd-5 {
     margin-left: 41.66667; }
   .offsetmd-5 {
     margin-left: 41.66667; }
   .colmd-6 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .offsetmd-6 {
     margin-left: 50; }
   .offsetmd-6 {
     margin-left: 50; }
   .colmd-7 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 58.33333; }
   .offsetmd-7 {
     margin-left: 58.33333; }
   .offsetmd-7 {
     margin-left: 58.33333; }
   .colmd-8 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 66.66667; }
   .offsetmd-8 {
     margin-left: 66.66667; }
   .offsetmd-8 {
     margin-left: 66.66667; }
   .colmd-9 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 75; }
   .offsetmd-9 {
     margin-left: 75; }
   .offsetmd-9 {
     margin-left: 75; }
   .colmd-10 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 83.33333; }
   .offsetmd-10 {
     margin-left: 83.33333; }
   .offsetmd-10 {
     margin-left: 83.33333; }
   .colmd-11 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 91.66667; }
   .offsetmd-11 {
     margin-left: 91.66667; }
   .offsetmd-11 {
     margin-left: 91.66667; }
   .colmd-12 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 100; }
   .offsetmd-12 {
     margin-left: 100; }
@@ -997,112 +1064,133 @@ template, [hidden] {
 
 @media (min-width: 992px) {
   .collg {
-    flex: 1 0 0%; }
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%; }
   .row-colslg-auto > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .row-cols-lg-1 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .row-cols-lg-2 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .row-cols-lg-3 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .row-cols-lg-4 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .row-cols-lg-5 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .row-cols-lg-6 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .collg-auto {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .offsetlg-0 {
     margin-left: 0; }
   .collg-1 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .offsetlg-1 {
     margin-left: 8.33333; }
   .offsetlg-1 {
     margin-left: 8.33333; }
   .collg-2 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .offsetlg-2 {
     margin-left: 16.66667; }
   .offsetlg-2 {
     margin-left: 16.66667; }
   .collg-3 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .offsetlg-3 {
     margin-left: 25; }
   .offsetlg-3 {
     margin-left: 25; }
   .collg-4 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .offsetlg-4 {
     margin-left: 33.33333; }
   .offsetlg-4 {
     margin-left: 33.33333; }
   .collg-5 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .offsetlg-5 {
     margin-left: 41.66667; }
   .offsetlg-5 {
     margin-left: 41.66667; }
   .collg-6 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .offsetlg-6 {
     margin-left: 50; }
   .offsetlg-6 {
     margin-left: 50; }
   .collg-7 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 58.33333; }
   .offsetlg-7 {
     margin-left: 58.33333; }
   .offsetlg-7 {
     margin-left: 58.33333; }
   .collg-8 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 66.66667; }
   .offsetlg-8 {
     margin-left: 66.66667; }
   .offsetlg-8 {
     margin-left: 66.66667; }
   .collg-9 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 75; }
   .offsetlg-9 {
     margin-left: 75; }
   .offsetlg-9 {
     margin-left: 75; }
   .collg-10 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 83.33333; }
   .offsetlg-10 {
     margin-left: 83.33333; }
   .offsetlg-10 {
     margin-left: 83.33333; }
   .collg-11 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 91.66667; }
   .offsetlg-11 {
     margin-left: 91.66667; }
   .offsetlg-11 {
     margin-left: 91.66667; }
   .collg-12 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 100; }
   .offsetlg-12 {
     margin-left: 100; }
@@ -1195,112 +1283,133 @@ template, [hidden] {
 
 @media (min-width: 1200px) {
   .colxl {
-    flex: 1 0 0%; }
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%; }
   .row-colsxl-auto > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .row-cols-xl-1 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .row-cols-xl-2 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .row-cols-xl-3 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .row-cols-xl-4 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .row-cols-xl-5 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .row-cols-xl-6 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .colxl-auto {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .offsetxl-0 {
     margin-left: 0; }
   .colxl-1 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .offsetxl-1 {
     margin-left: 8.33333; }
   .offsetxl-1 {
     margin-left: 8.33333; }
   .colxl-2 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .offsetxl-2 {
     margin-left: 16.66667; }
   .offsetxl-2 {
     margin-left: 16.66667; }
   .colxl-3 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .offsetxl-3 {
     margin-left: 25; }
   .offsetxl-3 {
     margin-left: 25; }
   .colxl-4 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .offsetxl-4 {
     margin-left: 33.33333; }
   .offsetxl-4 {
     margin-left: 33.33333; }
   .colxl-5 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .offsetxl-5 {
     margin-left: 41.66667; }
   .offsetxl-5 {
     margin-left: 41.66667; }
   .colxl-6 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .offsetxl-6 {
     margin-left: 50; }
   .offsetxl-6 {
     margin-left: 50; }
   .colxl-7 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 58.33333; }
   .offsetxl-7 {
     margin-left: 58.33333; }
   .offsetxl-7 {
     margin-left: 58.33333; }
   .colxl-8 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 66.66667; }
   .offsetxl-8 {
     margin-left: 66.66667; }
   .offsetxl-8 {
     margin-left: 66.66667; }
   .colxl-9 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 75; }
   .offsetxl-9 {
     margin-left: 75; }
   .offsetxl-9 {
     margin-left: 75; }
   .colxl-10 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 83.33333; }
   .offsetxl-10 {
     margin-left: 83.33333; }
   .offsetxl-10 {
     margin-left: 83.33333; }
   .colxl-11 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 91.66667; }
   .offsetxl-11 {
     margin-left: 91.66667; }
   .offsetxl-11 {
     margin-left: 91.66667; }
   .colxl-12 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 100; }
   .offsetxl-12 {
     margin-left: 100; }
@@ -1393,112 +1502,133 @@ template, [hidden] {
 
 @media (min-width: 1400px) {
   .colxxl {
-    flex: 1 0 0%; }
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%; }
   .row-colsxxl-auto > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .row-cols-xxl-1 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .row-cols-xxl-2 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .row-cols-xxl-3 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .row-cols-xxl-4 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .row-cols-xxl-5 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .row-cols-xxl-6 > * {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .colxxl-auto {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: auto; }
   .offsetxxl-0 {
     margin-left: 0; }
   .colxxl-1 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 8.33333; }
   .offsetxxl-1 {
     margin-left: 8.33333; }
   .offsetxxl-1 {
     margin-left: 8.33333; }
   .colxxl-2 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 16.66667; }
   .offsetxxl-2 {
     margin-left: 16.66667; }
   .offsetxxl-2 {
     margin-left: 16.66667; }
   .colxxl-3 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 25; }
   .offsetxxl-3 {
     margin-left: 25; }
   .offsetxxl-3 {
     margin-left: 25; }
   .colxxl-4 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 33.33333; }
   .offsetxxl-4 {
     margin-left: 33.33333; }
   .offsetxxl-4 {
     margin-left: 33.33333; }
   .colxxl-5 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 41.66667; }
   .offsetxxl-5 {
     margin-left: 41.66667; }
   .offsetxxl-5 {
     margin-left: 41.66667; }
   .colxxl-6 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 50; }
   .offsetxxl-6 {
     margin-left: 50; }
   .offsetxxl-6 {
     margin-left: 50; }
   .colxxl-7 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 58.33333; }
   .offsetxxl-7 {
     margin-left: 58.33333; }
   .offsetxxl-7 {
     margin-left: 58.33333; }
   .colxxl-8 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 66.66667; }
   .offsetxxl-8 {
     margin-left: 66.66667; }
   .offsetxxl-8 {
     margin-left: 66.66667; }
   .colxxl-9 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 75; }
   .offsetxxl-9 {
     margin-left: 75; }
   .offsetxxl-9 {
     margin-left: 75; }
   .colxxl-10 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 83.33333; }
   .offsetxxl-10 {
     margin-left: 83.33333; }
   .offsetxxl-10 {
     margin-left: 83.33333; }
   .colxxl-11 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 91.66667; }
   .offsetxxl-11 {
     margin-left: 91.66667; }
   .offsetxxl-11 {
     margin-left: 91.66667; }
   .colxxl-12 {
-    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     width: 100; }
   .offsetxxl-12 {
     margin-left: 100; }
