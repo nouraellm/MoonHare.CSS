@@ -10,8 +10,6 @@
   background-image: url("data:image/svg+xml,#{$select-icon}");
   background-repeat: no-repeat;
   background-position: right;
-  font-size: $select-background-size;
-  font-size: var(--select-background-size, $select-background-size);
   vertical-align: middle;
   
 
