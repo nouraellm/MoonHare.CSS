@@ -26,8 +26,9 @@ jobs:
           npm install
           npx browserslist@latest --update-db
       - name: Compile CSS
-        run:
+        run: |
           npm run sass:build
+          npm run prefix
 
       - name:  Clean
         run: |
