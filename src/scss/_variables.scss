@@ -378,12 +378,12 @@ $input-border-invalid-color: map-get($colors, red-50);
 $checkbox-background-color: transparent;
 $checkbox-border-width: 1px;
 $checkbox-border-color: map-get($colors, gray-500);
-$checkbox-focus-background-color: map-get($colors, gray-50);
-$checkbox-checked-background-color: map-get($colors, black);
-$checkbox-checked-icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
-$checkbox-indeterminate-icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
-$checkbox-checked-icon-light: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
-$checkbox-indeterminate-icon-light: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-width: 1.125rem;
+$checkbox-eight: 1.125rem;
+$checkbox-checked-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-indeterminate-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-checked-icon-light: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
+$checkbox-indeterminate-icon-light: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E";
 
 $radio-background-color: transparent;
 $radio-border-width: 1px;
