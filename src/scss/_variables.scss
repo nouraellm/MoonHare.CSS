@@ -21,21 +21,21 @@ $image-dragged-overlay: 32%;
 
 $overlay-base: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(r,g,b,a);'></svg>";
 
-$dark-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-hover-overlay/100%});'%3E%3C/svg%3E"
+$dark-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-hover-overlay/100%});'%3E%3C/svg%3E";
 $dark-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-focus-overlay/100%});'%3E%3C/svg%3E";
 $dark-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-selected-overlay/100%});'%3E%3C/svg%3E";
 $dark-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-activated-overlay/100%});'%3E%3C/svg%3E";
 $dark-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-pressed-overlay/100%});'%3E%3C/svg%3E";
 $dark-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-dragged-overlay/100%});'%3E%3C/svg%3E";
 
-$light-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-hover-overlay/100%});'%3E%3C/svg%3E"
+$light-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-hover-overlay/100%});'%3E%3C/svg%3E";
 $light-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-focus-overlay/100%});'%3E%3C/svg%3E";
 $light-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-selected-overlay/100%});'%3E%3C/svg%3E";
 $light-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-activated-overlay/100%});'%3E%3C/svg%3E";
 $light-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-pressed-overlay/100%});'%3E%3C/svg%3E";
 $light-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-dragged-overlay/100%});'%3E%3C/svg%3E";
 
-$image-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-hover-overlay/100%});'%3E%3C/svg%3E"
+$image-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-hover-overlay/100%});'%3E%3C/svg%3E";
 $image-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-focus-overlay/100%});'%3E%3C/svg%3E";
 $image-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-selected-overlay/100%});'%3E%3C/svg%3E";
 $image-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-activated-overlay/100%});'%3E%3C/svg%3E";
