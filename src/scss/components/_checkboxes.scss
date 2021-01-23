@@ -9,29 +9,77 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  &:hover {
-    opacity: hover;
-  }
-
-  &:checked,
-  &:indeterminate {
-    background-color: $checkbox-checked-background-color;
-    background-color: var(--checkbox-checked-background-color, $checkbox-checked-background-color);
-  }
-
   &:checked {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$dark-selected-overlay}");
+  }
+  &:indeterminate {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$dark-selected-overlay}");
   }
 
-  &:indeterminate {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath stroke='%23000' stroke-width='3' d='M6 10h8'/%3E%3C/svg%3E");
+  &:checked:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$dark-hover-overlay}");
+  }
+  &:indeterminate:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$dark-hover-overlay}");
   }
   
-  &.light:checked {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3l6-6'/%3E%3C/svg%3E");
+  &:checked:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$dark-focus-overlay}");
+  }
+  &:indeterminate:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$dark-focus-overlay}");
   }
 
-  &.light:indeterminate {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M6 10h8'/%3E%3C/svg%3E");
+  &:checked:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$dark-pressed-overlay}");
+  }
+  &:indeterminate:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$dark-pressed-overlay}");
+  }
+  
+  .light-effect{
+  &:checked {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$light-selected-overlay}");
+  }
+  &:indeterminate {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$light-selected-overlay}");
+  }
+
+  &:checked:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$light-hover-overlay}");
+  }
+  &:indeterminate:hover {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$light-hover-overlay}");
+  }
+  
+  &:checked:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$light-focus-overlay}");
+  }
+  &:indeterminate:focus {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$light-focus-overlay}");
+  }
+
+  &:checked:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+                      url("data:image/svg+xml,#{$light-pressed-overlay}");
+  }
+  &:indeterminate:active {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+                      url("data:image/svg+xml,#{$light-pressed-overlay}");
+  }
   }
 }
