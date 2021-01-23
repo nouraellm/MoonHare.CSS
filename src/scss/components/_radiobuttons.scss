@@ -1,36 +1,56 @@
-.radio {
-  display: block;
-  user-select: none;
+.radiobutton {
+  appearance: none;
+  width: $radiobutton-width;
+  width: var(--radiobutton-width, $radiobutton-width);
+  height: $radiobutton-height;
+  height: var(--radiobutton-height, $radiobutton-height);
+  border: $radiobutton-border-width solid $radiobutton-border-color;
+  border: var(--radiobutton-border-width, $radiobutton-border-width) solid
+    var(--radiobutton-border-color, $radiobutton-border-color);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
 
-  input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+  &:checked {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
   }
 
-  .mark {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    padding: 0.3rem;
-    background-clip: content-box;
-    background-color: $radio-background-color;
-    background-color: var(--radio-background-color, $radio-background-color);
-    border: $radio-border-width solid $radio-border-color;
-    border: var(--radio-border-width, $radio-border-width) solid var(--radio-border-color, $radio-border-color);
-    border-radius: 50%;
-    vertical-align: middle;
+  &:checked:hover {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
   }
 
-  &:hover input ~ .mark,
-  &:focus input ~ .mark {
-    background-color: $radio-focus-background-color;
-    background-color: var(--radio-focus-background-color, $radio-focus-background-color);
+  &:checked:focus {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
   }
 
-  input:checked ~ .mark {
-    background-color: $radio-checked-background-color;
-    background-color: var(--radio-checked-background-color, $radio-checked-background-color);
+  &:checked:active {
+    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
+      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
+  }
+
+  .light-effect {
+    &:checked {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-selected-overlay-image}");
+    }
+
+    &:checked:hover {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-hover-overlay-image}");
+    }
+
+    &:checked:focus {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-focus-overlay-image}");
+    }
+
+    &:checked:active {
+      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
+        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
+    }
   }
 }
