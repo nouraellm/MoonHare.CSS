@@ -25,7 +25,7 @@
 
   &:active {
     background-image: url("data:image/svg+xml,#{$select-icon}"),
-      url("data:image/svg+xml,#{$dark-activated-overlay-image}");
+      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
   }
 
   .light-effect {
@@ -41,7 +41,7 @@
 
     &:active {
       background-image: url("data:image/svg+xml,#{$select-light-icon}"),
-        url("data:image/svg+xml,#{$light-activated-overlay-image}");
+        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
     }
   }
 }
