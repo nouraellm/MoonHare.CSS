@@ -49,38 +49,38 @@
 
   .light-effect {
     &:checked {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
         url("data:image/svg+xml,#{$light-selected-overlay-image}");
     }
     &:indeterminate {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
         url("data:image/svg+xml,#{$light-selected-overlay-image}");
     }
 
     &:checked:hover {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
         url("data:image/svg+xml,#{$light-hover-overlay-image}");
     }
     &:indeterminate:hover {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
         url("data:image/svg+xml,#{$light-hover-overlay-image}");
     }
 
     &:checked:focus {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
         url("data:image/svg+xml,#{$light-focus-overlay-image}");
     }
     &:indeterminate:focus {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
         url("data:image/svg+xml,#{$light-focus-overlay-image}");
     }
 
     &:checked:active {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
         url("data:image/svg+xml,#{$light-pressed-overlay-image}");
     }
     &:indeterminate:active {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
+      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
         url("data:image/svg+xml,#{$light-pressed-overlay-image}");
     }
   }
