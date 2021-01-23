@@ -1,9 +1,9 @@
 .checkbox {
   appearance: none;
-  width: $check-width;
-  width: var(--check-width, $check-width);
-  height: $check-height;
-  height: var(--check-height, $check-height);
+  width: $checkbox-width;
+  width: var(--checkbox-width, $checkbox-width);
+  height: $checkbox-height;
+  height: var(--checkbox-height, $checkbox-height);
   border: $checkbox-border-width solid $checkbox-border-color;
   border: var(--checkbox-border-width, $checkbox-border-width) solid
     var(--checkbox-border-color, $checkbox-border-color);
