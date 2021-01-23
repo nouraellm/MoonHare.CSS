@@ -7,12 +7,13 @@
  
 @import "variables";
 
+@import "reset";
+@import "status";
+@import "grid";
+
 @import "utilities";
 @import "utilities/_api";
 @import "utilities/colors";
-
-@import "reset";
-@import "grid";
 
 @import "components/inputs";
 @import "components/tables";
