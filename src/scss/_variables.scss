@@ -332,17 +332,17 @@ $border-widths: (
   5: 5px
 ) !default;
 
-$border-color:                $gray-300 !default;
+$border-color:                map-get($colors, gray-500) !default;
 
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-pill:          50rem !default;
 
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow:                  0 .5rem 1rem rgba(map-get($colors,black), .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba(map-get($colors, black), .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba(map-get($colors, black), .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba(map-get($colors, black), .075) !default;
 $position-values: (
   0: 0,
   50: 50%,
