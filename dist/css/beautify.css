@@ -1828,6 +1828,18 @@ template, [hidden] {
 .box-content {
   box-sizing: content-box; }
 
+.clear-left {
+  clear: left; }
+
+.clear-right {
+  clear: right; }
+
+.clear-both {
+  clear: both; }
+
+.clear-none {
+  clear: none; }
+
 .float-start {
   float: left; }
 
