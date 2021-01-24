@@ -1949,6 +1949,24 @@ template, [hidden] {
 .border-start-0 {
   border-left: 0; }
 
+.border-0 {
+  border-width: 0; }
+
+.border-1 {
+  border-width: 1px; }
+
+.border-2 {
+  border-width: 2px; }
+
+.border-3 {
+  border-width: 3px; }
+
+.border-4 {
+  border-width: 4px; }
+
+.border-5 {
+  border-width: 5px; }
+
 .w-25 {
   width: 25%; }
 
