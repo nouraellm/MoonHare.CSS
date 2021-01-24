@@ -34,6 +34,18 @@ $utilities: map-merge(
         none: none,
       ),
     ),
+    "object-fit": (
+      responsive: true,
+      property: object-fit,
+      class: object,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        none: none,
+        scale-down: scale-down,
+      ),
+    ),
     "float": (
       responsive: true,
       property: float,
