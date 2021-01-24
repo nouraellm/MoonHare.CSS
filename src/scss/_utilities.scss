@@ -23,10 +23,11 @@ $utilities: map-merge(
         none: none,
         both: both,
     ),
-    "ovject-fit": (
+    "object-fit": (
       responsive: true,
       property: object-fit,
       values: contain cover fill none scale-down,
+    ),
     "float": (
       responsive: true,
       property: float,
