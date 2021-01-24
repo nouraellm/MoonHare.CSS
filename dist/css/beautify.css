@@ -1949,6 +1949,244 @@ template, [hidden] {
 .border-start-0 {
   border-left: 0; }
 
+.w-25 {
+  width: 25%; }
+
+.w-50 {
+  width: 50%; }
+
+.w-75 {
+  width: 75%; }
+
+.w-100 {
+  width: 100%; }
+
+.w-auto {
+  width: auto; }
+
+.mw-100 {
+  max-width: 100%; }
+
+.vw-100 {
+  width: 100vw; }
+
+.min-vw-100 {
+  min-width: 100vw; }
+
+.h-25 {
+  height: 25%; }
+
+.h-50 {
+  height: 50%; }
+
+.h-75 {
+  height: 75%; }
+
+.h-100 {
+  height: 100%; }
+
+.h-auto {
+  height: auto; }
+
+.mh-100 {
+  max-height: 100%; }
+
+.vh-100 {
+  height: 100vh; }
+
+.min-vh-100 {
+  min-height: 100vh; }
+
+.flex-fill {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+
+.flex-row {
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.flex-column {
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.flex-row-reverse {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
+
+.flex-column-reverse {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+
+.flex-grow-0 {
+  -ms-flex-positive: 0;
+      flex-grow: 0; }
+
+.flex-grow-1 {
+  -ms-flex-positive: 1;
+      flex-grow: 1; }
+
+.flex-shrink-0 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.flex-shrink-1 {
+  -ms-flex-negative: 1;
+      flex-shrink: 1; }
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flex-nowrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+.flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+
+.gap-0 {
+  gap: 0; }
+
+.gap-1 {
+  gap: 0.25rem; }
+
+.gap-2 {
+  gap: 0.5rem; }
+
+.gap-3 {
+  gap: 1rem; }
+
+.gap-4 {
+  gap: 1.5rem; }
+
+.gap-5 {
+  gap: 3rem; }
+
+.justify-content-start {
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+
+.justify-content-end {
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+
+.justify-content-center {
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.justify-content-between {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.justify-content-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.justify-content-evenly {
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+
+.align-items-start {
+  -ms-flex-align: start;
+      align-items: flex-start; }
+
+.align-items-end {
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+.align-items-center {
+  -ms-flex-align: center;
+      align-items: center; }
+
+.align-items-baseline {
+  -ms-flex-align: baseline;
+      align-items: baseline; }
+
+.align-items-stretch {
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+
+.align-content-start {
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.align-content-end {
+  -ms-flex-line-pack: end;
+      align-content: flex-end; }
+
+.align-content-center {
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.align-content-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
+
+.align-content-around {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
+
+.align-content-stretch {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch; }
+
+.align-self-auto {
+  -ms-flex-item-align: auto;
+      align-self: auto; }
+
+.align-self-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.align-self-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.align-self-center {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.align-self-baseline {
+  -ms-flex-item-align: baseline;
+      align-self: baseline; }
+
+.align-self-stretch {
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
+
+.order-first {
+  -ms-flex-order: -1;
+      order: -1; }
+
+.order-0 {
+  -ms-flex-order: 0;
+      order: 0; }
+
+.order-1 {
+  -ms-flex-order: 1;
+      order: 1; }
+
+.order-2 {
+  -ms-flex-order: 2;
+      order: 2; }
+
+.order-3 {
+  -ms-flex-order: 3;
+      order: 3; }
+
+.order-4 {
+  -ms-flex-order: 4;
+      order: 4; }
+
+.order-5 {
+  -ms-flex-order: 5;
+      order: 5; }
+
+.order-last {
+  -ms-flex-order: 6;
+      order: 6; }
+
 @media print {
   .d-print-inline {
     display: inline; }
