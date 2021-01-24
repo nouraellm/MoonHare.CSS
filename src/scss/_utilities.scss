@@ -22,7 +22,11 @@ $utilities: map-merge(
         right: right,
         none: none,
         both: both,
-      )
+    ),
+    "ovject-fit": (
+      responsive: true,
+      property: object-fit,
+      values: contain cover fill none scale-down,
     "float": (
       responsive: true,
       property: float,
@@ -30,8 +34,8 @@ $utilities: map-merge(
         start: left,
         end: right,
         none: none,
-      )
-    ),
+    )
+  ),
 ),
   $utilities
 );
