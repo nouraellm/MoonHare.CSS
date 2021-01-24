@@ -14,20 +14,6 @@ $utilities: map-merge(
       class: d,
       values: inline inline-block block grid table table-row table-cell flex inline-flex none
     ),
-    "clear": (
-      responsive: true,
-      property: clear,
-      values: (
-        left: left,
-        right: right,
-        none: none,
-        both: both,
-    ),
-    "object-fit": (
-      responsive: true,
-      property: object-fit,
-      values: contain cover fill none scale-down,
-    ),
     "float": (
       responsive: true,
       property: float,
@@ -35,7 +21,7 @@ $utilities: map-merge(
         start: left,
         end: right,
         none: none,
-    )
+    ),
   ),
 ),
   $utilities
