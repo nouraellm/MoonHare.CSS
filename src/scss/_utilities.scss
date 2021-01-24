@@ -7,45 +7,6 @@ $utilities: map-merge(
       class: align,
       values: baseline top middle bottom text-bottom text-top
     ),
-    "display": (
-      responsive: true,
-      print: true,
-      property: display,
-      class: d,
-      values: inline inline-block block grid table table-row table-cell flex inline-flex none
-    ),
-    "box-sizing": (
-      responsive: true,
-      property: box-sizing,
-      class: box,
-      values: (
-        border: border-box,
-        content: content-box,
-      ),
-    ),
-    "clear": (
-      responsive: true,
-      property: clear,
-      class: clear,
-      values: (
-        left: left,
-        right: right,
-        both: both,
-        none: none,
-      ),
-    ),
-    "object-fit": (
-      responsive: true,
-      property: object-fit,
-      class: object,
-      values: (
-        contain: contain,
-        cover: cover,
-        fill: fill,
-        none: none,
-        scale-down: scale-down,
-      ),
-    ),
     "float": (
       responsive: true,
       property: float,
@@ -53,8 +14,97 @@ $utilities: map-merge(
         start: left,
         end: right,
         none: none,
+      )
+    ),
+    "overflow": (
+      property: overflow,
+      values: auto hidden visible scroll,
+    ),
+    "display": (
+      responsive: true,
+      print: true,
+      property: display,
+      class: d,
+      values: inline inline-block block grid table table-row table-cell flex inline-flex none
+    ),
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      values: (
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        none: none,
+      )
+    ),
+    "position": (
+      property: position,
+      values: static relative absolute fixed sticky
+    ),
+    "top": (
+      property: top,
+      values: $position-values
+    ),
+    "bottom": (
+      property: bottom,
+      values: $position-values
+    ),
+    "start": (
+      property: left,
+      class: start,
+      values: $position-values
+    ),
+    "end": (
+      property: right,
+      class: end,
+      values: $position-values
+    ),
+    "translate-middle": (
+      property: transform,
+      class: translate-middle,
+      values: (
+        null: translate(-50%, -50%),
+        x: translateX(-50%),
+        y: translateY(-50%),
+      )
+    ),
+    "border": (
+      property: border,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-top": (
+      property: border-top,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-end": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-start": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
     ),
   ),
-),
   $utilities
 );
