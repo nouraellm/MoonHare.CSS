@@ -14,13 +14,24 @@ $utilities: map-merge(
       class: d,
       values: inline inline-block block grid table table-row table-cell flex inline-flex none
     ),
-    "box -sizing": (
+    "box-sizing": (
       responsive: true,
       property: box-sizing,
       class: box,
       values: (
         border: border-box,
         content: content-box,
+      ),
+    ),
+    "clear": (
+      responsive: true,
+      property: clear,
+      class: clear,
+      values: (
+        left: left,
+        right: right,
+        both: both,
+        none: none,
       ),
     ),
     "float": (
