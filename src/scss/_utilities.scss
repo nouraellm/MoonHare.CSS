@@ -105,6 +105,11 @@ $utilities: map-merge(
         0: 0,
       )
     ),
+    "border-width": (
+      property: border-width,
+      class: border,
+      values: $border-widths
+    ),
     "width": (
       property: width,
       class: w,
