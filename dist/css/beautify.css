@@ -1822,6 +1822,12 @@ template, [hidden] {
 .d-none {
   display: none; }
 
+.box-border {
+  box-sizing: border-box; }
+
+.box-content {
+  box-sizing: content-box; }
+
 .float-start {
   float: left; }
 
