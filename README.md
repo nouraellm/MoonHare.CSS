@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="#nolink">
-    <img src="https://beautifycss.github.io/logo.png" alt="Beautify logo" width="200" height="165">
+    <img src="https://github.com/MoonHareLabs.png" alt="Beautify logo" width="200" height="165">
   </a>
 </p>
 
