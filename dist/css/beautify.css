@@ -1840,6 +1840,26 @@ template, [hidden] {
 .clear-none {
   clear: none; }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain; }
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill; }
+
+.object-none {
+  -o-object-fit: none;
+     object-fit: none; }
+
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down; }
+
 .float-start {
   float: left; }
 
