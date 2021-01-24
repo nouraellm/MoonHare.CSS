@@ -7,6 +7,13 @@ $utilities: map-merge(
       class: align,
       values: baseline top middle bottom text-bottom text-top
     ),
+    "display": (
+      responsive: true,
+      print: true,
+      property: display,
+      class: d,
+      values: inline inline-block block grid table table-row table-cell flex inline-flex none
+    ),
     "float": (
       responsive: true,
       property: float,
