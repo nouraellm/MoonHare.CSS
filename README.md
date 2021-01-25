@@ -184,6 +184,7 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 <!-- CONTACT -->
 ## Contact
 
+![](https://bitbucket.org/favicon.ico)
 Bitbucket - https://bitbucket.org/moonharelabs/
 
 Gitlab - https://gitlab.com/moonharelabs
