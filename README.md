@@ -190,5 +190,5 @@ Bitbucket - https://bitbucket.org/moonharelabs/
 ![](https://gitlab.com/favicon.ico)
 Gitlab - https://gitlab.com/moonharelabs
 
-![](https://sourceforge.net/favicon.ico)
+<img src="https://sourceforge.net/favicon.ico" width="32" height="32"></img>
 Sourceforge - https://sourceforge.net/projects/moonhare-css/
