@@ -183,5 +183,6 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 
 <!-- CONTACT -->
 ## Contact
-N/A
-
+Bitbucket - https://bitbucket.org/moonharelabs/
+Gitlab - https://gitlab.com/moonharelabs
+Sourceforge - https://sourceforge.net/projects/moonhare-css/
