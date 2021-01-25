@@ -5,7 +5,7 @@
   </a>
 </p>
 
-<h3 align="center">Beautify</h3>
+<h3 align="center">MoonHare.CSS</h3>
 
 <p align="center">
   Beautiful, costomizeable, and powerful front-end framework for faster and easier web development.
@@ -60,7 +60,7 @@ There are many great CSS frameworks available on for web development, however, t
 
 ### Built With
 
-Beautify is created using SASS(Syntactically Awesome Style Sheets). and Compiled(Converted) to CSS(Cascading Style Sheets).
+MoonHare.CSS is created using SASS(Syntactically Awesome Style Sheets). and Compiled(Converted) to CSS(Cascading Style Sheets).
 Featuring Sass variables and mixins to customize from ground.
 ```scss
 $colors: (
@@ -72,14 +72,14 @@ $colors: (
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Get started with Beautify.css, Framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
-Looking to quickly add Beautify to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the releases page](https://github.com/beautifycss/Beautify/releases).
+Get started with MoonHare.CSS, Framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
+Looking to quickly add MoonHare.CSS to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the releases page](https://github.com/beautifycss/Beautify/releases).
 
 ### Installation
 Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other stylesheets to load our CSS.
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/beautifycss/Beautify/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
 ```
 
 ### Starter template
@@ -97,7 +97,7 @@ Copy
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Beautify.CSS -->
-    <link href="https://cdn.jsdelivr.net/gh/beautifycss/Beautify/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
@@ -116,11 +116,11 @@ That’s all you need for overall page requirements.
 
 ### Important globals
 
-Beautify employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the  _normalization_  of cross browser styles. Let’s dive in.
+MoonHare.CSS employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the  _normalization_  of cross browser styles. Let’s dive in.
 
 #### HTML5 doctype
 
-Beautify requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.
+MoonHare.CSS requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.
 ```html
 <!doctype html>
 <html lang="en">
@@ -130,7 +130,7 @@ Beautify requires the use of the HTML5 doctype. Without it, you’ll see some fu
 
 #### Responsive meta tag
 
-Beautify is developed  _mobile first_, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices,  **add the responsive viewport meta tag**  to your  `<head>`.
+MoonHare.CSS is developed  _mobile first_, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices,  **add the responsive viewport meta tag**  to your  `<head>`.
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
