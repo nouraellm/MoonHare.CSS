@@ -202,4 +202,4 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 
 [![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/moonharelabs/)
 
-[![](https://img.shields.io/badge/sourceforge-F6C915?style=for-the-badge&logo=sourceforge&logoColor=white)](https://sourceforge.net/projects/moonhare-css/)
+[![](https://img.shields.io/badge/sourceforge-FF6600?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
