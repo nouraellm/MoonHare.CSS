@@ -171,17 +171,11 @@ Contributions are what make the open source community such an amazing place to b
 
 Source code is hosted on various places.
 
-![](https://bitbucket.org/favicon.ico)
+[![](https://img.shields.io/badge/Bitbucket-e6e6e6?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
 
-[Bitbucket](https://bitbucket.org/moonharelabs/)
+[![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
 
-![](https://gitlab.com/favicon.ico)
-
-[Gitlab](https://gitlab.com/moonharelabs/)
-
-<img src="https://sourceforge.net/favicon.ico" width="32" height="32"></img>
-
-[Sourceforge](https://sourceforge.net/projects/moonhare-css/)
+[![](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
 
 Read our [contributing guide](https://github.com/beautifycss/Beautify/blob/main/CONTRIBUTING.md) and [Code of conduct](https://github.com/beautifycss/Beautify/blob/main/CODE_OF_CONDUCT.md) before contributing.
 1. Fork the Project
