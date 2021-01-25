@@ -187,6 +187,8 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 ![](https://bitbucket.org/favicon.ico)
 Bitbucket - https://bitbucket.org/moonharelabs/
 
+![](https://gitlab.com/favicon.ico)
 Gitlab - https://gitlab.com/moonharelabs
 
+![](https://sourceforge.net/favicon.ico)
 Sourceforge - https://sourceforge.net/projects/moonhare-css/
