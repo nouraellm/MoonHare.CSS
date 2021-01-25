@@ -169,6 +169,20 @@ See the [open issues](https://github.com/beautifycss/Beautify/issues) for a list
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+Source code is hosted on various places.
+
+![](https://bitbucket.org/favicon.ico)
+
+[Bitbucket](https://bitbucket.org/moonharelabs/)
+
+![](https://gitlab.com/favicon.ico)
+
+[Gitlab](https://gitlab.com/moonharelabs/)
+
+<img src="https://sourceforge.net/favicon.ico" width="32" height="32"></img>
+
+[Sourceforge](https://sourceforge.net/projects/moonhare-css/)
+
 Read our [contributing guide](https://github.com/beautifycss/Beautify/blob/main/CONTRIBUTING.md) and [Code of conduct](https://github.com/beautifycss/Beautify/blob/main/CODE_OF_CONDUCT.md) before contributing.
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -181,8 +195,8 @@ Read our [contributing guide](https://github.com/beautifycss/Beautify/blob/main/
 
 Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycss/Beautify/blob/main/LICENSE) for more information.
 
-<!-- CONTACT -->
-## Contact
+<!-- COMMUNITY -->
+## Community
 
 ![](https://bitbucket.org/favicon.ico)
 
