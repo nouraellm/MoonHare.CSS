@@ -185,10 +185,13 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 ## Contact
 
 ![](https://bitbucket.org/favicon.ico)
-Bitbucket - https://bitbucket.org/moonharelabs/
+
+[Bitbucket](https://bitbucket.org/moonharelabs/)
 
 ![](https://gitlab.com/favicon.ico)
-Gitlab - https://gitlab.com/moonharelabs
+
+[Gitlab](https://gitlab.com/moonharelabs/)
 
 <img src="https://sourceforge.net/favicon.ico" width="32" height="32"></img>
-Sourceforge - https://sourceforge.net/projects/moonhare-css/
+
+[Sourceforge](https://sourceforge.net/projects/moonhare-css/)
