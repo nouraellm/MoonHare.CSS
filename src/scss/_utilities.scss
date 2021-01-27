@@ -35,6 +35,47 @@ $utilities: map-merge(
       class: d,
       values: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none
     ),
+    "clear": (
+      property: clear,
+      values: left right both none
+    ),
+    "object-fit": (
+      property: object-fit,
+      class: object,
+      values: contain cover fill none scale-down
+    ),
+    "object-position": (
+      property: object-position,
+      class: object,
+      values: bottom center left left-bottom left-top right right-bottom right-top top
+    ),
+    "overflow-x": (
+      property: overflow,
+      values: auto hidden visible scroll
+    ),
+    "overflow-x": (
+      property: overflow-x,
+      values: auto hidden visible scroll
+    ),
+    "overflow-y": (
+      property: overflow-y,
+      values: auto hidden visible scroll
+    ),
+    "overscroll-behavior": (
+      property: overscroll-behavior,
+      class: overscroll,
+      values: auto contain none
+    ),
+    "overscroll-behavior-x": (
+      property: overscroll-behavior-x,
+      class: overscroll-x,
+      values: auto contain none
+    ),
+    "overscroll-behavior-y": (
+      property: overscroll-behavior-y,
+      class: overscroll-y,
+      values: auto contain none
+    ),
     "shadow": (
       property: box-shadow,
       class: shadow,
