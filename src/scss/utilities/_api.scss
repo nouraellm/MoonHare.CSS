@@ -68,11 +68,13 @@
   @if type-of($utility) == "map" and map-get($utility, responsive) == true {
     @each $name, $breakpoint in $breakpoints{
       @include media($name, $breakpoint){
-        @include generate-utility($utility, $name);
+        @include generate-utility($utility, "-"+$name);
       }
     }
   }
-  @include generate-utility($utility, "");
+  @else {
+    @include generate-utility($utility, "");
+  }
 }
 
 // Print utilities
