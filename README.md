@@ -20,32 +20,6 @@
   <a href="#demo">View Demo</a>
 </p>
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -113,52 +87,6 @@ Copy
 ```
 
 That’s all you need for overall page requirements.
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-
-### Important globals
-
-MoonHare.CSS employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the  _normalization_  of cross browser styles. Let’s dive in.
-
-#### HTML5 doctype
-
-MoonHare.CSS requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.
-```html
-<!doctype html>
-<html lang="en">
-  ...
-</html>
-```
-
-#### Responsive meta tag
-
-MoonHare.CSS is developed  _mobile first_, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices,  **add the responsive viewport meta tag**  to your  `<head>`.
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
-```
-
-#### Box-sizing
-
-For more straightforward sizing in CSS, we switch the global  `box-sizing`  value from  `content-box`  to  `border-box`. This ensures  `padding`  does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.
-
-On the rare occasion you need to override it, use something like the following:
-
-```css
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
-
-```
-
-With the above snippet, nested elements—including generated content via  `::before`  and  `::after`—will all inherit the specified  `box-sizing`  for that  `.selector-for-some-widget`.
-
-Learn more about  [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
-
-#### Reset
-
-For improved cross-browser rendering, we use  **Reset**  to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
 
 
 <!-- ROADMAP -->
