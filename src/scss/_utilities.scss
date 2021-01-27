@@ -16,10 +16,6 @@ $utilities: map-merge(
         none: none,
       )
     ),
-    "overflow": (
-      property: overflow,
-      values: auto hidden visible scroll,
-    ),
     "box-sizing": (
       property: box-sizing,
       class: box,
@@ -49,7 +45,7 @@ $utilities: map-merge(
       class: object,
       values: bottom center left left-bottom left-top right right-bottom right-top top
     ),
-    "overflow-x": (
+    "overflow": (
       property: overflow,
       values: auto hidden visible scroll
     ),
