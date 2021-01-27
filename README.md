@@ -21,16 +21,12 @@
 </p>
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+Quickly design and customize responsive mobile-first sites with MoonHare, modern front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful utilities collection.
 
-There are many great CSS frameworks available on for web development, however, they are different. I wanted a fully customizeable and easy to use solution. So I created a new framework.
-
-- Customizeable - Offers a head start implementing a custom design with its own identity.
-- No Javascript - Only pure css...
-- Responsive - It's working finely in different devices, and mobile-first.
-- Grid - Responsive and Powerful grid system,
-- Components - Basic extensive prebuilt components.
+- Components - essential components.
+  - Grid
+  - Buttons
+  
 
 ### Built With
 
