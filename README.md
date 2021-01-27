@@ -40,7 +40,7 @@ Quickly design and customize responsive mobile-first sites with MoonHare, modern
     ...
   };
   ```
-  - CSS(Cascading Style Sheets) - Featuring CSS variables to customize easily.
+  - CSS(Cascading Style Sheets) ![](https://img.shields.io/badge?message=%20&style=for-the-badge&logo=css3) - Featuring CSS variables to customize easily.
   ```css
   :root {
     --font-color: white;
