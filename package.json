@@ -1,27 +1,27 @@
 {
-  "name": "Beautify.css",
-  "version": "1.0.0",
-  "author": "Kavindu Santhusa",
-  "license": "MIT",
-  "description": "A minimalist front-end design toolkit for developing web apps.",
-  "homepage": "https://github.com/MoonHareLabs/MoonHare",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/beautifycss/Beautify.git"
+  "name":"Beautify.css",
+  "version":"1.0.0",
+  "author":"Kavindu Santhusa",
+  "license":"MIT",
+  "description":"A minimalist front-end design toolkit for developing web apps.",
+  "homepage":"https://github.com/MoonHareLabs/MoonHare",
+  "main":"index.js",
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/beautifycss/Beautify.git"
   },
-  "bugs": {
-    "url": "https://github.com/beautifycss/Beautify/issues"
+  "bugs":{
+    "url":"https://github.com/beautifycss/Beautify/issues"
   },
-  "scripts": {
-    "sass:watch": "node-sass src/scss/ -o dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded",
-    "sass:build": "node-sass src/scss/ -o dist/css/ -r",
-    "sass:build:docs": "node-sass src/scss/beautify.scss docs/css/beautify.css --source-map-embed --source-map-contents --output-style expanded",
-    "prefix": "postcss dist/css/*.css -r --use=autoprefixer --no-map",
-    "gulp-css": "gulp css",
-    "gulp-watch": "gulp watch"
+  "scripts":{
+    "sass:watch":"node-sass src/scss/ -o dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded",
+    "sass:build":"node-sass src/scss/ -o dist/css/ -r",
+    "sass:build:docs":"node-sass src/scss/beautify.scss docs/css/beautify.css --source-map-embed --source-map-contents --output-style expanded",
+    "prefix":"postcss dist/css/*.css -r --use=autoprefixer --no-map",
+    "gulp-css":"gulp css",
+    "gulp-watch":"gulp watch"
   },
-  "keywords": [
+  "keywords":[
     "css",
     "sass",
     "mobile-first",
@@ -30,26 +30,28 @@
     "framework",
     "web"
   ],
-  "private": false,
-  "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.14.0",
-    "postcss-cli": "^7.1.1"
+  "private":false,
+  "devDependencies":{
+    "autoprefixer":"^9.7.6",
+    "cssnano":"^4.1.10",
+    "gulp":"^4.0.1",
+    "gulp-postcss":"^8.0.0",
+    "gulp-rename":"^2.0.0",
+    "gulp-sass":"^4.0.2",
+    "gulp-sourcemaps":"^2.6.5",
+    "node-sass":"^4.14.0",
+    "postcss-cli":"^7.1.1"
   },
-  "dependencies": {},
-  "style": "dist/css/moonhare.css",
-  "sass": "src/scss/moonhare.scss",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MoonHareLabs/MoonHare.git"
+  "dependencies":{
+    
   },
-  "bugs": {
-    "url": "https://github.com/MoonHareLabs/MoonHare/issues"
+  "style":"dist/css/moonhare.css",
+  "sass":"src/scss/moonhare.scss",
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/MoonHareLabs/MoonHare.git"
   },
+  "bugs":{
+    "url":"https://github.com/MoonHareLabs/MoonHare/issues"
+  }
 }
