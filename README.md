@@ -31,19 +31,15 @@ Quickly design and customize responsive mobile-first sites with MoonHare, modern
   - Forms - Fixes for style form components.
   - Menus - Powerful menus for Navigation.
   and more...
-- Utilities - 
-
-
-### Built With
-
-MoonHare.CSS is created using SASS(Syntactically Awesome Style Sheets). and Compiled(Converted) to CSS(Cascading Style Sheets).
-Featuring Sass variables and mixins to customize from ground.
-```scss
-$colors: (
-  red: #fff,
-  ...
-};
-```
+- Utilities - Large collection of utility classes and small production build size.
+- Customizeable - MoonHare.CSS is created using SASS(Syntactically Awesome Style Sheets). and Compiled(Converted) to CSS(Cascading Style Sheets).
+  Featuring Sass variables and mixins to customize from ground.
+  ```scss
+  $colors: (
+    red: #fff,
+    ...
+  };
+  ```
 
 <!-- GETTING STARTED -->
 ## Getting Started
