@@ -82,7 +82,8 @@ Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other style
 <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
 ```
 ```diff
-! Warning: Don't use CDN for testing purposes. Because It returns cached files.
+! Warning: Don't use CDN for testing purposes.
+! Because It returns cached files.
 ```
 
 ### Starter template
