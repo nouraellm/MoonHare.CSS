@@ -4,7 +4,7 @@
   "author": "Kavindu Santhusa",
   "license": "MIT",
   "description": "A minimalist front-end design toolkit for developing web apps.",
-  "homepage": "https://github.com/beautifycss/Beautify",
+  "homepage": "https://github.com/MoonHareLabs/MoonHare",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -22,11 +22,13 @@
     "gulp-watch": "gulp watch"
   },
   "keywords": [
+    "css",
     "sass",
-    "boilerplate",
+    "mobile-first",
+    "responsive",
+    "front-end",
     "framework",
-    "css framework",
-    "design"
+    "web"
   ],
   "private": false,
   "devDependencies": {
@@ -40,5 +42,14 @@
     "node-sass": "^4.14.0",
     "postcss-cli": "^7.1.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "style": "dist/css/moonhare.css",
+  "sass": "src/scss/moonhare.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonHareLabs/MoonHare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MoonHareLabs/MoonHare/issues"
+  },
 }
