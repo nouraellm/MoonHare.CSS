@@ -196,7 +196,7 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 <!-- COMMUNITY -->
 ## Community
 
-[![](https://img.shields.io/badge/Bitbucket-e6e6e6?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
+[![](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
 
 [![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
 
