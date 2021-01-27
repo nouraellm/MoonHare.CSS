@@ -32,7 +32,7 @@ $utilities: map-merge(
       responsive: true,
       print: true,
       property: display,
-      class: d,
+      class: null,
       values: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none
     ),
     "clear": (
