@@ -81,6 +81,7 @@ Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other style
 ```html
 <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
 ```
+<p class="text-purple" style="background-color:blue;">Warning</p>
 
 ### Starter template
 
