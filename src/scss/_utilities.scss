@@ -105,9 +105,16 @@ $utilities: map-merge(
     ),
     "visibility": (
       print: true,
+      resonsive: true,
       property: visibility,
       class: null,
       values: invisible visible
+    ),
+    "z-index": (
+      property: z-index,
+      resonsive: true,
+      class: z,
+      values: 0 10 20 30 40 50 auto
     ),
     "translate-middle": (
       property: transform,
