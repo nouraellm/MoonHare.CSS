@@ -20,18 +20,26 @@ $utilities: map-merge(
       property: overflow,
       values: auto hidden visible scroll,
     ),
+    "box-sizing": (
+      property: box-sizing,
+      class: box,
+      values: (
+        border: border-box,
+        content: content-box,
+      )
+    ),
     "display": (
       responsive: true,
       print: true,
       property: display,
       class: d,
-      values: inline inline-block block grid table table-row table-cell flex inline-flex none
+      values: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none
     ),
     "shadow": (
       property: box-shadow,
       class: shadow,
       values: (
-        null: $box-shadow,
+        null: $box-shadow, 
         sm: $box-shadow-sm,
         lg: $box-shadow-lg,
         none: none,
