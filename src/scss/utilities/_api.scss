@@ -1,5 +1,15 @@
 // Utility generator
 // Used to generate utilities & print utilities
+
+@mixin media($name, $breakpoint) {
+  @if $name != "" {
+    @media (min-width: #{$breakpoint}) { @content; }
+  }
+  @else {
+    @content;
+  }
+}
+
 @mixin generate-utility($utility, $infix) {
   $values: map-get($utility, values);
 
@@ -55,6 +65,13 @@
 }
 
 @each $key, $utility in $utilities {
+  @if type-of($utility) == "map" and map-get($utility, responsive) == true {
+    @each $name, $breakpoint in $breakpoints{
+      @include media($name, $breakpoint){
+        @include generate-utility($utility, $name);
+      }
+    }
+  }
   @include generate-utility($utility, "");
 }
 
