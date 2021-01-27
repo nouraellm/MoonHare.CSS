@@ -25,7 +25,6 @@ $utilities: map-merge(
       )
     ),
     "display": (
-      responsive: true,
       print: true,
       property: display,
       class: null,
@@ -103,6 +102,12 @@ $utilities: map-merge(
       property: right,
       class: end,
       values: $position-values
+    ),
+    "visibility": (
+      print: true,
+      property: visibility,
+      class: null,
+      values: invisible visible
     ),
     "translate-middle": (
       property: transform,
