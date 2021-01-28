@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">MoonHare.CSS</h3>
+<h1 align="center">MoonHare</h3>
 
 <p align="center">
   <b>Beautiful, costomizeable, and powerful front-end framework for faster and easier web development.</b>
