@@ -129,6 +129,8 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 
 [![twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/harelabs/)
 [![slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://twitter.com/harelabs/)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@moonharelabs)
+[![Dev.To](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@moonharelabs)
 [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MoonHareLabs/MoonHare)
 [![bitbucket](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
 [![gitlab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
