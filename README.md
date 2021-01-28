@@ -1,3 +1,4 @@
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/moonharelabs/moonhare/Build/main?logo=github&style=for-the-badge)
 
 <p align="center">
   <a href="#nolink">
