@@ -5,10 +5,10 @@
   </a>
 </p>
 
-<h3 align="center">MoonHare.CSS</h3>
+<h1 align="center">MoonHare.CSS</h3>
 
 <p align="center">
-  Beautiful, costomizeable, and powerful front-end framework for faster and easier web development.
+  <b>Beautiful, costomizeable, and powerful front-end framework for faster and easier web development.</b>
   <br>
   <a href="#docs"><strong>Explore Beautify docs »</strong></a>
   <br>
@@ -20,27 +20,28 @@
   <a href="#demo">View Demo</a>
 </p>
 
+<hr>
 
 Quickly design and customize responsive mobile-first sites with MoonHare, modern front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful utilities collection.
 
 - **Cross browser** - Makes browsers render all elements more consistently and in line with modern standards.
 - **Components** - essential components.
-  - Grid - Mobile-first twelve column flexbox grid system, six default responsive tiers.
-  - Buttons - Minimal styled button for actions.
-  - Tables - Cross Browser tables for show Data.
-  - Forms - Fixes for style form components.
-  - Menus - Powerful menus for Navigation.
+  - **Grid** - Mobile-first twelve column flexbox grid system, six default responsive tiers.
+  - **Buttons** - Minimal styled button for actions.
+  - **Tables** - Cross Browser tables for show Data.
+  - **Forms** - Fixes for style form components.
+  - **Menus** - Powerful menus for Navigation.
   and more...
 - **Utilities** - Large collection of utility classes and small production build size.
 - **Customizeable** -
-  - SASS(Syntactically Awesome Style Sheets) - Featuring Sass variables and mixins to customize from ground.
+  - **SASS**(Syntactically Awesome Style Sheets) - Featuring Sass variables and mixins to customize from ground.
   ```scss
   $colors: (
     red: #fff,
     ...
   };
   ```
-  - CSS(Cascading Style Sheets) ![](https://img.shields.io/badge?message=%20&style=for-the-badge&logo=css3) - Featuring CSS variables to customize easily.
+  - **CSS**(Cascading Style Sheets) - Featuring CSS variables to customize easily.
   ```css
   :root {
     --font-color: white;
@@ -51,11 +52,18 @@ Quickly design and customize responsive mobile-first sites with MoonHare, modern
 ## Getting Started
 
 Get started with MoonHare.CSS, Framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
-Looking to quickly add MoonHare.CSS to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the releases page](https://github.com/beautifycss/Beautify/releases).
+Looking to quickly add MoonHare.CSS to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the releases page](https://github.com/MoonHareLabs/MoonHare/releases).
+
+MoonHare has 2(two) stylesheets available.
+- **Components** - `monhare.css`
+- **Utiities** - `moonhare-uilities.css`
+
 
 ### Installation
+You can Install Components directy. But use tool like Purgecss to minify production size. It makes...
+- Com
+#### 
 Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other stylesheets to load our CSS.
-
 ```html
 <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
 ```
