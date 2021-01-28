@@ -126,8 +126,9 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 <!-- COMMUNITY -->
 ## Community
 
-[![](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
-
-[![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
-
-[![](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
+[![twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/harelabs/)
+[![slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://twitter.com/harelabs/)
+[![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MoonHareLabs/MoonHare)
+[![bitbucket](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
+[![gitlab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
+[![sourceforge](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
