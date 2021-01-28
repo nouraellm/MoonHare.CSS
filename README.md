@@ -1,5 +1,3 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/moonharelabs/moonhare/Build/main?logo=github&style=for-the-badge)
-
 <p align="center">
   <a href="#nolink">
     <img src="https://github.com/MoonHareLabs.png" alt="Beautify logo" width="200" height="200">
@@ -22,6 +20,8 @@
 </p>
 
 <hr>
+
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/moonharelabs/moonhare/Build/main?logo=github&style=for-the-badge)
 
 Quickly design and customize responsive mobile-first sites with MoonHare, modern front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful utilities collection.
 
