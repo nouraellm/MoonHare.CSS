@@ -51,26 +51,16 @@ Quickly design and customize responsive mobile-first sites with MoonHare, modern
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Get started with MoonHare.CSS, Framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
+Get started with MoonHare.CSS, Framework for building responsive, mobile-first sites, with jsDelivr and a [template starter page](#starter-template).
 Looking to quickly add MoonHare.CSS to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the releases page](https://github.com/MoonHareLabs/MoonHare/releases).
-
-MoonHare has 2(two) stylesheets available.
-- **Components** - `monhare.css`
-- **Utiities** - `moonhare-uilities.css`
 
 
 ### Installation
-You can Install Components directy. But use tool like Purgecss to minify production size. It makes...
-- Com
-#### 
 Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other stylesheets to load our CSS.
 ```html
-<link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/moonhare.min.css" rel="stylesheet" crossorigin="anonymous">
 ```
-```diff
-! Warning: Don't use CDN for testing purposes.
-! Because It returns cached files.
-```
+
 
 ### Starter template
 
@@ -86,8 +76,8 @@ Copy
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Beautify.CSS -->
-    <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/beautify.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- MoonHare -->
+    <link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/moonhare.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
