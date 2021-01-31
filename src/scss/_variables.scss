@@ -45,11 +45,19 @@ $image-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewB
 // Grid
 $breakpoints: (
   "" : 0,
-  sm : 576px,
-  md : 768px,
-  lg : 992px,
-  xl : 1200px,
-  xxl: 1400px
+  -sm : 576px,
+  -md : 768px,
+  -lg : 992px,
+  -xl : 1200px,
+  -xxl: 1400px
+);
+$containers: (
+  "" : 0,
+  -sm : 576px,
+  -md : 768px,
+  -lg : 992px,
+  -xl : 1200px,
+  -xxl: 1400px
 );
 $columns: 12;
 $row-columns: 6;
