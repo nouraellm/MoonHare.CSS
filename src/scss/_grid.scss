@@ -104,27 +104,24 @@
     .offset#{$name}-#{$i} {
       margin-left: 100*$i/$columns;
     }
-    .offset#{$name}-#{$i} {
-      margin-left: 100*$i/$columns;
-    }
   }
   @each $i, $gutter in $gutters {
-    .g-#{$name}-#{$i},
-    .gx-#{$name}-#{$i}{
+    .g#{$name}-#{$i},
+    .gx#{$name}-#{$i}{
       margin-left: -$gutter/2;
       margin-right: -$gutter/2;
     }
-    .g-#{$name}-#{$i} > *,
-    .gx-#{$name}-#{$i} > *{
+    .g#{$name}-#{$i} > *,
+    .gx#{$name}-#{$i} > *{
       padding-left: $gutter/2;
       padding-right: $gutter/2;
     }
-    .g-#{$name}-#{$i},
-    .gy-#{$name}-#{$i}{
+    .g#{$name}-#{$i},
+    .gy#{$name}-#{$i}{
       margin-top: -$gutter;
     }
-    .g-#{$name}-#{$i} > *,
-    .gy-#{$name}-#{$i} > *{
+    .g#{$name}-#{$i} > *,
+    .gy#{$name}-#{$i} > *{
       margin-top: $gutter;
     }
   }
