@@ -1,3 +1,5 @@
+.dark-effect:hover,
+.hover:hover,
 .input:hover,
 .table.hover tbody tr:hover,
 .button:hover,
@@ -7,6 +9,8 @@
   background-image: url("data:image/svg+xml,#{$dark-hover-overlay-image}");
 }
 
+.dark-effect:focus,
+.focus:focus,
 .input:focus,
 .button:focus,
 .radiobutton:focus,
@@ -15,6 +19,8 @@
   background-image: url("data:image/svg+xml,#{$dark-focus-overlay-image}");
 }
 
+.dark-effect:active,
+.active:active,
 .input:active,
 .button:active,
 .radiobutton:active,
@@ -23,6 +29,8 @@
   background-image: url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
 }
 
+.light-effect:hover,
+.light-hover:hover,
 .input.light-effect:hover,
 .table.light-effect.hover tbody tr:hover,
 .button.light-effect:hover,
@@ -32,6 +40,8 @@
   background-image: url("data:image/svg+xml,#{$light-hover-overlay-image}");
 }
 
+.light-effect:focus,
+.light-focus:focus,
 .input.light-effect:focus,
 .button.light-effect:focus,
 .radiobutton.light-effect:focus,
@@ -40,6 +50,8 @@
   background-image: url("data:image/svg+xml,#{$light-focus-overlay-image}");
 }
 
+.light-effect:active,
+.light-active:active,
 .input.light-effect:active,
 .button.light-effect:active,
 .radiobutton.light-effect:active,
@@ -48,14 +60,17 @@
   background-image: url("data:image/svg+xml,#{$light-pressed-overlay-image}");
 }
 
+.image-hover:hover,
 .image-effect:hover{
   background-image: url("data:image/svg+xml,#{$image-hover-overlay-image}");
 }
 
+.image-focus:focus,
 .image-effect:focus{
   background-image: url("data:image/svg+xml,#{$image-focus-overlay-image}");
 }
 
+.image-active:active,
 .image-effect:active{
   background-image: url("data:image/svg+xml,#{$image-pressed-overlay-image}");
 }
