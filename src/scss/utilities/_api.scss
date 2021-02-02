@@ -44,14 +44,14 @@
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
-      .#{$infix + "\:" + $property-class + $property-class-modifier} {
+      .#{$property-class + $infix + $property-class-modifier} {
         @each $property in $properties {
           #{$property}: $value;
         }
       }
 
       @each $pseudo in $state {
-        .#{$infix + "\:" + $pseudo + "\:" + $property-class + $property-class-modifier + ":" + $pseudo} {
+        .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
           @each $property in $properties {
             #{$property}: $value;
           }
