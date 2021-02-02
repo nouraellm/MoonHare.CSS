@@ -290,6 +290,8 @@ template, [hidden] {
   *:before, *:after {
     box-sizing: border-box; }
 
+.dark-effect:hover,
+.hover:hover,
 .input:hover,
 .table.hover tbody tr:hover,
 .button:hover,
@@ -298,6 +300,8 @@ template, [hidden] {
 .check:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.04);'%3E%3C/svg%3E"); }
 
+.dark-effect:focus,
+.focus:focus,
 .input:focus,
 .button:focus,
 .radiobutton:focus,
@@ -305,6 +309,8 @@ template, [hidden] {
 .check:focus {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"); }
 
+.dark-effect:active,
+.active:active,
 .input:active,
 .button:active,
 .radiobutton:active,
@@ -312,6 +318,8 @@ template, [hidden] {
 .check:active {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"); }
 
+.light-effect:hover,
+.light-hover:hover,
 .input.light-effect:hover,
 .table.light-effect.hover tbody tr:hover,
 .button.light-effect:hover,
@@ -320,6 +328,8 @@ template, [hidden] {
 .check.light-effect:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.08);'%3E%3C/svg%3E"); }
 
+.light-effect:focus,
+.light-focus:focus,
 .input.light-effect:focus,
 .button.light-effect:focus,
 .radiobutton.light-effect:focus,
@@ -327,6 +337,8 @@ template, [hidden] {
 .check.light-effect:focus {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.24);'%3E%3C/svg%3E"); }
 
+.light-effect:active,
+.light-active:active,
 .input.light-effect:active,
 .button.light-effect:active,
 .radiobutton.light-effect:active,
@@ -334,12 +346,15 @@ template, [hidden] {
 .check.light-effect:active {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.32);'%3E%3C/svg%3E"); }
 
+.image-hover:hover,
 .image-effect:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"); }
 
+.image-focus:focus,
 .image-effect:focus {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.36);'%3E%3C/svg%3E"); }
 
+.image-active:active,
 .image-effect:active {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.48);'%3E%3C/svg%3E"); }
 
