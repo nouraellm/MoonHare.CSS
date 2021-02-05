@@ -206,6 +206,32 @@ $utilities: map-merge(
         12: 'repeat(12, minmax(0, 1fr))',
       )
     ),
+    "grid-template-rows": (
+      property: grid-template-rows,
+      class: grid-rows,
+      resonsive: true,
+      values: (
+        none: 'none',
+        1: 'repeat(1, minmax(0, 1fr))',
+        2: 'repeat(2, minmax(0, 1fr))',
+        3: 'repeat(3, minmax(0, 1fr))',
+        4: 'repeat(4, minmax(0, 1fr))',
+        5: 'repeat(5, minmax(0, 1fr))',
+        6: 'repeat(6, minmax(0, 1fr))',
+      )
+    ),
+    "grid-column-start": (
+      property: grid-column-start,
+      class: grid-col-start,
+      resonsive: true,
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 auto,
+    ),
+    "grid-column-end": (
+      property: grid-column-end,
+      class: grid-col-end,
+      resonsive: true,
+      values: 1 2 3 4 5 6 7 8 9 10 11 12 auto,
+    ),
   ),
   $utilities
 );
