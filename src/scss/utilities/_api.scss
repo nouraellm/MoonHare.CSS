@@ -44,14 +44,14 @@
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
-      .#{$infix + "-" + $property-class + $property-class-modifier} {
+      .#{$infix + $property-class + $property-class-modifier} {
         @each $property in $properties {
           #{$property}: $value;
         }
       }
 
       @each $pseudo in $state {
-        .#{$infix + "-" + $pseudo + "-" + $property-class + $property-class-modifier}:#{$pseudo} {
+        .#{$infix + $pseudo + "-" + $property-class + $property-class-modifier}:#{$pseudo} {
           @each $property in $properties {
             #{$property}: $value;
           }
@@ -66,6 +66,9 @@
 
 @each $name, $breakpoint in $breakpoints{
   @include media($name, $breakpoint){
+    @if $name != "" {
+      $name: $name+"-";
+    }
     @each $key, $utility in $utilities {
       @include generate-utility($utility, $name);
     }
