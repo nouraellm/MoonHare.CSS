@@ -2,6 +2,7 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
+    // Layout
     "box-sizing": (
       responsive: true,
       property: box-sizing,
@@ -115,6 +116,7 @@ $utilities: map-merge(
       class: z,
       values: 0 10 20 30 40 50 auto
     ),
+    // Flexbox
     "flex-direction": (
       property: flex-direction,
       class: flex,
