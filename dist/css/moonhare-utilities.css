@@ -1973,6 +1973,45 @@ template, [hidden] {
   -ms-flex-order: 0;
       order: 0; }
 
+.grid-cols-none {
+  grid-template-columns: "none"; }
+
+.grid-cols-1 {
+  grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+
+.grid-cols-2 {
+  grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+
+.grid-cols-3 {
+  grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+
+.grid-cols-4 {
+  grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+
+.grid-cols-5 {
+  grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+
+.grid-cols-6 {
+  grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+
+.grid-cols-7 {
+  grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+
+.grid-cols-8 {
+  grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+
+.grid-cols-9 {
+  grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+
+.grid-cols-10 {
+  grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+
+.grid-cols-11 {
+  grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+
+.grid-cols-12 {
+  grid-template-columns: "repeat(12, minmax(0, 1fr))"; }
+
 @media (min-width: 576px) {
   .sm-box-border {
     box-sizing: border-box; }
@@ -2263,7 +2302,33 @@ template, [hidden] {
         order: 9999; }
   .sm-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .sm-grid-cols-none {
+    grid-template-columns: "none"; }
+  .sm-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .sm-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .sm-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .sm-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .sm-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .sm-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .sm-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .sm-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .sm-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .sm-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .sm-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .sm-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
 
 @media (min-width: 768px) {
   .md-box-border {
@@ -2555,7 +2620,33 @@ template, [hidden] {
         order: 9999; }
   .md-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .md-grid-cols-none {
+    grid-template-columns: "none"; }
+  .md-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .md-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .md-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .md-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .md-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .md-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .md-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .md-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .md-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .md-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .md-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .md-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
 
 @media (min-width: 992px) {
   .lg-box-border {
@@ -2847,7 +2938,33 @@ template, [hidden] {
         order: 9999; }
   .lg-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .lg-grid-cols-none {
+    grid-template-columns: "none"; }
+  .lg-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .lg-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .lg-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .lg-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .lg-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .lg-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .lg-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .lg-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .lg-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .lg-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .lg-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .lg-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
 
 @media (min-width: 1200px) {
   .xl-box-border {
@@ -3139,7 +3256,33 @@ template, [hidden] {
         order: 9999; }
   .xl-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .xl-grid-cols-none {
+    grid-template-columns: "none"; }
+  .xl-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .xl-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .xl-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .xl-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .xl-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .xl-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .xl-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .xl-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .xl-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .xl-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .xl-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .xl-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
 
 @media (min-width: 1400px) {
   .xxl-box-border {
@@ -3431,7 +3574,33 @@ template, [hidden] {
         order: 9999; }
   .xxl-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .xxl-grid-cols-none {
+    grid-template-columns: "none"; }
+  .xxl-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .xxl-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .xxl-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .xxl-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .xxl-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .xxl-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .xxl-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .xxl-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .xxl-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .xxl-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .xxl-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .xxl-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
 
 @media print {
   .print-box-border {
@@ -3723,4 +3892,30 @@ template, [hidden] {
         order: 9999; }
   .print-order-none {
     -ms-flex-order: 0;
-        order: 0; } }
+        order: 0; }
+  .print-grid-cols-none {
+    grid-template-columns: "none"; }
+  .print-grid-cols-1 {
+    grid-template-columns: "repeat(1, minmax(0, 1fr))"; }
+  .print-grid-cols-2 {
+    grid-template-columns: "repeat(2, minmax(0, 1fr))"; }
+  .print-grid-cols-3 {
+    grid-template-columns: "repeat(3, minmax(0, 1fr))"; }
+  .print-grid-cols-4 {
+    grid-template-columns: "repeat(4, minmax(0, 1fr))"; }
+  .print-grid-cols-5 {
+    grid-template-columns: "repeat(5, minmax(0, 1fr))"; }
+  .print-grid-cols-6 {
+    grid-template-columns: "repeat(6, minmax(0, 1fr))"; }
+  .print-grid-cols-7 {
+    grid-template-columns: "repeat(7, minmax(0, 1fr))"; }
+  .print-grid-cols-8 {
+    grid-template-columns: "repeat(8, minmax(0, 1fr))"; }
+  .print-grid-cols-9 {
+    grid-template-columns: "repeat(9, minmax(0, 1fr))"; }
+  .print-grid-cols-10 {
+    grid-template-columns: "repeat(10, minmax(0, 1fr))"; }
+  .print-grid-cols-11 {
+    grid-template-columns: "repeat(11, minmax(0, 1fr))"; }
+  .print-grid-cols-12 {
+    grid-template-columns: "repeat(12, minmax(0, 1fr))"; } }
