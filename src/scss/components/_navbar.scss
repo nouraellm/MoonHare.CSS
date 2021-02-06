@@ -20,7 +20,28 @@
     border-right: 1px solid gray;
   }
 
-  .top-fixed {
+  &.sticky {
+    position: sticky;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &.top {
+    top: 0;
+  }
+
+  &.bottom {
+    bottom: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+  
+  &.left {
+    left: 0;
   }
 
   &:before,
