@@ -3,11 +3,18 @@
   overflow: hidden
 
 .item {
-    padding: 8px 16px;
-    float: left;
+    padding: $navbar-pad-y $navbar-pad-x;
+    padding: var(--mh-navbar-pad-y, $navbar-pad-y) var(--mh-navbar-pad-x, $navbar-pad-x);
     width: auto;
     border: none;
-    display: block;
+    display: inline-block;
     outline: 0
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both
   }
 }
