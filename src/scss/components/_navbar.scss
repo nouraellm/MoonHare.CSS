@@ -1,7 +1,9 @@
 .navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 
   .item {
@@ -9,7 +11,8 @@
     padding: var(--mh-navbar-pad-y, $navbar-pad-y) var(--mh-navbar-pad-x, $navbar-pad-x);
     width: auto;
     border: none;
-    display: inline-block;
+    display: block;
+    float: left;
     outline: 0
   }
 
