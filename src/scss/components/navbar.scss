@@ -2,7 +2,7 @@
   width: 100%;
   overflow: hidden
 
-.item {
+  .item {
     padding: $navbar-pad-y $navbar-pad-x;
     padding: var(--mh-navbar-pad-y, $navbar-pad-y) var(--mh-navbar-pad-x, $navbar-pad-x);
     width: auto;
