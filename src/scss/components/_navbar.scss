@@ -51,3 +51,11 @@
     clear: both;
   }
 }
+
+@each $name, $breakpoint in $breakpoints{
+  @if $name != "" {
+    .navbar-#{$name} .item {
+      float: none;
+    }
+  }
+}
