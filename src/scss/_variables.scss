@@ -424,3 +424,7 @@ $select-border-width: 1px;
 $select-border-color: map-get($colors, gray-500);
 $select-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'%3E%3Cpath d='M2 5l6 6 6-6'/%3E%3C/svg%3E";
 $select-light-icon: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'%3E%3Cpath fill='%23fff' d='M2 5l6 6 6-6'/%3E%3C/svg%3E";
+
+// Navbar
+$navbar-pad-x: 0.75rem;
+$navbar-pad-y: 0.5rem;

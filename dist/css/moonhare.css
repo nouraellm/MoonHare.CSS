@@ -1575,6 +1575,56 @@ textarea.input {
   height: auto;
   resize: vertical; }
 
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+  .navbar .item {
+    padding: 0.5rem 0.75rem;
+    padding: var(--mh-navbar-pad-y, 0.5rem) var(--mh-navbar-pad-x, 0.75rem);
+    border: none;
+    display: block;
+    float: left;
+    outline: 0;
+    text-decoration: none; }
+  .navbar.bordered .item {
+    border-right: 1px solid gray; }
+  .navbar.sticky {
+    position: -webkit-sticky;
+    position: sticky; }
+  .navbar.fixed {
+    position: fixed; }
+  .navbar.top {
+    top: 0; }
+  .navbar.bottom {
+    bottom: 0; }
+  .navbar.right {
+    right: 0; }
+  .navbar.left {
+    left: 0; }
+  .navbar:before, .navbar:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.navbar-sm .item {
+  float: none; }
+
+.navbar-md .item {
+  float: none; }
+
+.navbar-lg .item {
+  float: none; }
+
+.navbar-xl .item {
+  float: none; }
+
+.navbar-xxl .item {
+  float: none; }
+
 .table {
   display: table;
   background-color: transparent;
