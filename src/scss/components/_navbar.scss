@@ -4,22 +4,29 @@
   padding: 0;
   overflow: hidden;
   position: relative;
-  border: 1px solid transparent;
+  width: 100%;
 
   .item {
     padding: $navbar-pad-y $navbar-pad-x;
     padding: var(--mh-navbar-pad-y, $navbar-pad-y) var(--mh-navbar-pad-x, $navbar-pad-x);
-    width: auto;
     border: none;
     display: block;
     float: left;
-    outline: 0
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &.bordered .item{
+    border-right: 1px solid gray;
+  }
+
+  .top-fixed {
   }
 
   &:before,
   &:after {
     content: "";
     display: table;
-    clear: both
+    clear: both;
   }
 }
