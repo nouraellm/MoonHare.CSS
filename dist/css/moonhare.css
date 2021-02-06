@@ -1716,20 +1716,29 @@ textarea.input {
     border: none; }
 
 .card {
-  transition: 0.3s;
-  background-color: transparent;
-  background-color: var(--card-background-color, transparent);
   border: 1px solid #9e9e9e;
   border: var(--card-border-width, 1px) solid var(--card-border-color, #9e9e9e);
+  border-radius: 0.125rem;
+  max-width: 100%;
   position: relative;
-  min-width: 0;
-  word-wrap: break-word; }
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
   .card .content {
     padding: 0.75rem 0.75rem;
     padding: var(--card-pad-y, 0.75rem) var(--card-pad-x, 0.75rem); }
+  .card .title {
+    font-weight: 700;
+    padding: 0.75rem 1rem; }
+  .card .image {
+    display: block;
+    position: relative; }
+  .card .footer {
+    border-top: 1px solid gray; }
+    .card .footer .item {
+      display: block;
+      float: left; }
 
 .image {
   max-width: 100%;
