@@ -2,8 +2,6 @@
   display: inline-block;
   padding: $button-pad-y $button-pad-x;
   padding: var(--button-pad-y, $button-pad-y) var(--button-pad-x, $button-pad-x);
-  background-color: $button-background-color;
-  background-color: var(--button-background-color, $button-background-color);
   border: $button-border-width solid $button-border-color;
   border: var(--button-border-width, $button-border-width) solid var(--button-border-color, $button-border-color);
   outline: none;
