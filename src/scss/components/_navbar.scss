@@ -1,6 +1,8 @@
 .navbar {
-  width: 100%;
-  overflow: hidden
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 
   .item {
     padding: $navbar-pad-y $navbar-pad-x;
