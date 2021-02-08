@@ -58,10 +58,16 @@ Looking to quickly add MoonHare.CSS to your project? Use jsDelivr, a free open s
 
 ### Installation
 Copy-paste the stylesheet  `<link>`  into your  `<head>`  before all other stylesheets to load our CSS.
+
+#### Components
 ```html
-<link href="https://cdn.jsdelivr.net/gh/MoonHareLabs/MoonHare.CSS/dist/css/moonhare.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/moonhare@1.0.0/dist/css/moonhare.css" rel="stylesheet" crossorigin="anonymous">
 ```
 
+#### Utilities
+```html
+<link href="https://cdn.jsdelivr.net/npm/moonhare@1.0.0/dist/css/moonhare-utilities.css" rel="stylesheet" crossorigin="anonymous">
+```
 
 ### Starter template
 
