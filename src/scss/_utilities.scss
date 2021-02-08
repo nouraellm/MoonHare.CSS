@@ -15,7 +15,7 @@ $utilities: map-merge(
     "display": (
       responsive: true,
       property: display,
-      class: null,
+      class: "",
       values: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none
     ),
     "float": (
@@ -107,7 +107,7 @@ $utilities: map-merge(
     "visibility": (
       resonsive: true,
       property: visibility,
-      class: null,
+      class: "",
       values: invisible visible
     ),
     "z-index": (
