@@ -15,7 +15,6 @@ on:
 jobs:
 
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,7 +27,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPMTOKEN}}
 
   publish-gpr:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
