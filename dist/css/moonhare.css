@@ -1587,9 +1587,11 @@ textarea.input {
     padding: var(--mh-navbar-pad-y, 0.5rem) var(--mh-navbar-pad-x, 0.75rem);
     border: none;
     display: block;
-    float: left;
+    float: none;
     outline: 0;
     text-decoration: none; }
+  .navbar.default .item {
+    float: left; }
   .navbar.bordered .item {
     border-right: 1px solid gray; }
   .navbar.sticky {
@@ -1611,19 +1613,19 @@ textarea.input {
     clear: both; }
 
 .navbar-sm .item {
-  float: none; }
+  float: left; }
 
 .navbar-md .item {
-  float: none; }
+  float: left; }
 
 .navbar-lg .item {
-  float: none; }
+  float: left; }
 
 .navbar-xl .item {
-  float: none; }
+  float: left; }
 
 .navbar-xxl .item {
-  float: none; }
+  float: left; }
 
 .table {
   display: table;
