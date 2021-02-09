@@ -3,14 +3,8 @@ name: Build
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**.js'
-      - 'src/**'
   pull_request:
     branches: [ main ]
-    paths:
-      - '**.js'
-      - 'src/**'
 
 jobs:
   build:
