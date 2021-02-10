@@ -74,10 +74,3 @@
     }
   }
 }
-
-// Print utilities
-@media print {
-  @each $key, $utility in $utilities {
-    @include generate-utility($utility, "print-");
-  }
-}
