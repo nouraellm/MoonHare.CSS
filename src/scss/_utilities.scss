@@ -129,7 +129,7 @@ $utilities: map-merge(
       property: z-index,
       resonsive: true,
       class: z,
-      values: 0 10 20 30 40 50 auto
+      values: $z-index,
     ),
     // Flexbox
     "flex-direction": (
@@ -153,52 +153,25 @@ $utilities: map-merge(
       property: flex,
       class: flex,
       resonsive: true,
-      values: (
-        1: "1 1 0%", 
-        auto: "1 1 auto",
-        initial: "0 1 auto",
-        none: none,
-      )
+      values: $flex,
     ),
     "flex-grow": (
       property: flex-grow,
       class: flex,
       resonsive: true,
-      values: (
-        grow-0: 0, 
-        grow: 1,
-      )
+      values: $flex-grow,
     ),
     "flex-shrink": (
       property: flex-shrink,
       class: flex,
       resonsive: true,
-      values: (
-        shrink-0: 0, 
-        shrink: 1,
-      )
+      values: $flex-shrink,
     ),
     "order": (
       property: order,
       class: order,
       resonsive: true,
-      values: (
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        first: -9999,
-        last: 9999,
-        none: 0,
-      )
+      values: $order,
     ),
     // Grid
     "grid-template-columns": (
