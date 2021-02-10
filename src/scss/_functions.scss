@@ -2,7 +2,7 @@
   $result: ();
   @each $key, $value in $map {
     @if $value != 0 {
-      $result: map-merge($result, ("n" + $key: (-$value)));
+      $result: map-merge($result, ("-" + $key: (-$value)));
     }
   }
   @return $result;
