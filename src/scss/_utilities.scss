@@ -42,7 +42,7 @@ $utilities: map-merge(
       responsive: true,
       property: object-position,
       class: object,
-      values: bottom center left left-bottom left-top right right-bottom right-top top
+      values: $object-position,
     ),
     "overflow": (
       responsive: true,
