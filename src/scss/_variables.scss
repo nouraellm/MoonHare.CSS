@@ -368,6 +368,8 @@ $spacing: (
   96: '24rem',
 ) !default;
 
+$negative-spacing: negativify-map($spcing) !default;
+
 $border-width:                1px !default;
 $border-widths: (
   0: 0,
