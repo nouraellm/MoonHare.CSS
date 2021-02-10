@@ -42,7 +42,7 @@ $utilities: map-merge(
       responsive: true,
       property: object-position,
       class: object,
-      values: bottom center left left-bottom left-top right right-bottom right-top top
+      values: $object-position,
     ),
     "overflow": (
       responsive: true,
@@ -82,6 +82,21 @@ $utilities: map-merge(
       property: position,
       values: static relative absolute fixed sticky
     ),
+    "inset": (
+      responsive: true,
+      property: top right bottom left,
+      values: $position-values
+    ),
+    "inset-x": (
+      responsive: true,
+      property: right left,
+      values: $position-values
+    ),
+    "inset-y": (
+      responsive: true,
+      property: top bottom,
+      values: $position-values
+    ),
     "top": (
       responsive: true,
       property: top,
@@ -92,13 +107,13 @@ $utilities: map-merge(
       property: bottom,
       values: $position-values
     ),
-    "start": (
+    "left": (
       responsive: true,
       property: left,
       class: start,
       values: $position-values
     ),
-    "end": (
+    "right": (
       responsive: true,
       property: right,
       class: end,

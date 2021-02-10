@@ -370,6 +370,38 @@ $spacing: (
 
 $negative-spacing: negativify-map($spacing) !default;
 
+$object-position: (
+  bottom: bottom,
+  center: center,
+  left: left,
+  left-bottom: left bottom,
+  left-top: left top,
+  right: right,
+  right-bottom: right bottom,
+  right-top: right top,
+  top: top,
+) !default;
+
+$position-base: (
+  auto: 'auto',
+  '1\\/2': '50%',
+  '1\\/3': '33.333333%',
+  '2\\/3': '66.666667%',
+  '1\\/4': '25%',
+  '2\\/4': '50%',
+  '3\\/4': '75%',
+  full: '100%',
+  '-1\\/2': '-50%',
+  '-1\\/3': '-33.333333%',
+  '-2\\/3': '-66.666667%',
+  '-1\\/4': '-25%',
+  '-2\\/4': '-50%',
+  '-3\\/4': '-75%',
+  '-full': '-100%',
+) !default;
+
+$position-values: map-merge(map-merge($position-base, $spacing), $negative-spacing) !default;
+
 $border-width:                1px !default;
 $border-widths: (
   0: 0,
