@@ -331,41 +331,41 @@ $colors: (
 ) !default;
 
 $spacing: (
-  px: '1px',
-  0: '0px',
-  0.5: '0.125rem',
-  1: '0.25rem',
-  1.5: '0.375rem',
-  2: '0.5rem',
-  2.5: '0.625rem',
-  3: '0.75rem',
-  3.5: '0.875rem',
-  4: '1rem',
-  5: '1.25rem',
-  6: '1.5rem',
-  7: '1.75rem',
-  8: '2rem',
-  9: '2.25rem',
-  10: '2.5rem',
-  11: '2.75rem',
-  12: '3rem',
-  14: '3.5rem',
-  16: '4rem',
-  20: '5rem',
-  24: '6rem',
-  28: '7rem',
-  32: '8rem',
-  36: '9rem',
-  40: '10rem',
-  44: '11rem',
-  48: '12rem',
-  52: '13rem',
-  56: '14rem',
-  60: '15rem',
-  64: '16rem',
-  72: '18rem',
-  80: '20rem',
-  96: '24rem',
+  px: 1px,
+  0: 0px,
+  0.5: 0.125rem,
+  1: 0.25rem,
+  1.5: 0.375rem,
+  2: 0.5rem,
+  2.5: 0.625rem,
+  3: 0.75rem,
+  3.5: 0.875rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.25rem,
+  10: 2.5rem,
+  11: 2.75rem,
+  12: 3rem,
+  14: 3.5rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  28: 7rem,
+  32: 8rem,
+  36: 9rem,
+  40: 10rem,
+  44: 11rem,
+  48: 12rem,
+  52: 13rem,
+  56: 14rem,
+  60: 15rem,
+  64: 16rem,
+  72: 18rem,
+  80: 20rem,
+  96: 24rem,
 ) !default;
 
 $negative-spacing: negativify-map($spacing) !default;
@@ -383,21 +383,21 @@ $object-position: (
 ) !default;
 
 $position-base: (
-  auto: 'auto',
-  '1\\/2': '50%',
-  '1\\/3': '33.333333%',
-  '2\\/3': '66.666667%',
-  '1\\/4': '25%',
-  '2\\/4': '50%',
-  '3\\/4': '75%',
-  full: '100%',
-  '-1\\/2': '-50%',
-  '-1\\/3': '-33.333333%',
-  '-2\\/3': '-66.666667%',
-  '-1\\/4': '-25%',
-  '-2\\/4': '-50%',
-  '-3\\/4': '-75%',
-  '-full': '-100%',
+  auto: auto,
+  '1\\/2': 50%,
+  '1\\/3': 33.333333%,
+  '2\\/3': 66.666667%,
+  '1\\/4': 25%,
+  '2\\/4': 50%,
+  '3\\/4': 75%,
+  full: 100%,
+  '-1\\/2': -50%,
+  '-1\\/3': -33.333333%,
+  '-2\\/3': -66.666667%,
+  '-1\\/4': -25%,
+  '-2\\/4': -50%,
+  '-3\\/4': -75%,
+  '-full': -100%,
 ) !default;
 
 $position-values: map-merge(map-merge($position-base, $spacing), $negative-spacing) !default;
@@ -405,23 +405,32 @@ $position-values: map-merge(map-merge($position-base, $spacing), $negative-spaci
 
 $z-index: (
   auto: 'auto',
-  0: '0',
-  10: '10',
-  20: '20',
-  30: '30',
-  40: '40',
-  50: '50',
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  20: 20,
+  30: 30,
+  40: 40,
+  50: 50,
 ) !default;
 
 $flex: (
   1: '1 1 0%',
   auto: '1 1 auto',
   initial: '0 1 auto',
-  none: 'none',
+  none: none,
 ) !default;
 
 $flex-grow: (
-  no: 0,
+  none: 0,
   "": 1,
 ) !default;
 
@@ -446,6 +455,129 @@ $order: (
   10: '10',
   11: '11',
   12: '12',
+) !default;
+
+$grid-auto-columns: (
+  auto: 'auto',
+  min: 'min-content',
+  max: 'max-content',
+  fr: 'minmax(0, 1fr)',
+) !default;
+
+$grid-auto-rows: (
+  auto: 'auto',
+  min: 'min-content',
+  max: 'max-content',
+  fr: 'minmax(0, 1fr)',
+) !default;
+
+$grid-column: (
+  auto: 'auto',
+  'span-1': 'span 1 / span 1',
+  'span-2': 'span 2 / span 2',
+  'span-3': 'span 3 / span 3',
+  'span-4': 'span 4 / span 4',
+  'span-5': 'span 5 / span 5',
+  'span-6': 'span 6 / span 6',
+  'span-7': 'span 7 / span 7',
+  'span-8': 'span 8 / span 8',
+  'span-9': 'span 9 / span 9',
+  'span-10': 'span 10 / span 10',
+  'span-11': 'span 11 / span 11',
+  'span-12': 'span 12 / span 12',
+  'span-full': '1 / -1',
+) !default;
+
+$grid-column-end: (
+  auto: 'auto',
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5',
+  6: '6',
+  7: '7',
+  8: '8',
+  9: '9',
+  10: '10',
+  11: '11',
+  12: '12',
+  13: '13',
+) !default;
+$grid-column-start: (
+  auto: 'auto',
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5',
+  6: '6',
+  7: '7',
+  8: '8',
+  9: '9',
+  10: '10',
+  11: '11',
+  12: '12',
+  13: '13',
+) !default;
+
+$grid-row: (
+  auto: 'auto',
+  'span-1': 'span 1 / span 1',
+  'span-2': 'span 2 / span 2',
+  'span-3': 'span 3 / span 3',
+  'span-4': 'span 4 / span 4',
+  'span-5': 'span 5 / span 5',
+  'span-6': 'span 6 / span 6',
+  'span-full': '1 / -1',
+) !default;
+
+$grid-row-start: (
+  auto: 'auto',
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5',
+  6: '6',
+  7: '7',
+) !default;
+
+$grid-row-end: (
+  auto: 'auto',
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5',
+  6: '6',
+  7: '7',
+) !default;
+
+$grid-template-columns: (
+  none: 'none',
+  1: 'repeat(1, minmax(0, 1fr))',
+  2: 'repeat(2, minmax(0, 1fr))',
+  3: 'repeat(3, minmax(0, 1fr))',
+  4: 'repeat(4, minmax(0, 1fr))',
+  5: 'repeat(5, minmax(0, 1fr))',
+  6: 'repeat(6, minmax(0, 1fr))',
+  7: 'repeat(7, minmax(0, 1fr))',
+  8: 'repeat(8, minmax(0, 1fr))',
+  9: 'repeat(9, minmax(0, 1fr))',
+  10: 'repeat(10, minmax(0, 1fr))',
+  11: 'repeat(11, minmax(0, 1fr))',
+  12: 'repeat(12, minmax(0, 1fr))',
+) !default;
+
+$grid-template-rows: (
+  none: 'none',
+  1: 'repeat(1, minmax(0, 1fr))',
+  2: 'repeat(2, minmax(0, 1fr))',
+  3: 'repeat(3, minmax(0, 1fr))',
+  4: 'repeat(4, minmax(0, 1fr))',
+  5: 'repeat(5, minmax(0, 1fr))',
+  6: 'repeat(6, minmax(0, 1fr))',
 ) !default;
 
 $border-width:                1px !default;

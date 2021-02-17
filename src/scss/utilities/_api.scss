@@ -31,15 +31,16 @@
     
     .#{$infix + $class + $key} {
       @each $property, $value in $includes {
-        #{$property}: nth($value, $index);
+      $v: nth($value, $index);
+        #{$property}: if(type-of($v) == string, unquote($v), $v);
       }
     }
 
       @each $state, $m in $states {
         .#{nth($m, 1) + $infix + $state + $class + $key+nth($m, 2)} {
           @each $property, $value in $includes {
-        #{$property}: nth($value, $index);
-          }
+      $v: nth($value, $index);
+        #{$property}: if(type-of($v) == string, unquote($v), $v);          }
         }
       }
     @if $is-rtl == false {
