@@ -321,6 +321,55 @@ $utilities: map-merge(
       keys: map-keys($gap),
     ),
 
+    // Box Alignment
+    "justify-content": (
+      responsive: true,
+      includes: (
+        justify-content: flex-start flex-end center space-between space-around space-evenly,
+      ),
+      class: justify,
+      keys: start end center between around evenly,
+    ),
+    "justify-items": (
+      responsive: true,
+      includes: (
+        justify-items: auto start end center stretch,
+      ),
+      class: justify-items,
+      keys: auto start end center stretch,
+    ),
+    "justify-self": (
+      responsive: true,
+      includes: (
+        justify-self: auto start end center stretch,
+      ),
+      class: justify-self,
+      keys: auto start end center stretch,
+    ),
+    "align-content": (
+      responsive: true,
+      includes: (
+        align-content: flex-start flex-end center space-between space-around space-evenly,
+      ),
+      class: content,
+      keys: start end center between around evenly,
+    ),
+    "align-items": (
+      responsive: true,
+      includes: (
+        align-items: flex-start flex-end center baseline stretch,
+      ),
+      class: items,
+      keys: start end center baseline stretch,
+    ),
+    "place-content": (
+      responsive: true,
+      includes: (
+        place-content: start end center space-between space-around space-evenly stretch,
+      ),
+      class: place-content,
+      keys: start end center between around evenly stretch,
+    ),
 
   ),
   $utilities
