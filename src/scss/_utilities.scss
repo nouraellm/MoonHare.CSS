@@ -296,6 +296,31 @@ $utilities: map-merge(
       class: grid-flow,
       keys: row col row-dense col-dense,
     ),
+    "gap": (
+      responsive: true,
+      includes: (
+        gap: map-values($gap),
+      ),
+      class: gap,
+      keys: map-keys($gap),
+    ),
+    "col-gap": (
+      responsive: true,
+      includes: (
+        column-gap: map-values($gap),
+      ),
+      class: col-gap,
+      keys: map-keys($gap),
+    ),
+    "raw-gap": (
+      responsive: true,
+      includes: (
+        raw-gap: map-values($gap),
+      ),
+      class: raw-gap,
+      keys: map-keys($gap),
+    ),
+
 
   ),
   $utilities
