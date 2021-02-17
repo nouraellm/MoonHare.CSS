@@ -11,64 +11,45 @@
 }
 
 @mixin generate-utility($utility, $infix) {
-  $values: map-get($utility, values);
+  $includes: map-get($utility, includes);
+  $keys: map-get($utility, keys);
+  $class: map-get($utility, class);
+  $class: if($class, $class, "");
+  $class: if($class!="" and $infix!="", "-" + $class, $class);
+  $is-rtl: map-get($utility, rtl);
+  $states: if(map-has-key($utility, states), map-get($utility, states), map-remove((x:x), x));
 
-  // If the values are a list or string, convert it into a map
-  @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
-    $values: zip($values, $values);
-  }
+    $index: 0;
+  @each $key in $keys {
+    $key: if($key, $key, "");
+    $key: if($class!="" or $infix!="", "-"+$key, $key);
+      $index: $index+1;
 
-  @each $key, $value in $values {
-    $properties: map-get($utility, property);
-
-    // Multiple properties are possible, for example with vertical or horizontal margins or paddings
-    @if type-of($properties) == "string" {
-      $properties: append((), $properties);
+    @if $is-rtl == false {
+      /* rtl:begin:remove */
+    }
+    
+    .#{$infix + $class + $key} {
+      @each $property, $value in $includes {
+        #{$property}: nth($value, $index);
+      }
     }
 
-    // Use custom class if present
-    $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
-    $property-class: if($property-class == null, "", $property-class);
-
-    // State params to generate pseudo-classes
-    $state: if(map-has-key($utility, state), map-get($utility, state), ());
-
-    $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
-
-    // Don't prefix if value key is null (eg. with shadow class)
-    $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
-
-    $is-rtl: map-get($utility, rtl);
-
-    @if $value != null {
-      @if $is-rtl == false {
-        /* rtl:begin:remove */
-      }
-      .#{$infix + $property-class + $property-class-modifier} {
-        @each $property in $properties {
-          #{$property}: $value;
-        }
-      }
-
-      @each $pseudo in $state {
-        .#{$infix + $pseudo + "-" + $property-class + $property-class-modifier}:#{$pseudo} {
-          @each $property in $properties {
-            #{$property}: $value;
+      @each $state, $m in $states {
+        .#{nth($m, 1) + $infix + $state + $class + $key+nth($m, 2)} {
+          @each $property, $value in $includes {
+        #{$property}: nth($value, $index);
           }
         }
       }
-      @if $is-rtl == false {
-        /* rtl:end:remove */
-      }
+    @if $is-rtl == false {
+      /* rtl:end:remove */
     }
   }
 }
 
 @each $name, $breakpoint in $breakpoints{
   @include media($name, $breakpoint){
-    @if $name != "" {
-      $name: $name+"-";
-    }
     @each $key, $utility in $utilities {
       @include generate-utility($utility, $name);
     }
