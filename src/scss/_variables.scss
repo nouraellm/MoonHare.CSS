@@ -580,6 +580,9 @@ $grid-template-rows: (
   6: 'repeat(6, minmax(0, 1fr))',
 ) !default;
 
+$gap: $spacing !default;
+
+
 $border-width:                1px !default;
 $border-widths: (
   0: 0,
