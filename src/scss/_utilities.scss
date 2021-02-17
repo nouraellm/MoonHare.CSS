@@ -370,6 +370,22 @@ $utilities: map-merge(
       class: place-content,
       keys: start end center between around evenly stretch,
     ),
+    "place-items": (
+      responsive: true,
+      includes: (
+        place-items: auto start end center stretch,
+      ),
+      class: place-items,
+      keys: auto start end center stretch,
+    ),
+    "place-self": (
+      responsive: true,
+      includes: (
+        place-self: auto start end center stretch,
+      ),
+      class: place-self,
+      keys: auto start end center stretch,
+    ),
 
   ),
   $utilities
