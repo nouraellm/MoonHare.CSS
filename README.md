@@ -141,5 +141,8 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 [![bitbucket](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
 [![gitlab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
 [![sourceforge](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
-[![email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-)](mailto:kavindusanthusa@gmail.com)
+[![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moon-hare-labs@googlegroups.com)
+[![google groups](https://img.shields.io/badge/GOOGLE%20GROUPS-00a4FF?style=for-the-badge&logo=google-chat&logoColor=white)](https://groups.google.com/g/moon-hare-labs)
+[![outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:moonharelabs@outlook.com)
+[![facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/groups/moonharelabs)
+
