@@ -141,3 +141,5 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 [![bitbucket](https://img.shields.io/badge/Bitbucket-33ffff?style=for-the-badge&logo=bitbucket&logoColor=blue)](https://bitbucket.org/moonharelabs/)
 [![gitlab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab)](https://gitlab.com/moonharelabs/)
 [![sourceforge](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
+[![email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+)](mailto:kavindusanthusa@gmail.com)
