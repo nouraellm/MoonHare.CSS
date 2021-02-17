@@ -143,3 +143,4 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/beautifycs
 [![sourceforge](https://img.shields.io/badge/sourceforge-330F63?style=for-the-badge&logo=sourceforge)](https://sourceforge.net/projects/moonhare-css/)
 [![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moon-hare-labs@googlegroups.com)
 [![google groups](https://img.shields.io/badge/GOOGLE%20GROUPS-00a4FF?style=for-the-badge&logo=google-chat&logoColor=white)](https://groups.google.com/g/moon-hare-labs)
+[![outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:moonharelabs@outlook.com)
