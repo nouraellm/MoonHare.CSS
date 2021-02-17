@@ -207,6 +207,96 @@ $utilities: map-merge(
       keys: map-keys($order),
     ),
 
+    // Grid
+    "grid-template-columns": (
+      responsive: true,
+      includes: (
+        grid-template-columns: map-values($grid-template-columns),
+      ),
+      class: grid-cols,
+      keys: map-keys($grid-template-columns),
+    ),
+    "grid-column": (
+      responsive: true,
+      includes: (
+        grid-column: map-values($grid-column),
+      ),
+      class: grid-col-span,
+      keys: map-keys($grid-column),
+    ),
+    "grid-column-start": (
+      responsive: true,
+      includes: (
+        grid-column-start: map-values($grid-column-start),
+      ),
+      class: grid-col-start,
+      keys: map-keys($grid-column-start),
+    ),
+    "grid-column-end": (
+      responsive: true,
+      includes: (
+        grid-column-end: map-values($grid-column-end),
+      ),
+      class: grid-col-end,
+      keys: map-keys($grid-column-end),
+    ),
+    "grid-template-rows": (
+      responsive: true,
+      includes: (
+        grid-template-rows: map-values($grid-template-rows),
+      ),
+      class: grid-rows,
+      keys: map-keys($grid-template-rows),
+    ),
+    "grid-row": (
+      responsive: true,
+      includes: (
+        grid-row: map-values($grid-row),
+      ),
+      class: grid-row-span,
+      keys: map-keys($grid-row),
+    ),
+    "grid-row-start": (
+      responsive: true,
+      includes: (
+        grid-row-start: map-values($grid-row-start),
+      ),
+      class: grid-row-start,
+      keys: map-keys($grid-row-start),
+    ),
+    "grid-row-end": (
+      responsive: true,
+      includes: (
+        grid-row-end: map-values($grid-row-end),
+      ),
+      class: grid-row-end,
+      keys: map-keys($grid-row-end),
+    ),
+    "grid-auto-columns": (
+      responsive: true,
+      includes: (
+        grid-auto-columns: map-values($grid-auto-columns),
+      ),
+      class: auto-cols,
+      keys: map-keys($grid-auto-columns),
+    ),
+    "grid-auto-rows": (
+      responsive: true,
+      includes: (
+        grid-auto-rows: map-values($grid-auto-rows),
+      ),
+      class: auto-rows,
+      keys: map-keys($grid-auto-rows),
+    ),
+    "grid-auto-flow": (
+      responsive: true,
+      includes: (
+        grid-auto-flow: row col "row dense" "col dense",
+      ),
+      class: grid-flow,
+      keys: row col row-dense col-dense,
+    ),
+
   ),
   $utilities
 );
