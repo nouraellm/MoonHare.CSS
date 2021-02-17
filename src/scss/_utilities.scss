@@ -47,10 +47,10 @@ $utilities: map-merge(
     "object-position": (
       responsive: true,
       includes: (
-        object-position: bottom center left left-bottom left-top right right-bottom right-top top,
+        object-position: map-values($object-position),
       ),
       class: object,
-      keys: bottom center left left-bottom left-top right right-bottom right-top top,
+      keys: map-keys($object-position),
     ),
     "overflow": (
       responsive: true,
@@ -151,10 +151,10 @@ $utilities: map-merge(
     "z-index": (
       responsive: true,
       includes: (
-        z-index: 0 1 2 3 4 5 6 7 8 9 10 20 30 40 50 auto,
+        z-index: map-values($z-index),
       ),
       class: z,
-      keys: 0 1 2 3 4 5 6 7 8 9 10 20 30 40 50 auto,
+      keys: map-keys($z-index),
     ),
     
     // Flex
@@ -165,6 +165,46 @@ $utilities: map-merge(
       ),
       class: flex,
       keys: row row-reverse col col-reverse,
+    ),
+    "flex-wrap": (
+      responsive: true,
+      includes: (
+        flex-wrap: wrap wrap-reverse nowrap,
+      ),
+      class: flex,
+      keys: wrap wrap-reverse nowrap,
+    ),
+    "flex": (
+      responsive: true,
+      includes: (
+        flex: map-values($flex),
+      ),
+      class: flex,
+      keys: map-keys($flex),
+    ),
+    "flex-grow": (
+      responsive: true,
+      includes: (
+        flex-grow: map-values($flex-grow),
+      ),
+      class: flex-grow,
+      keys: map-keys($flex-grow),
+    ),
+    "flex-shrink": (
+      responsive: true,
+      includes: (
+        flex-shrink: map-values($flex-shrink),
+      ),
+      class: flex-shrink,
+      keys: map-keys($flex-shrink),
+    ),
+    "order": (
+      responsive: true,
+      includes: (
+        order: map-values($order),
+      ),
+      class: order,
+      keys: map-keys($order),
     ),
 
   ),
