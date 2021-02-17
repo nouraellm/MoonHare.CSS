@@ -2,336 +2,171 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
+  
     // Layout
     "box-sizing": (
       responsive: true,
-      property: box-sizing,
+      includes: (
+        box-sizing: border-box content-box,
+      ),
       class: box,
-      values: (
-        border: border-box,
-        content: content-box,
-      )
+      keys: border content,
     ),
     "display": (
       responsive: true,
-      property: display,
-      class: "",
-      values: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none
+      includes: (
+        display: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none,
+      ),
+      class: null,
+      keys: inline inline-block block grid table table-row table-caption table-cell table-raw table-column table-column-group table-footer-group table-raw-group flex inline-flex flow-root grid inline-grid contents none,
     ),
     "float": (
       responsive: true,
-      property: float,
-      values: (
-        start: left,
-        end: right,
-        none: none,
-      )
+      includes: (
+        float: left right none,
+      ),
+      class: float,
+      keys: left right none,
     ),
     "clear": (
       responsive: true,
-      property: clear,
-      values: left right both none
+      includes: (
+        float: left right both none,
+      ),
+      class: clear,
+      keys: left right both none,
     ),
     "object-fit": (
       responsive: true,
-      property: object-fit,
+      includes: (
+        object-fit: contain cover fill none scale-down,
+      ),
       class: object,
-      values: contain cover fill none scale-down
+      keys: contain cover fill none scale-down,
     ),
     "object-position": (
       responsive: true,
-      property: object-position,
+      includes: (
+        object-position: bottom center left left-bottom left-top right right-bottom right-top top,
+      ),
       class: object,
-      values: $object-position,
+      keys: bottom center left left-bottom left-top right right-bottom right-top top,
     ),
     "overflow": (
       responsive: true,
-      property: overflow,
-      values: auto hidden visible scroll
+      includes: (
+        overflow: auto hidden visible scroll,
+      ),
+      class: overflow,
+      keys: auto hidden visible scroll,
     ),
     "overflow-x": (
       responsive: true,
-      property: overflow-x,
-      values: auto hidden visible scroll
+      includes: (
+        overflow-x: auto hidden visible scroll,
+      ),
+      class: overflow-x,
+      keys: auto hidden visible scroll,
     ),
     "overflow-y": (
       responsive: true,
-      property: overflow-y,
-      values: auto hidden visible scroll
+      includes: (
+        overflow-y: auto hidden visible scroll,
+      ),
+      class: overflow-y,
+      keys: auto hidden visible scroll,
     ),
     "overscroll-behavior": (
       responsive: true,
-      property: overscroll-behavior,
+      includes: (
+        overscroll-behavior: auto contain none,
+      ),
       class: overscroll,
-      values: auto contain none
+      keys: auto contain none,
     ),
     "overscroll-behavior-x": (
       responsive: true,
-      property: overscroll-behavior-x,
+      includes: (
+        overscroll-behavior-x: auto contain none,
+      ),
       class: overscroll-x,
-      values: auto contain none
+      keys: auto contain none,
     ),
     "overscroll-behavior-y": (
       responsive: true,
-      property: overscroll-behavior-y,
+      includes: (
+        overscroll-behavior-y: auto contain none,
+      ),
       class: overscroll-y,
-      values: auto contain none
+      keys: auto contain none,
     ),
     "position": (
       responsive: true,
-      property: position,
-      values: static relative absolute fixed sticky
-    ),
-    "inset": (
-      responsive: true,
-      property: top right bottom left,
-      values: $position-values
-    ),
-    "inset-x": (
-      responsive: true,
-      property: right left,
-      values: $position-values
-    ),
-    "inset-y": (
-      responsive: true,
-      property: top bottom,
-      values: $position-values
+      includes: (
+        position: static relative absolute fixed sticky,
+      ),
+      class: null,
+      keys: static relative absolute fixed sticky,
     ),
     "top": (
       responsive: true,
-      property: top,
-      values: $position-values
+      includes: (
+        top: static relative absolute fixed sticky,
+      ),
+      class: top,
+      keys: static relative absolute fixed sticky,
     ),
     "bottom": (
       responsive: true,
-      property: bottom,
-      values: $position-values
+      includes: (
+        bottom: static relative absolute fixed sticky,
+      ),
+      class: bottom,
+      keys: static relative absolute fixed sticky,
     ),
     "left": (
       responsive: true,
-      property: left,
-      class: start,
-      values: $position-values
+      includes: (
+        left: static relative absolute fixed sticky,
+      ),
+      class: left,
+      keys: static relative absolute fixed sticky,
     ),
     "right": (
       responsive: true,
-      property: right,
-      class: end,
-      values: $position-values
+      includes: (
+        right: static relative absolute fixed sticky,
+      ),
+      class: right,
+      keys: static relative absolute fixed sticky,
     ),
     "visibility": (
-      resonsive: true,
-      property: visibility,
-      class: "",
-      values: invisible visible
+      responsive: true,
+      includes: (
+        visibility: invisible visible,
+      ),
+      class: null,
+      keys: invisible visible,
     ),
     "z-index": (
-      property: z-index,
-      resonsive: true,
+      responsive: true,
+      includes: (
+        z-index: 0 1 2 3 4 5 6 7 8 9 10 20 30 40 50 auto,
+      ),
       class: z,
-      values: $z-index,
+      keys: 0 1 2 3 4 5 6 7 8 9 10 20 30 40 50 auto,
     ),
-    // Flexbox
+    
+    // Flex
     "flex-direction": (
-      property: flex-direction,
+      responsive: true,
+      includes: (
+        flex-direction: row row-reverse column column-reverse,
+      ),
       class: flex,
-      resonsive: true,
-      values: (
-        row: row, 
-        row-reverse: row-reverse,
-        col: column,
-        col-reverse: column-reverse,
-      )
+      keys: row row-reverse col col-reverse,
     ),
-    "flex-wrap": (
-      property: flex-wrap,
-      class: flex,
-      resonsive: true,
-      values: wrap wrap-reverse nowrap
-    ),
-    "flex": (
-      property: flex,
-      class: flex,
-      resonsive: true,
-      values: $flex,
-    ),
-    "flex-grow": (
-      property: flex-grow,
-      class: flex,
-      resonsive: true,
-      values: $flex-grow,
-    ),
-    "flex-shrink": (
-      property: flex-shrink,
-      class: flex,
-      resonsive: true,
-      values: $flex-shrink,
-    ),
-    "order": (
-      property: order,
-      class: order,
-      resonsive: true,
-      values: $order,
-    ),
-    // Grid
-    "grid-template-columns": (
-      property: grid-template-columns,
-      class: grid-cols,
-      resonsive: true,
-      values: (
-        none: 'none',
-        1: 'repeat(1, minmax(0, 1fr))',
-        2: 'repeat(2, minmax(0, 1fr))',
-        3: 'repeat(3, minmax(0, 1fr))',
-        4: 'repeat(4, minmax(0, 1fr))',
-        5: 'repeat(5, minmax(0, 1fr))',
-        6: 'repeat(6, minmax(0, 1fr))',
-        7: 'repeat(7, minmax(0, 1fr))',
-        8: 'repeat(8, minmax(0, 1fr))',
-        9: 'repeat(9, minmax(0, 1fr))',
-        10: 'repeat(10, minmax(0, 1fr))',
-        11: 'repeat(11, minmax(0, 1fr))',
-        12: 'repeat(12, minmax(0, 1fr))',
-      )
-    ),
-    "grid-template-rows": (
-      property: grid-template-rows,
-      class: grid-rows,
-      resonsive: true,
-      values: (
-        none: 'none',
-        1: 'repeat(1, minmax(0, 1fr))',
-        2: 'repeat(2, minmax(0, 1fr))',
-        3: 'repeat(3, minmax(0, 1fr))',
-        4: 'repeat(4, minmax(0, 1fr))',
-        5: 'repeat(5, minmax(0, 1fr))',
-        6: 'repeat(6, minmax(0, 1fr))',
-      )
-    ),
-    "grid-column-start": (
-      property: grid-column-start,
-      class: grid-col-start,
-      resonsive: true,
-      values: 1 2 3 4 5 6 7 8 9 10 11 12 auto,
-    ),
-    "grid-column-end": (
-      property: grid-column-end,
-      class: grid-col-end,
-      resonsive: true,
-      values: 1 2 3 4 5 6 7 8 9 10 11 12 auto,
-    ),
-    "grid-row-start": (
-      property: grid-row-start,
-      class: grid-row-start,
-      resonsive: true,
-      values: 1 2 3 4 5 6 7 auto,
-    ),
-    "grid-row-end": (
-      property: grid-row-end,
-      class: grid-row-end,
-      resonsive: true,
-      values: 1 2 3 4 5 6 7 auto,
-    ),
-    "grid-column": (
-      property: grid-column,
-      class: grid-col,
-      resonsive: true,
-      values: (
-        auto: 'auto',
-        'span-1': 'span 1 / span 1',
-        'span-2': 'span 2 / span 2',
-        'span-3': 'span 3 / span 3',
-        'span-4': 'span 4 / span 4',
-        'span-5': 'span 5 / span 5',
-        'span-6': 'span 6 / span 6',
-        'span-7': 'span 7 / span 7',
-        'span-8': 'span 8 / span 8',
-        'span-9': 'span 9 / span 9',
-        'span-10': 'span 10 / span 10',
-        'span-11': 'span 11 / span 11',
-        'span-12': 'span 12 / span 12',
-        'span-full': '1 / -1',
-      )
-    ),
-    "grid-row": (
-      property: grid-row,
-      class: grid-row,
-      resonsive: true,
-      values: (
-        auto: 'auto',
-        'span-1': 'span 1 / span 1',
-        'span-2': 'span 2 / span 2',
-        'span-3': 'span 3 / span 3',
-        'span-4': 'span 4 / span 4',
-        'span-5': 'span 5 / span 5',
-        'span-6': 'span 6 / span 6',
-        'span-full': '1 / -1',
-      )
-    ),
-    "grid-auto-flow": (
-      property: grid-auto-flow,
-      class: grid-flow,
-      resonsive: true,
-      values: (
-        row: 'row',
-        col: 'column',
-        row-dense: 'row dense',
-        col-dense: 'column dense',
-      )
-    ),
-    "grid-auto-columns": (
-      property: grid-auto-columns,
-      class: auto-cols,
-      resonsive: true,
-      values: (
-        auto: 'auto',
-        min: 'min-content',
-        max: 'max-content',
-        fr: 'minmax(0, 1fr)',
-      )
-    ),
-    "grid-auto-rows": (
-      property: grid-auto-rows,
-      class: auto-rows,
-      resonsive: true,
-      values: (
-        auto: 'auto',
-        min: 'min-content',
-        max: 'max-content',
-        fr: 'minmax(0, 1fr)',
-      )
-    ),
-    "gap": (
-      property: gap,
-      class: gap,
-      resonsive: true,
-      values: spacing,
-    ),
-    "gap-x": (
-      property: column-gap,
-      class: gap-x,
-      resonsive: true,
-      values: spacing,
-    ),
-    "gap-y": (
-      property: row-gap,
-      class: gap-y,
-      resonsive: true,
-      values: spacing,
-    ),
-    "justify-content": (
-      property: justify-content,
-      class: justify,
-      resonsive: true,
-      values: (
-        start: flex-start,
-        end: flex-end,
-        center: center,
-        between: space-between,
-        around: space-around,
-        evenly: space-evenly,
-      )
-    ),
+
   ),
   $utilities
 );
