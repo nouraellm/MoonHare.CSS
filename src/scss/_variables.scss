@@ -660,6 +660,10 @@ $border-widths: (
   5: 5px
 ) !default;
 
+$min-height: $min-width !default;
+
+$max-height: $max-width !default;
+
 $border-color:                map-get($colors, gray-500) !default;
 
 $border-radius:               .25rem !default;
