@@ -536,6 +536,33 @@ $utilities: map-merge(
     ),
     // TODO: space-between utilities
 
+    // Sizing
+
+    "width": (
+      responsive: true,
+      includes: (
+        margin-right: map-values($width),
+      ),
+      class: w,
+      keys: map-keys($width),
+    ),
+    "min-width": (
+      responsive: true,
+      includes: (
+        margin-right: map-values($min-width),
+      ),
+      class: min-w,
+      keys: map-keys($min-width),
+    ),
+    "max-width": (
+      responsive: true,
+      includes: (
+        margin-right: map-values($max-width),
+      ),
+      class: max-w,
+      keys: map-keys($max-width),
+    ),
+
   ),
   $utilities
 );
