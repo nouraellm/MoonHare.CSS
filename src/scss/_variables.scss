@@ -620,6 +620,8 @@ $width: map-merge((
   max: 'max-content',
 ), $spacing) !default;
 
+$height: $width !default;
+
 
 $border-width:                1px !default;
 $border-widths: (
