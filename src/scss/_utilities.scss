@@ -111,34 +111,45 @@ $utilities: map-merge(
     "top": (
       responsive: true,
       includes: (
-        top: static relative absolute fixed sticky,
+        top: map-values($position-values),
       ),
       class: top,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "bottom": (
       responsive: true,
       includes: (
-        bottom: static relative absolute fixed sticky,
+        bottom: map-values($position-values),
       ),
       class: bottom,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "left": (
       responsive: true,
       includes: (
-        left: static relative absolute fixed sticky,
+        left: map-values($position-values),
       ),
       class: left,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "right": (
       responsive: true,
       includes: (
-        right: static relative absolute fixed sticky,
+        right: map-values($position-values),
       ),
       class: right,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
+    ),
+    "inset": (
+      responsive: true,
+      includes: (
+        top: map-values($position-values),
+        bottom: map-values($position-values),
+        left: map-values($position-values),
+        right: map-values($position-values),
+      ),
+      class: inset,
+      keys: map-keys($position-values),
     ),
     "visibility": (
       responsive: true,
