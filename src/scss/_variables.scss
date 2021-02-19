@@ -582,6 +582,10 @@ $grid-template-rows: (
 
 $gap: $spacing !default;
 
+$padding: $spacing !default;
+
+$margin: map-merge(map-merge((auto:auto), $spacing), $negative-spacing) !default;
+
 
 $border-width:                1px !default;
 $border-widths: (
