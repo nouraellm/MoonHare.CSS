@@ -622,14 +622,14 @@ $width: map-merge((
 
 $height: $width !default;
 
-$min-width: {
+$min-width: (
   0: 0,
   full: 100%,
   min: min-content,
   max: max-content,
 ) !default;
 
-$max-width: {
+$max-width: (
   none: none,
   0: 0rem,
   xs: 20rem,
