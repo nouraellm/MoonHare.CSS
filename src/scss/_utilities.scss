@@ -151,6 +151,24 @@ $utilities: map-merge(
       class: inset,
       keys: map-keys($position-values),
     ),
+    "inset-y": (
+      responsive: true,
+      includes: (
+        top: map-values($position-values),
+        bottom: map-values($position-values),
+      ),
+      class: inset-y,
+      keys: map-keys($position-values),
+    ),
+    "inset-x": (
+      responsive: true,
+      includes: (
+        left: map-values($position-values),
+        right: map-values($position-values),
+      ),
+      class: inset-x,
+      keys: map-keys($position-values),
+    ),
     "visibility": (
       responsive: true,
       includes: (
