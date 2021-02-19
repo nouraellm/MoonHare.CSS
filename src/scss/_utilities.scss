@@ -111,34 +111,63 @@ $utilities: map-merge(
     "top": (
       responsive: true,
       includes: (
-        top: static relative absolute fixed sticky,
+        top: map-values($position-values),
       ),
       class: top,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "bottom": (
       responsive: true,
       includes: (
-        bottom: static relative absolute fixed sticky,
+        bottom: map-values($position-values),
       ),
       class: bottom,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "left": (
       responsive: true,
       includes: (
-        left: static relative absolute fixed sticky,
+        left: map-values($position-values),
       ),
       class: left,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
     ),
     "right": (
       responsive: true,
       includes: (
-        right: static relative absolute fixed sticky,
+        right: map-values($position-values),
       ),
       class: right,
-      keys: static relative absolute fixed sticky,
+      keys: map-keys($position-values),
+    ),
+    "inset": (
+      responsive: true,
+      includes: (
+        top: map-values($position-values),
+        bottom: map-values($position-values),
+        left: map-values($position-values),
+        right: map-values($position-values),
+      ),
+      class: inset,
+      keys: map-keys($position-values),
+    ),
+    "inset-y": (
+      responsive: true,
+      includes: (
+        top: map-values($position-values),
+        bottom: map-values($position-values),
+      ),
+      class: inset-y,
+      keys: map-keys($position-values),
+    ),
+    "inset-x": (
+      responsive: true,
+      includes: (
+        left: map-values($position-values),
+        right: map-values($position-values),
+      ),
+      class: inset-x,
+      keys: map-keys($position-values),
     ),
     "visibility": (
       responsive: true,
@@ -386,6 +415,126 @@ $utilities: map-merge(
       class: place-self,
       keys: auto start end center stretch,
     ),
+    
+    // Spacing
+    
+    "padding": (
+      responsive: true,
+      includes: (
+        padding: map-values($padding),
+      ),
+      class: p,
+      keys: map-keys($padding),
+    ),
+    "padding-y": (
+      responsive: true,
+      includes: (
+        padding-top: map-values($padding),
+        padding-bottom: map-values($padding),
+      ),
+      class: py,
+      keys: map-keys($padding),
+    ),
+    "padding-x": (
+      responsive: true,
+      includes: (
+        padding-left: map-values($padding),
+        padding-right: map-values($padding),
+      ),
+      class: px,
+      keys: map-keys($padding),
+    ),
+    "padding-top": (
+      responsive: true,
+      includes: (
+        padding-top: map-values($padding),
+      ),
+      class: pt,
+      keys: map-keys($padding),
+    ),
+    "padding-bottom": (
+      responsive: true,
+      includes: (
+        padding-bottom: map-values($padding),
+      ),
+      class: pb,
+      keys: map-keys($padding),
+    ),
+    "padding-left": (
+      responsive: true,
+      includes: (
+        padding-left: map-values($padding),
+      ),
+      class: pl,
+      keys: map-keys($padding),
+    ),
+    "padding-right": (
+      responsive: true,
+      includes: (
+        padding-right: map-values($padding),
+      ),
+      class: pr,
+      keys: map-keys($padding),
+    ),
+    "margin": (
+      responsive: true,
+      includes: (
+        margin: map-values($margin),
+      ),
+      class: m,
+      keys: map-keys($margin),
+    ),
+    "margin-y": (
+      responsive: true,
+      includes: (
+        margin-top: map-values($margin),
+        margin-bottom: map-values($margin),
+      ),
+      class: my,
+      keys: map-keys($margin),
+    ),
+    "margin-x": (
+      responsive: true,
+      includes: (
+        margin-left: map-values($margin),
+        margin-right: map-values($margin),
+      ),
+      class: mx,
+      keys: map-keys($margin),
+    ),
+    "margin-top": (
+      responsive: true,
+      includes: (
+        margin-top: map-values($margin),
+      ),
+      class: mt,
+      keys: map-keys($margin),
+    ),
+    "margin-bottom": (
+      responsive: true,
+      includes: (
+        margin-bottom: map-values($margin),
+      ),
+      class: mb,
+      keys: map-keys($margin),
+    ),
+    "margin-left": (
+      responsive: true,
+      includes: (
+        margin-left: map-values($margin),
+      ),
+      class: ml,
+      keys: map-keys($margin),
+    ),
+    "margin-right": (
+      responsive: true,
+      includes: (
+        margin-right: map-values($margin),
+      ),
+      class: mr,
+      keys: map-keys($margin),
+    ),
+    // TODO: space-between utilities
 
   ),
   $utilities
