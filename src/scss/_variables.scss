@@ -622,14 +622,14 @@ $width: map-merge((
 
 $height: $width !default;
 
-min-width: {
+$min-width: {
   0: 0,
   full: 100%,
   min: min-content,
   max: max-content,
 ) !default;
 
-max-width: {
+$max-width: {
   none: none,
   0: 0rem,
   xs: 20rem,
@@ -649,6 +649,9 @@ max-width: {
   prose: 65ch,
 ) !default;
 
+$min-height: $min-width !default;
+
+$max-height: $max-width !default;
 
 $border-width:                1px !default;
 $border-widths: (
@@ -659,10 +662,6 @@ $border-widths: (
   4: 4px,
   5: 5px
 ) !default;
-
-$min-height: $min-width !default;
-
-$max-height: $max-width !default;
 
 $border-color:                map-get($colors, gray-500) !default;
 
