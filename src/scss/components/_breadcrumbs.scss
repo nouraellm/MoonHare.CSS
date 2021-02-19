@@ -1,13 +1,21 @@
 .breadcrumb {
   list-style: none;
+  padding: 0.5rem 1rem;
 
   li {
     display: inline;
     font-size: 1rem;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
-  li+li:before,
-  .sep {
+  li+li:before {
     padding: 0.5rem;
     color: black;
     content: "/\00a0";
