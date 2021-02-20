@@ -14,7 +14,7 @@
 
   .radio{
     width: $radiobutton-width;
-    width: var(--radio-width, $radio-width);
+    width: var(--radio-width, $radiobutton-width);
     height: $radiobutton-height;
     height: var(--radio-height, $radiobutton-height);
     border: $radiobutton-border-width solid $radiobutton-border-color;
