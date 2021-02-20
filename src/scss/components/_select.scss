@@ -1,48 +1,15 @@
-.select {
+.select {  
   padding: $select-pad-y $select-pad-x;
   padding: var(--select-pad-y, $select-pad-y) var(--select-pad-x, $select-pad-x);
-  font-size: $select-font-size;
-  font-size: var(--select-font-size, $select-font-size);
   appearance: none;
   border: $select-border-width solid $select-border-color;
   border: var(--select-border-width, $select-border-width) solid
     var(--select-border-color, $select-border-color);
-  background-image: url("data:image/svg+xml,#{$select-icon}");
-  background-repeat: no-repeat;
-  background-position: right;
-  vertical-align: middle;
   min-width: $select-min-width;
   max-width: $select-max-width;
 
-  &:hover {
-    background-image: url("data:image/svg+xml,#{$select-icon}"),
-      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
-  }
-
-  &:focus {
-    background-image: url("data:image/svg+xml,#{$select-icon}"),
-      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
-  }
-
-  &:active {
-    background-image: url("data:image/svg+xml,#{$select-icon}"),
-      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
-  }
-
-  .light-effect {
-    &:hover {
-      background-image: url("data:image/svg+xml,#{$select-light-icon}"),
-        url("data:image/svg+xml,#{$light-hover-overlay-image}");
-    }
-
-    &:focus {
-      background-image: url("data:image/svg+xml,#{$select-light-icon}"),
-        url("data:image/svg+xml,#{$light-focus-overlay-image}");
-    }
-
-    &:active {
-      background-image: url("data:image/svg+xml,#{$select-light-icon}"),
-        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
-    }
+  &:focus:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
   }
 }
