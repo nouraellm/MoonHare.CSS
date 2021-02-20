@@ -17,4 +17,9 @@
   &borderless {
     border: none;
   }
+
+  &.primary{
+    color: white;
+    background-color: lightblue;
+  }
 }
