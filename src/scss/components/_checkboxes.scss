@@ -1,87 +1,47 @@
-.checkbox {
-  appearance: none;
-  width: $checkbox-width;
-  width: var(--checkbox-width, $checkbox-width);
-  height: $checkbox-height;
-  height: var(--checkbox-height, $checkbox-height);
-  border: $checkbox-border-width solid $checkbox-border-color;
-  border: var(--checkbox-border-width, $checkbox-border-width) solid
-    var(--checkbox-border-color, $checkbox-border-color);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  vertical-align: middle;
+.check-label {
+  cursor: pointer;
+  user-select: none;
 
-  &:checked {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
-  }
-  &:indeterminate {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
-  }
+  input {
+    width: 0;
+    height: 0;
+    margin: 0;
 
-  &:checked:hover {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
-  }
-  &:indeterminate:hover {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
-  }
-
-  &:checked:focus {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
-  }
-  &:indeterminate:focus {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
-  }
-
-  &:checked:active {
-    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
-  }
-  &:indeterminate:active {
-    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}"),
-      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
-  }
-
-  .light-effect {
-    &:checked {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-selected-overlay-image}");
-    }
-    &:indeterminate {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
-        url("data:image/svg+xml,#{$light-selected-overlay-image}");
+    &:checked ~ .box .check{
+      display: block;
     }
 
-    &:checked:hover {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-hover-overlay-image}");
+    &:indeterminate ~ .box .ind{
+      display: block;
     }
-    &:indeterminate:hover {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
-        url("data:image/svg+xml,#{$light-hover-overlay-image}");
-    }
+  }
 
-    &:checked:focus {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-focus-overlay-image}");
-    }
-    &:indeterminate:focus {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
-        url("data:image/svg+xml,#{$light-focus-overlay-image}");
-    }
+  .box{
+    width: $checkbox-width;
+    width: var(--checkbox-width, $checkbox-width);
+    height: $checkbox-height;
+    height: var(--checkbox-height, $checkbox-height);
+    border: $checkbox-border-width solid $checkbox-border-color;
+    border: var(--checkbox-border-width, $checkbox-border-width) solid
+      var(--checkbox-border-color, $checkbox-border-color);
+  }
 
-    &:checked:active {
-      background-image: url("data:image/svg+xml,#{$checkbox-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
-    }
-    &:indeterminate:active {
-      background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-light-icon}"),
-        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
-    }
+  .mark {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: 50% 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    user-select: none;
+    line-height: 1rem;
+    font-size: 65%;
+    text-align: center;
+  }
+  .check-mark {
+    background-image: url("data:image/svg+xml,#{$checkbox-checked-icon}");
+  }
+  .ind-mark {
+    background-image: url("data:image/svg+xml,#{$checkbox-indeterminate-icon}");
   }
 }
