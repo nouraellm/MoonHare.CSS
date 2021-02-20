@@ -1,56 +1,38 @@
-.radiobutton {
-  appearance: none;
-  width: $radiobutton-width;
-  width: var(--radiobutton-width, $radiobutton-width);
-  height: $radiobutton-height;
-  height: var(--radiobutton-height, $radiobutton-height);
-  border: $radiobutton-border-width solid $radiobutton-border-color;
-  border: var(--radiobutton-border-width, $radiobutton-border-width) solid
-    var(--radiobutton-border-color, $radiobutton-border-color);
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  vertical-align: middle;
+.radio-label {
+  cursor: pointer;
+  user-select: none;
 
-  &:checked {
-    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-selected-overlay-image}");
+  input {
+    width: 0;
+    height: 0;
+    margin: 0;
+
+    &:checked ~ .radio .mark{
+      display: block;
+    }
   }
 
-  &:checked:hover {
-    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-hover-overlay-image}");
+  .radio{
+    width: $radiobutton-width;
+    width: var(--radio-width, $radio-width);
+    height: $radiobutton-height;
+    height: var(--radio-height, $radiobutton-height);
+    border: $radiobutton-border-width solid $radiobutton-border-color;
+    border: var(--radiobutton-border-width, $radiobutton-border-width) solid
+      var(--radiobutton-border-color, $radiobutton-border-color);
+    border-radius: 50%;
   }
 
-  &:checked:focus {
-    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-focus-overlay-image}");
-  }
-
-  &:checked:active {
-    background-image: url("data:image/svg+xml,#{$radiobutton-checked-icon}"),
-      url("data:image/svg+xml,#{$dark-pressed-overlay-image}");
-  }
-
-  .light-effect {
-    &:checked {
-      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-selected-overlay-image}");
-    }
-
-    &:checked:hover {
-      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-hover-overlay-image}");
-    }
-
-    &:checked:focus {
-      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-focus-overlay-image}");
-    }
-
-    &:checked:active {
-      background-image: url("data:image/svg+xml,#{$radiobutton-checked-light-icon}"),
-        url("data:image/svg+xml,#{$light-pressed-overlay-image}");
-    }
+  .mark {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: 50% 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    user-select: none;
+    line-height: 1rem;
+    font-size: 65%;
+    text-align: center;
   }
 }
