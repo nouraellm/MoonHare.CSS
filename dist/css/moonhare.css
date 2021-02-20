@@ -1717,6 +1717,9 @@ textarea.input {
   min-width: 3rem; }
   .buttonborderless {
     border: none; }
+  .button.primary {
+    color: white;
+    background-color: lightblue; }
 
 .card {
   border: 1px solid #9e9e9e;
