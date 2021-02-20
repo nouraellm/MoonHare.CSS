@@ -680,6 +680,13 @@ $position-values: (
   100: 100%
 ) !default;
 
+
+$alert-pad-y: 1.25rem;
+$alert-pad-x: 1.25rem;
+$alert-border-width: 1px;
+$alert-border-color: map-get($colors, gray-500);
+$alert-margin-bottom: 1rem;
+
 // Buttons
 $button-min-width: 3rem;
 $button-pad-y: 0.375rem;
