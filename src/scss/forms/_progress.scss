@@ -1,0 +1,14 @@
+.progress {
+  display: inline-block;
+  height: 1rem;
+
+  .bar {
+    height: 100%;
+    background-color: black;
+    opacity: 5;
+
+    .white {
+      background-color: white;
+    }
+  }
+}
