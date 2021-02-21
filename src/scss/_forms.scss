@@ -104,6 +104,7 @@ textarea.input {
     width: 1rem;
     height: 1rem;
     border: 2px solid lightgray;
+    border-radius: 50%;
   }
 
   .ball {
@@ -111,6 +112,8 @@ textarea.input {
     background-color: gray;
     width: 50%;
     height: 50%;
-    top: 50%;
+    top: 25%;
+    top: 25%;
+    border-radius: 50%;
   }
 }
