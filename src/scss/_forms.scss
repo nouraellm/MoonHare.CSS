@@ -44,3 +44,13 @@ textarea.input {
   font-weight: normal;
   margin-left: .5rem;
 }
+
+.check-label {
+  input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+}
