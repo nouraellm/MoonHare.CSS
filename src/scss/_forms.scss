@@ -20,3 +20,25 @@
 .select[multiple] {
   height: auto;
 }
+
+textarea.input {
+  min-height: 6.5rem;
+}
+
+.label,
+.legend {
+  display: block;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.fieldset {
+  border-width: 0;
+  padding: 0;
+}
+
+.label-inline {
+  display: inline-block;
+  font-weight: normal;
+  margin-left: .5rem;
+}
