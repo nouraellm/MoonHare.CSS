@@ -7,16 +7,16 @@
     height: 0;
     margin: 0;
 
-    &:checked ~ .box .check{
+    &:checked ~ .custom-check .check{
       display: block;
     }
 
-    &:indeterminate ~ .box .ind{
+    &:indeterminate ~ .custom-check .ind{
       display: block;
     }
   }
 
-  .box{
+  .custom-check{
     width: $checkbox-width;
     width: var(--checkbox-width, $checkbox-width);
     height: $checkbox-height;
