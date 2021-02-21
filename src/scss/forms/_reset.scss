@@ -7,10 +7,14 @@
 .input {
   appearance: none;
   background-color: transparent;
-  border: 1px solid lightgray;
   box-shadow: none;
   height: 3.8rem;
-  padding: 0.5rem 1rem;
+  padding: $input-pad-y $input-pad-x;
+  padding: var(--input-pad-y, $input-pad-y) var(--input-pad-x, $input-pad-x);
+  border: $input-border-width solid $input-border-color;
+  border: var(--input-border-width, $input-border-width) solid var(--input-border-color, $input-border-color);
+  font-size: $input-font-size;
+  font-size: var(--input-font-size, $input-font-size);
   width: 100%;
   outline: none;
 }
