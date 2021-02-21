@@ -3,3 +3,13 @@
   height: 0;
   margin: 0;
 }
+
+.input {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid lightgray;
+  box-shadow: none;
+  height: 3.8rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
