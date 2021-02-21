@@ -1,8 +1,7 @@
 .file {
-  padding: .5rem 1rem;
-  line-height: 1.5;
-  color: gray;
-  background-color: transparent;
-  border: 1px solid lightgray;
-  user-select: none;
+  .custom-file {
+    padding: 0.5rem 1rem;
+    border: 1px solid lightgray;
+    user-select: none;
+  }
 }
