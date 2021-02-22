@@ -25,31 +25,6 @@
 
 Quickly design and customize responsive mobile-first sites with MoonHare, modern front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful utilities collection.
 
-- **Cross browser** - Makes browsers render all elements more consistently and in line with modern standards.
-- **Components** - essential components.
-  - **Grid** - Mobile-first twelve column flexbox grid system, six default responsive tiers.
-  - **Buttons** - Minimal styled button for actions.
-  - **Tables** - Cross Browser tables for show Data.
-  - **Forms** - Fixes for style form components.
-  - **Menus** - Powerful menus for Navigation.
-  and more...
-- **Utilities** - Large collection of utility classes and small production build size.
-- **Customizeable** -
-  - **SASS**(Syntactically Awesome Style Sheets) - Featuring Sass variables and mixins to customize from ground.
-  ```scss
-  $colors: (
-    red: #fff,
-    ...
-  };
-  ```
-  - **CSS**(Cascading Style Sheets) - Featuring CSS variables to customize easily.
-  ```css
-  :root {
-    --font-color: white;
-  }
-  ```
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 Get started with MoonHare.CSS, Framework for building responsive, mobile-first sites, with jsDelivr and a [template starter page](#starter-template).
