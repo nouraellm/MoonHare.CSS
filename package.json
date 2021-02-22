@@ -3,20 +3,20 @@
   "version": "1.0.1",
   "author": "Kavindu Santhusa",
   "license": "MIT",
-  "description": "A minimalist front-end design toolkit for developing web apps.",
-  "homepage": "https://github.com/MoonHareLabs/MoonHare",
+  "description": "Beautiful, customizable, and powerful front-end CSS framework for developing responsive, mobile first projects on the web.",
+  "homepage": "https://github.com/MoonHareLabs/MoonHare.CSS",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MoonHareLabs/MoonHare.git"
+    "url": "git+https://github.com/MoonHareLabs/MoonHare.CSS.git"
   },
   "bugs": {
-    "url": "https://github.com/MoonHareLabs/MoonHare/issues"
+    "url": "https://github.com/MoonHareLabs/MoonHare.CSS/issues"
   },
   "scripts": {
-    "sass:watch": "node-sass src/scss/ -o dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded",
+    "sass:watch": "node-sass src/scss/ -o dist/css/ -w -r",
     "sass:build": "node-sass src/scss/ -o dist/css/ -r",
-    "sass:build:docs": "node-sass src/scss/beautify.scss docs/css/beautify.css --source-map-embed --source-map-contents --output-style expanded",
+    "sass:build:docs": "node-sass src/scss/beautify.scss docs/css/beautify.css",
     "prefix": "postcss dist/css/*.css -r --use=autoprefixer --no-map",
     "gulp-css": "gulp css",
     "gulp-watch": "gulp watch"
