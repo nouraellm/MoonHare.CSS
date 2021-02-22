@@ -1,1 +1,30 @@
+.hover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.hover:hover,
+.hovered {
+  background-image: $dark-hover-overlay-image;
+}
+
+.focus:focus,
+.focused {
+  background-image: $dark-hover-overlay-image;
+}
+
+.active:active,
+.activated {
+  background-image: $dark-hover-overlay-image;
+}
+
+.check:checked,
+.checked {
+  background-image: $dark-hover-overlay-image;
+}
+
+.pressed,
+.checked {
+  background-image: $dark-hover-overlay-image;
+}
