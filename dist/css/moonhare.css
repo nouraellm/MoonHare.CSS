@@ -469,7 +469,6 @@ textarea.input {
   width: 0;
   margin: 0; }
 
-.file-label .mark,
 .radio-label .mark,
 .check-label .mark {
   width: 100%;
@@ -490,7 +489,8 @@ textarea.input {
 .check-label .custom {
   width: 1rem;
   height: 1rem;
-  border: 2px solid lightgray; }
+  border: 2px solid lightgray;
+  display: inline-block; }
 
 .radio-label input {
   opacity: 0;
@@ -506,9 +506,10 @@ textarea.input {
   width: 1rem;
   height: 1rem;
   border: 2px solid lightgray;
-  border-radius: 50%; }
+  border-radius: 50%;
+  display: inline-block; }
 
-.radio-label .ball {
+.radio-label .radio-ball {
   position: absolute;
   background-color: gray;
   width: 50%;
