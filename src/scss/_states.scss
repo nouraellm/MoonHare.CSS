@@ -1,30 +1,52 @@
-.hover {
+.button,
+.check-label .custom,
+.radio-label .custom,
+.input,
+.onhover:hover,
+.hover,
+.onfocus:focus,
+.focused,
+.onpress:active,
+.pressed,
+.onselect:checked,
+.selected {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hover:hover,
-.hovered {
+.button:hover,
+.check-label .custom:hover,
+.radio-label .custom:hover,
+.input:hover,
+.onhover:hover,
+.hover{
   background-image: $dark-hover-overlay-image;
 }
 
-.focus:focus,
-.focused {
-  background-image: $dark-hover-overlay-image;
+.button:focus,
+.check-label .custom:focus,
+.radio-label .custom:focus,
+.input:focus,
+.onfocus:focus,
+.focused{
+  background-image: $dark-focus-overlay-image;
 }
 
-.active:active,
-.activated {
-  background-image: $dark-hover-overlay-image;
+.button:active,
+.check-label .custom:active,
+.radio-label .custom:active,
+.input:active,
+.onpress:active,
+.pressed{
+  background-image: $dark-pressed-overlay-image;
 }
 
-.check:checked,
-.checked {
-  background-image: $dark-hover-overlay-image;
+.check-label input:checked ~ .custom,
+.radio-label input:checked ~ .custom,
+.onselect:checked,
+.onselect\:after:checked ~ *,
+.selected {
+  background-image: $dark-selected-overlay-image;
 }
 
-.pressed,
-.checked {
-  background-image: $dark-hover-overlay-image;
-}
