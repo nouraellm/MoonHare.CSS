@@ -48,6 +48,7 @@ textarea.input {
 .file-label,
 .radio-label,
 .check-label {
+  display: inline-block;
   input {
     opacity: 0;
     cursor: pointer;
