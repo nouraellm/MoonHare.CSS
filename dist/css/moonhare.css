@@ -521,3 +521,118 @@ textarea.input {
   top: 25%;
   top: 25%;
   border-radius: 50%; }
+
+.button,
+.check-label .custom,
+.radio-label .custom,
+.input,
+.onhover:hover,
+.hover,
+.onfocus:focus,
+.focused,
+.onpress:active,
+.pressed,
+.onselect:checked,
+.onselect\:after:checked ~ *,
+.selected,
+.activated,
+.onhover-dark:hover,
+.hover-dark,
+.onfocus-dark:focus,
+.focused-dark,
+.onpress-dark:active,
+.pressed-dark,
+.onselect-dark:checked,
+.onselect\:after-dark:checked,
+.selected-dark,
+.activated-dark,
+.onhover-image:hover,
+.hover-image,
+.onfocus-image:focus,
+.focused-image,
+.onpress-image:active,
+.pressed-image,
+.onselect-image:checked,
+.onselect\:after-image:checked,
+.selected-image,
+.activated-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.button:hover,
+.check-label .custom:hover,
+.radio-label .custom:hover,
+.input:hover,
+.select:hover,
+.onhover:hover,
+.hover {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.04);'%3E%3C/svg%3E"; }
+
+.button:focus,
+.check-label .custom:focus,
+.radio-label .custom:focus,
+.input:focus,
+.select:focus,
+.onfocus:focus,
+.focused {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"; }
+
+.button:active,
+.check-label .custom:active,
+.radio-label .custom:active,
+.input:active,
+.select:active,
+.onpress:active,
+.pressed {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"; }
+
+.activated {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"; }
+
+.check-label input:checked ~ .custom,
+.radio-label input:checked ~ .custom,
+.onselect:checked,
+.onselect\:after:checked ~ *,
+.selected {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.08);'%3E%3C/svg%3E"; }
+
+.onhover-dark:hover,
+.hover-dark {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.08);'%3E%3C/svg%3E"; }
+
+.onfocus-dark:focus,
+.focused-dark {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.24);'%3E%3C/svg%3E"; }
+
+.onpress-dark:active,
+.pressed-dark {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.32);'%3E%3C/svg%3E"; }
+
+.activated-dark {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.24);'%3E%3C/svg%3E"; }
+
+.onselect-dark:checked,
+.onselect\:after-dark:checked ~ *,
+.selected-dark {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,0.16);'%3E%3C/svg%3E"; }
+
+.onhover-image:hover,
+.hover-image {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.12);'%3E%3C/svg%3E"; }
+
+.onfocus-image:focus,
+.focused-image {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.36);'%3E%3C/svg%3E"; }
+
+.onpress-image:active,
+.pressed-image {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.48);'%3E%3C/svg%3E"; }
+
+.activated-image {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.36);'%3E%3C/svg%3E"; }
+
+.onselect-image:checked,
+.onselect\:after-image:checked ~ *,
+.selected-image {
+  background-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,0.24);'%3E%3C/svg%3E"; }
