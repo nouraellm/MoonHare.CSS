@@ -460,14 +460,18 @@ textarea.input {
   font-weight: normal;
   margin-left: .5rem; }
 
-.file-label input,
-.radio-label input,
-.check-label input {
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  margin: 0; }
+.file-label,
+.radio-label,
+.check-label {
+  display: inline-block; }
+  .file-label input,
+  .radio-label input,
+  .check-label input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    margin: 0; }
 
 .radio-label .mark,
 .check-label .mark {
