@@ -390,11 +390,11 @@ template, [hidden] {
     color: white;
     background-color: blue; }
     .button.primary:hover {
-      background-color: rgba(0, 0, 0, 0.04); }
+      background-color: #0000f5; }
     .button.primary:focus {
-      background-color: rgba(0, 0, 255, 0.12); }
+      background-color: #0000e0; }
     .button.primary:active {
-      background-color: rgba(0, 0, 255, 0.08); }
+      background-color: #0000eb; }
 
 .menu .fixed {
   position: fixed;
