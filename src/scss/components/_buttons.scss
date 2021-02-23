@@ -23,7 +23,7 @@
   }
 
   &:focus {
-    background-color: rgba(0, 0, 0, $dark-focused-overlay/100%);
+    background-color: rgba(0, 0, 0, $dark-focus-overlay/100%);
   }
 
   &:active {
@@ -39,7 +39,7 @@
     }
 
     &:focus {
-      background-color: rgba(0, 0, 255, $dark-focused-overlay/100%);
+      background-color: rgba(0, 0, 255, $dark-focus-overlay/100%);
     }
 
     &:active {
