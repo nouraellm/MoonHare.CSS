@@ -15,7 +15,7 @@
   },
   "scripts": {
     "sass:watch": "node-sass src/scss:dist/css/ -w",
-    "sass:build": "node-sass src/scss:dist/css/",
+    "sass:build": "node-sass src/scss/ -o dist/css/ -r",
     "sass:build:docs": "node-sass src/scss/beautify.scss docs/css/beautify.css",
     "prefix": "postcss dist/css/*.css -r --use=autoprefixer --no-map",
     "gulp-css": "gulp css",
