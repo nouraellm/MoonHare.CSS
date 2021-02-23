@@ -124,3 +124,11 @@ textarea.input {
     border-radius: 50%;
   }
 }
+
+.input:focus,
+.select:focus,
+.radio-label .custom:focus,
+.check-label .custom:focus,
+.file-label .custom:focus {
+  border-color: lightblue;
+}

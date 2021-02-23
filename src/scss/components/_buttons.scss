@@ -18,8 +18,32 @@
     border: none;
   }
 
+  &:hover {
+    background-color: rgba(0, 0, 0, $dark-hover-overlay/100%);
+  }
+
+  &:focus {
+    background-color: rgba(0, 0, 0, $dark-focus-overlay/100%);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, $dark-selected-overlay/100%);
+  }
+
   &.primary{
     color: white;
-    background-color: lightblue;
+    background-color: blue;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, $dark-hover-overlay/100%);
+    }
+
+    &:focus {
+      background-color: rgba(0, 0, 255, $dark-focus-overlay/100%);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 255, $dark-selected-overlay/100%);
+    }
   }
 }
