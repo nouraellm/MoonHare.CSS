@@ -19,17 +19,14 @@
   }
 
   &:hover {
-    background-color: mix(black, white, $dark-hover-overlay);
     background-color: rgba(0, 0, 0, $dark-hover-overlay/100%);
   }
 
   &:focus {
-    background-color: mix(black, white, $dark-focused-overlay);
     background-color: rgba(0, 0, 0, $dark-focused-overlay/100%);
   }
 
   &:active {
-    background-color: mix(black, white, $dark-selected-overlay);
     background-color: rgba(0, 0, 0, $dark-selected-overlay/100%);
   }
 
@@ -38,17 +35,14 @@
     background-color: blue;
 
     &:hover {
-      background-color: mix(black, blue, $dark-hover-overlay);
       background-color: rgba(0, 0, 0, $dark-hover-overlay/100%);
     }
 
     &:focus {
-      background-color: mix(black, blue, $dark-focused-overlay);
       background-color: rgba(0, 0, 255, $dark-focused-overlay/100%);
     }
 
     &:active {
-      background-color: mix(black, blue, $dark-selected-overlay);
       background-color: rgba(0, 0, 255, $dark-selected-overlay/100%);
     }
   }
