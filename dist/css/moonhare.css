@@ -441,6 +441,12 @@ template, [hidden] {
   .button-block {
     display: block;
     width: 100%; }
+  .button-rounded {
+    border-radius: 3.2rem; }
+    .button-rounded.button-sm {
+      border-radius: 2.6rem; }
+    .button-rounded.button-lg {
+      border-radius: 4rem; }
 
 .menu .fixed {
   position: fixed;
