@@ -46,4 +46,71 @@
       background-color: mix(black, $button-primary-background-color, $selected-overlay);
     }
   }
+
+  &.danger{
+    color: $button-primary-color;
+    background-color: #ff8080;
+
+    &:hover {
+      background-color: mix(black, #ff8080, $hover-overlay);
+    }
+
+    &:focus {
+      background-color: mix(black, #ff8080, $focus-overlay);
+    }
+
+    &:active {
+      background-color: mix(black, #ff8080, $selected-overlay);
+    }
+  }
+
+  &.success{
+    color: $button-primary-color;
+    background-color: #80ff80;
+
+    &:hover {
+      background-color: mix(black, #80ff80, $hover-overlay);
+    }
+
+    &:focus {
+      background-color: mix(black, #80ff80, $focus-overlay);
+    }
+
+    &:active {
+      background-color: mix(black, #80ff80, $selected-overlay);
+    }
+  
+    &.info{
+    color: $button-primary-color;
+    background-color: #00ffff;
+
+    &:hover {
+      background-color: mix(black, #00ffff, $hover-overlay);
+    }
+
+    &:focus {
+      background-color: mix(black, #00ffff, $focus-overlay);
+    }
+
+    &:active {
+      background-color: mix(black, #00ffff, $selected-overlay);
+    }
+  }
+
+    &.secondary{
+    color: $button-primary-color;
+    background-color: #ffff00;
+
+    &:hover {
+      background-color: mix(black, #ffff00, $hover-overlay);
+    }
+
+    &:focus {
+      background-color: mix(black, #ffff00, $focus-overlay);
+    }
+
+    &:active {
+      background-color: mix(black, #ffff00, $selected-overlay);
+    }
+  }
 }
