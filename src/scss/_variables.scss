@@ -1,46 +1,9 @@
-$dark-hover-overlay: 4%;
-$dark-focus-overlay: 12%;
-$dark-selected-overlay: 8%;
-$dark-activated-overlay: 12%;
-$dark-pressed-overlay: 12%;
-$dark-dragged-overlay: 8%;
-
-$light-hover-overlay: 8%;
-$light-focus-overlay: 24%;
-$light-selected-overlay: 16%;
-$light-activated-overlay: 24%;
-$light-pressed-overlay: 32%;
-$light-dragged-overlay: 16%;
-
-$image-hover-overlay: 12%;
-$image-focus-overlay: 36%;
-$image-selected-overlay: 24%;
-$image-activated-overlay: 36%;
-$image-pressed-overlay: 48%;
-$image-dragged-overlay: 32%;
-
-$overlay-base: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(r,g,b,a);'></svg>";
-
-$dark-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-hover-overlay/100%});'%3E%3C/svg%3E";
-$dark-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-focus-overlay/100%});'%3E%3C/svg%3E";
-$dark-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-selected-overlay/100%});'%3E%3C/svg%3E";
-$dark-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-activated-overlay/100%});'%3E%3C/svg%3E";
-$dark-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-pressed-overlay/100%});'%3E%3C/svg%3E";
-$dark-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$dark-dragged-overlay/100%});'%3E%3C/svg%3E";
-
-$light-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-hover-overlay/100%});'%3E%3C/svg%3E";
-$light-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-focus-overlay/100%});'%3E%3C/svg%3E";
-$light-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-selected-overlay/100%});'%3E%3C/svg%3E";
-$light-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-activated-overlay/100%});'%3E%3C/svg%3E";
-$light-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-pressed-overlay/100%});'%3E%3C/svg%3E";
-$light-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(255,255,255,#{$light-dragged-overlay/100%});'%3E%3C/svg%3E";
-
-$image-hover-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-hover-overlay/100%});'%3E%3C/svg%3E";
-$image-focus-overlay-image:     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-focus-overlay/100%});'%3E%3C/svg%3E";
-$image-selected-overlay-image:  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-selected-overlay/100%});'%3E%3C/svg%3E";
-$image-activated-overlay-image: "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-activated-overlay/100%});'%3E%3C/svg%3E";
-$image-pressed-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-pressed-overlay/100%});'%3E%3C/svg%3E";
-$image-dragged-overlay-image:   "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background-color:rgba(0,0,0,#{$image-dragged-overlay/100%});'%3E%3C/svg%3E";
+$hover-overlay: 5%;
+$focus-overlay: 10%;
+$selected-overlay: 10%;
+$activated-overlay: 10%;
+$pressed-overlay: 15%;
+$dragged-overlay: 15%;
 
 // Grid
 $breakpoints: (
@@ -663,24 +626,7 @@ $border-widths: (
   5: 5px
 ) !default;
 
-$border-color:                map-get($colors, gray-500) !default;
-
-$border-radius:               .25rem !default;
-$border-radius-sm:            .2rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-pill:          50rem !default;
-
-$box-shadow:                  0 .5rem 1rem rgba(map-get($colors,black), .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba(map-get($colors, black), .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba(map-get($colors, black), .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba(map-get($colors, black), .075) !default;
-$position-values: (
-  0: 0,
-  50: 50%,
-  100: 100%
-) !default;
-
-
+// Alerts
 $alert-pad-y: 1.25rem;
 $alert-pad-x: 1.25rem;
 $alert-border-width: 1px;
@@ -688,13 +634,14 @@ $alert-border-color: map-get($colors, gray-500);
 $alert-margin-bottom: 1rem;
 
 // Buttons
-$button-min-width: 3rem;
-$button-pad-y: 0.375rem;
-$button-pad-x: 0.75rem;
-$button-font-size: 1rem;
-$button-background-color: transparent;
-$button-border-width: 1px;
-$button-border-color: map-get($colors, gray-500);
+$button-min-width: 3rem !default;
+$button-padding-y: 0.375rem !default;
+$button-padding-x: 0.75rem !default;
+$button-border-width: 1px !default;
+$button-border-color: lightgray !default;
+
+$button-primary-color: white !default;
+$button-primary-background-color: blue !default;
 
 // Cards
 $card-pad-y: 0.75rem;
