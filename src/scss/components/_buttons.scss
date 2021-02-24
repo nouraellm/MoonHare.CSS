@@ -1,9 +1,11 @@
 .button {
   display: inline-block;
   padding: $button-padding-y $button-padding-x;
-  padding: var(--button-pad-y, $button-padding-y) var(--button-pad-x, $button-padding-x);
+  padding: var(--button-pad-y, $button-padding-y)
+    var(--button-pad-x, $button-padding-x);
   border: $button-border-width solid $button-border-color;
-  border: var(--button-border-width, $button-border-width) solid var(--button-border-color, $button-border-color);
+  border: var(--button-border-width, $button-border-width) solid
+    var(--button-border-color, $button-border-color);
   background-color: transparent;
   outline: none;
   user-select: none;
@@ -14,7 +16,7 @@
   text-decoration: none;
   min-width: $button-min-width;
 
-  &borderless {
+  &.borderless {
     border: none;
   }
 
@@ -30,24 +32,36 @@
     background-color: rgba(0, 0, 0, $selected-overlay/100%);
   }
 
-  &.primary{
+  &.primary {
     color: $button-primary-color;
     background-color: $button-primary-background-color;
 
     &:hover {
-      background-color: mix(black, $button-primary-background-color, $hover-overlay);
+      background-color: mix(
+        black,
+        $button-primary-background-color,
+        $hover-overlay
+      );
     }
 
     &:focus {
-      background-color: mix(black, $button-primary-background-color, $focus-overlay);
+      background-color: mix(
+        black,
+        $button-primary-background-color,
+        $focus-overlay
+      );
     }
 
     &:active {
-      background-color: mix(black, $button-primary-background-color, $selected-overlay);
+      background-color: mix(
+        black,
+        $button-primary-background-color,
+        $selected-overlay
+      );
     }
   }
 
-  &.danger{
+  &.danger {
     color: $button-primary-color;
     background-color: #ff8080;
 
@@ -64,7 +78,7 @@
     }
   }
 
-  &.success{
+  &.success {
     color: $button-primary-color;
     background-color: #80ff80;
 
@@ -79,8 +93,8 @@
     &:active {
       background-color: mix(black, #80ff80, $selected-overlay);
     }
-  
-    &.info{
+  }
+  &.info {
     color: $button-primary-color;
     background-color: #00ffff;
 
@@ -97,7 +111,7 @@
     }
   }
 
-    &.secondary{
+  &.secondary {
     color: $button-primary-color;
     background-color: #ffff00;
 
@@ -115,19 +129,21 @@
   }
 
   &-sm {
-  padding: $button-padding-y*.75 $button-padding-x*.75;
-  padding: var(--button-sm-pad-y, $button-padding-y*.75) var(--button-sm-pad-x, $button-padding-x*.75);
-  font-size: 1.2rem;
-}
+    padding: $button-padding-y * 0.75 $button-padding-x * 0.75;
+    padding: var(--button-sm-pad-y, $button-padding-y * 0.75)
+      var(--button-sm-pad-x, $button-padding-x * 0.75);
+    font-size: 1.2rem;
+  }
 
-&-lg {
-  padding: $button-padding-y*1.5 $button-padding-x*1.5;
-  padding: var(--button-sm-pad-y, $button-padding-y*1.5) var(--button-sm-pad-x, $button-padding-x*1.5);
-  font-size: 1.8rem;
-}
+  &-lg {
+    padding: $button-padding-y * 1.5 $button-padding-x * 1.5;
+    padding: var(--button-sm-pad-y, $button-padding-y * 1.5)
+      var(--button-sm-pad-x, $button-padding-x * 1.5);
+    font-size: 1.8rem;
+  }
 
-&-block {
-  display: block;
-  width: 100%;
-}
+  &-block {
+    display: block;
+    width: 100%;
+  }
 }
