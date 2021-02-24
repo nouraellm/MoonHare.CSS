@@ -113,4 +113,21 @@
       background-color: mix(black, #ffff00, $selected-overlay);
     }
   }
+
+  &-sm {
+  padding: $button-padding-y*.75 $button-padding-x*.75;
+  padding: var(--button-sm-pad-y, $button-padding-y*.75) var(--button-sm-pad-x, $button-padding-x*.75);
+  font-size: 1.2rem;
+}
+
+&-lg {
+  padding: $button-padding-y*1.5 $button-padding-x*1.5;
+  padding: var(--button-sm-pad-y, $button-padding-y*1.5) var(--button-sm-pad-x, $button-padding-x*1.5);
+  font-size: 1.8rem;
+}
+
+&-block {
+  display: block;
+  width: 100%;
+}
 }
