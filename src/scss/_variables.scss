@@ -644,11 +644,11 @@ $button-primary-color: white !default;
 $button-primary-background-color: blue !default;
 
 // Cards
-$card-pad-y: 0.75rem;
-$card-pad-x: 0.75rem;
-$card-background-color: transparent;
-$card-border-width: 1px;
-$card-border-color: map-get($colors, gray-500);
+$card-pad-y: 0.75rem !default;
+$card-pad-x: 0.75rem !default;
+$card-background-color: transparent !default;
+$card-border-width: 1px !default;
+$card-border-color: map-get($colors, gray-500) !default;
 
 // Images
 $thumbnail-pad: 0.3rem;
@@ -656,15 +656,15 @@ $thumbnail-border-width: 1px;
 $thumbnail-border-color: map-get($colors, gray-500);
 
 // Tables
-$table-pad-y: 0.375rem;
-$table-pad-x: 0.75rem;
-$table-background-color: transparent;
-$table-striped-background-color: map-get($colors, gray-50);
-$table-hover-background-color: map-get($colors, gray-100);
-$table-border-width: 1px;
-$table-border-color: map-get($colors, gray-500);
-$table-header-border-width: 2px;
-$table-header-border-color: map-get($colors, gray-600);
+$table-pad-y: 0.375rem !default;
+$table-pad-x: 0.75rem !default;
+$table-background-color: transparent !default;
+$table-striped-background-color: map-get($colors, gray-50) !default;
+$table-hover-background-color: map-get($colors, gray-100) !default;
+$table-border-width: 1px !default;
+$table-border-color: map-get($colors, gray-500) !default;
+$table-header-border-width: 2px !default;
+$table-header-border-color: map-get($colors, gray-600) !default;
 
 // Input
 $input-pad-y: 0.75rem;
