@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
-  padding: $button-pad-y $button-pad-x;
-  padding: var(--button-pad-y, $button-pad-y) var(--button-pad-x, $button-pad-x);
+  padding: $button-padding-y $button-padding-x;
+  padding: var(--button-pad-y, $button-padding-y) var(--button-pad-x, $button-padding-x);
   border: $button-border-width solid $button-border-color;
   border: var(--button-border-width, $button-border-width) solid var(--button-border-color, $button-border-color);
   background-color: transparent;
@@ -19,31 +19,31 @@
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, $dark-hover-overlay/100%);
+    background-color: rgba(0, 0, 0, $hover-overlay/100%);
   }
 
   &:focus {
-    background-color: rgba(0, 0, 0, $dark-focus-overlay/100%);
+    background-color: rgba(0, 0, 0, $focus-overlay/100%);
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, $dark-selected-overlay/100%);
+    background-color: rgba(0, 0, 0, $selected-overlay/100%);
   }
 
   &.primary{
-    color: white;
-    background-color: blue;
+    color: $button-primary-color;
+    background-color: $button-primary-background-color;
 
     &:hover {
-      background-color: mix(black, blue, $dark-hover-overlay);
+      background-color: mix(black, $button-primary-background-color, $hover-overlay);
     }
 
     &:focus {
-      background-color: mix(black, blue, $dark-focus-overlay);
+      background-color: mix(black, $button-primary-background-color, $focus-overlay);
     }
 
     &:active {
-      background-color: mix(black, blue, $dark-selected-overlay);
+      background-color: mix(black, $button-primary-background-color, $selected-overlay);
     }
   }
 }
