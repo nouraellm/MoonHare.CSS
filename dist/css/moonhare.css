@@ -387,13 +387,13 @@ template, [hidden] {
     background-color: rgba(0, 0, 0, 0.1); }
   .button.primary {
     color: white;
-    background-color: blue; }
+    background-color: #8080FF; }
     .button.primary:hover {
-      background-color: #0000f2; }
+      background-color: #7a7af2; }
     .button.primary:focus {
-      background-color: #0000e6; }
+      background-color: #7373e6; }
     .button.primary:active {
-      background-color: #0000e6; }
+      background-color: #7373e6; }
 
 .menu .fixed {
   position: fixed;
