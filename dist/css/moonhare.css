@@ -377,7 +377,7 @@ template, [hidden] {
   text-align: center;
   text-decoration: none;
   min-width: 3rem; }
-  .buttonborderless {
+  .button.borderless {
     border: none; }
   .button:hover {
     background-color: rgba(0, 0, 0, 0.05); }
@@ -394,6 +394,53 @@ template, [hidden] {
       background-color: #7373e6; }
     .button.primary:active {
       background-color: #7373e6; }
+  .button.danger {
+    color: white;
+    background-color: #ff8080; }
+    .button.danger:hover {
+      background-color: #f27a7a; }
+    .button.danger:focus {
+      background-color: #e67373; }
+    .button.danger:active {
+      background-color: #e67373; }
+  .button.success {
+    color: white;
+    background-color: #80ff80; }
+    .button.success:hover {
+      background-color: #7af27a; }
+    .button.success:focus {
+      background-color: #73e673; }
+    .button.success:active {
+      background-color: #73e673; }
+  .button.info {
+    color: white;
+    background-color: #00ffff; }
+    .button.info:hover {
+      background-color: #00f2f2; }
+    .button.info:focus {
+      background-color: #00e6e6; }
+    .button.info:active {
+      background-color: #00e6e6; }
+  .button.secondary {
+    color: white;
+    background-color: #ffff00; }
+    .button.secondary:hover {
+      background-color: #f2f200; }
+    .button.secondary:focus {
+      background-color: #e6e600; }
+    .button.secondary:active {
+      background-color: #e6e600; }
+  .button-sm {
+    padding: 0.28125rem 0.5625rem;
+    padding: var(--button-sm-pad-y, 0.28125rem) var(--button-sm-pad-x, 0.5625rem);
+    font-size: 1.2rem; }
+  .button-lg {
+    padding: 0.5625rem 1.125rem;
+    padding: var(--button-sm-pad-y, 0.5625rem) var(--button-sm-pad-x, 1.125rem);
+    font-size: 1.8rem; }
+  .button-block {
+    display: block;
+    width: 100%; }
 
 .menu .fixed {
   position: fixed;
