@@ -146,4 +146,16 @@
     display: block;
     width: 100%;
   }
+
+  &-rounded {
+  border-radius: 3.2rem;
+
+  &.button-sm {
+    border-radius: 2.6rem;
+  }
+
+  &.button-lg {
+    border-radius: 4rem;
+  }
+}
 }
