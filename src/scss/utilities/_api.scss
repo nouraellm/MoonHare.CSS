@@ -108,11 +108,3 @@
     }
   }
 }
-
-@each $name, $breakpoint in $breakpoints {
-  @include media($name, $breakpoint) {
-    @each $key, $utility in $utilities {
-      @include generate-utility($utility, $name);
-    }
-  }
-}
