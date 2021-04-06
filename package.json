@@ -15,7 +15,7 @@
   },
   "scripts": {
     "sass:watch": "sass --watch src/scss:dist/css/",
-    "sass:build": "sass src/scss:dist/css/,
+    "sass:build": "sass src/scss:dist/css/",
     "prefix": "postcss dist/css/*.css -r --use=autoprefixer --no-map",
     "gulp-css": "gulp css",
     "gulp-watch": "gulp watch"
