@@ -36,7 +36,7 @@
   @include responsive-variants(".");
 }
 
-@mixin generate-kkkk() {
+@mixin generate-placehoders() {
   @include default-variants("%");
   @include responsive-variants("%");
 }
