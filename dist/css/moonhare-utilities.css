@@ -1283,7 +1283,7 @@
   background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
 }
 
-.bg {
+.bg-none {
   background-image: none;
 }
 
@@ -4113,7 +4113,7 @@
     background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
   }
 
-  .sm\:bg {
+  .sm\:bg-none {
     background-image: none;
   }
 
@@ -6943,7 +6943,7 @@
     background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
   }
 
-  .md\:bg {
+  .md\:bg-none {
     background-image: none;
   }
 
@@ -9773,7 +9773,7 @@
     background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
   }
 
-  .lg\:bg {
+  .lg\:bg-none {
     background-image: none;
   }
 
@@ -12603,7 +12603,7 @@
     background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
   }
 
-  .xl\:bg {
+  .xl\:bg-none {
     background-image: none;
   }
 
@@ -15433,7 +15433,7 @@
     background-color: rgba(0, 0, 0, var(--mh-bg-opacity));
   }
 
-  .xxl\:bg {
+  .xxl\:bg-none {
     background-image: none;
   }
 
