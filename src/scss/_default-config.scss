@@ -75,7 +75,7 @@ $_theme: map-merge(
 $_theme: map-merge(
     $_theme,
     (background-image: (
-      null: 'none',
+      none: 'none',
       'gradient-to-t': 'linear-gradient(to top, var(--#{$prefix}-gradient-stops))',
       'gradient-to-tr': 'linear-gradient(to top right, var(--#{$prefix}-gradient-stops))',
       'gradient-to-r': 'linear-gradient(to right, var(--#{$prefix}-gradient-stops))',
