@@ -1,1 +1,1 @@
-test('Runs without crashing', () => true);
+test('Runs without crashing', () => undefined);
