@@ -43,7 +43,8 @@
             var css = this.runPlugins('.' + this.escapeSelector(parts.join(':')), parts.slice(1), styleSheet);
 
             if (css) {
-                if (!styleSheet[-1] || styleSheet[-1] /* last style block */ [0] /* selector */ !== '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.theme.screens[screen]))
+                if (!styleSheet[-1] || styleSheet[-1] /* last style block */ [0] /* selector */ !== '@media(min-width:breakpoint)'.replace(
+                        'breakpoint', moonHare.theme.screens[screen]))
                     styleSheet.push(['@media(min-width:breakpoint)'.replace('breakpoint', moonHare.theme.screens[screen]), css]);
                 else [].push.apply(styleSheet[-1] /* last style block */ [1] /* rules */ , css);
             }
