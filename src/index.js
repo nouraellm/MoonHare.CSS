@@ -108,11 +108,8 @@
         [].forEach.call(window.document.querySelectorAll('*'), function(el) {
             [].foeEach.call(el.classList, function (cls) {
                 if (!(cls in this.cache)) {
-                    this.insertedRules.push(cls);
                     var parts = cls.split(':');
                     (this.variants[parts[0]] || this.defaultVariant).call(this, parts, cls)
-                    [].forEach.call(this.stylesheet.rules, function () {
-                    });
                 }
             });
         });
