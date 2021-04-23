@@ -36,6 +36,8 @@
 
     moonHare.variants = {};
 
+    moonHare.cache = {};
+
     moonHare.plugins = {};
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
@@ -60,6 +62,8 @@
     // Append <style> element to <head>
     window.document.head.appendChild(moonHare.styleEl);
 
+    moonHare.styleSheet = moonHare.styleEl.sheet;
+
     // @copyright - jQuery(https://tldrlegal.com/license/mit-license)
     // @reference https://github.com/jquery/jquery/blob/main/src/selector/escapeSelector.js
     moonHare.escapeSelector = function(sel) {
@@ -78,30 +82,15 @@
         return (sel + "").replace(rcssescape, fcssescape);
     };
 
-    moonHare.runPlugins = function(className, parts, styleSheet) {
+    moonHare.defaultVariant = function(parts, cls) {
         if (parts.length === 1) {
             Object.keys(this.plugins).map(function(pluginName) {
-                if (parts[0].startsWith(pluginName)) return this.plugins[pluginName].call(this, parts, styleSheet);
+                if (parts[0].startsWith(pluginName)) return [cls, this.plugins[pluginName].call(this, parts)];
             }, this);
         }
         if (parts.length === 2) return [
-            [className, parts[0] + ':' + parts[1] + ';']
+            [cls, parts[0] + ':' + parts[1] + ';']
         ];
-    }
-
-    moonHare.defaultVariant = function(parts, styleSheet) {
-        var css = this.runPlugins(parts, styleSheet);
-
-        if (css)[].push.apply(styleSheet, css);
-        return styleSheet;
-    }
-
-    moonHare.addStyles = function(styles) {
-        this.styleEl.innerHTML = styles;
-    }
-
-    moonHare.clearStyles = function() {
-        this.styleEl.innerHTML = '';
     }
 
     moonHare.getClasses = function() {
@@ -109,15 +98,15 @@
         [].forEach.call(window.document.querySelectorAll('*'), function(el) {
 
             // Get all classes.
-            [].foeEach.call(el.classList, function(cls) {
+            [].forEach.call(el.classList, function(cls) {
 
                 // Process suitable variants for class name.
                 this.processVariants(cls)
-            });
-        });
+            }, this);
+        }, this);
     }
 
-    moonHare.cacheCheck = function(rule, parts, cls) {
+    moonHare.cacheCheck = function(className, styles, parts, cls) {
         // Read cache to find the correct place for class.
         Object.keys(this.cache).forEach(function(cacheClass) {
 
@@ -131,7 +120,7 @@
 
                     // add class to cache and add styles to stylesheet
                     this.cache[cls] = this.cache[cacheClass];
-                    this.styleSheet.addRule(rule[0], rule[1], this.cache[cacheClass]);
+                    this.styleSheet.addRule(className, styles, this.cache[cacheClass]);
                     this.cache[cacheClass] += 1;
                     return;
                 }
@@ -139,39 +128,20 @@
         });
 
         // default: append styles to stylesheet
-        this.styleSheet.addRule(rule[0], rule[1], this.styleSheet.cssRules.length);
+        this.styleSheet.addRule(className, styles, this.styleSheet.cssRules.length);
         this.cache[cls] = this.styleSheet.cssRules.length;
     }
 
-    moonHare.processVariants = function(cls) {
+    moonHare.processVariants = function(cls, parts) {
         if (!(cls in this.cache)) {
-            var parts = cls.split(':');
-            this.cacheCheck(this.variants([parts[0]] || this.defaultVariant).call(this, parts, cls), parts, cls);
+            parts = parts || cls.split(':');
+            var style = (this.variants[parts[0]] || this.defaultVariant).call(this, parts, '.' + this.escapeSelector(cls));
+            this.cacheCheck(style[0], style[1], parts, cls);
         }
     }
 
-    moonHare.generateCSS = function(styleSheet) {
-        var styleString = '';
-
-        styleSheet.forEach(function(rule) {
-            var selector = Array.isArray(rule[0]) ? rule[0].join(',') : rule[0],
-                styles = Array.isArray(rule[1]) ? this.generateCSS(rule[1]) : rule[1];
-
-            styleString += selector + '{' + styles + '}';
-        }, this);
-
-        return styleString;
-    }
-
     moonHare.start = function() {
-        this.clearStyles();
-        this.addStyles(
-            this.generateCSS(
-                this.generateVariants(
-                    this.getClasses()
-                )
-            )
-        );
+        this.getClasses()
     };
 
     if (window.document.readyState != 'loading') moonHare.start();
