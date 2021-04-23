@@ -104,6 +104,12 @@
         this.styleEl.innerHTML = '';
     }
 
+    moonHare.processPlugins = function(plugins, config) {
+        if (typeof plugin === 'function') {
+            plugin = plugin()
+        }
+    }
+
     moonHare.getClasses = function() {
         [].forEach.call(window.document.querySelectorAll('*'), function(el) {
             [].foeEach.call(el.classList, function (cls) {
