@@ -105,13 +105,17 @@
     }
 
     moonHare.getClasses = function() {
-        var classList = [];
-
-        [].slice.call(window.document.querySelectorAll('*')).forEach(function(el) {
-            [].push.apply(classList, el.classList);
+        [].forEach.call(window.document.querySelectorAll('*'), function(el) {
+            [].foeEach.call(el.classList, function (cls) {
+                if (!(cls in this.cache)) {
+                    this.insertedRules.push(cls);
+                    var parts = cls.split(':');
+                    (this.variants[parts[0]] || this.defaultVariant).call(this, parts, cls)
+                    [].forEach.call(this.stylesheet.rules, function () {
+                    });
+                }
+            });
         });
-
-        return classList;
     }
 
     moonHare.generateVariants = function(classList) {
