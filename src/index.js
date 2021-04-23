@@ -12,7 +12,7 @@
         },
     };
 
-    moonHare.variantOrder: [
+    moonHare.variantOrder = [
         'first',
         'last',
         'odd',
@@ -104,32 +104,50 @@
         this.styleEl.innerHTML = '';
     }
 
-    moonHare.processPlugins = function(plugins, config) {
-        if (typeof plugin === 'function') {
-            plugin = plugin()
-        }
-    }
-
     moonHare.getClasses = function() {
+        // Select all elements in DOM.
         [].forEach.call(window.document.querySelectorAll('*'), function(el) {
-            [].foeEach.call(el.classList, function (cls) {
-                if (!(cls in this.cache)) {
-                    var parts = cls.split(':');
-                    (this.variants[parts[0]] || this.defaultVariant).call(this, parts, cls)
-                }
+
+            // Get all classes.
+            [].foeEach.call(el.classList, function(cls) {
+
+                // Process suitable variants for class name.
+                this.processVariants(cls)
             });
         });
     }
 
-    moonHare.generateVariants = function(classList) {
-        var styleSheet = [];
+    moonHare.cacheCheck = function(rule, parts, cls) {
+        // Read cache to find the correct place for class.
+        Object.keys(this.cache).forEach(function(cacheClass) {
 
-        classList.forEach(function(cls) {
+            // Compare classes
+            var cacheClassParts = cacheClass.split(':')
+            parts.forEach(function(part, index) {
+
+                // Correct the order of variants.
+                if (this.config.variantsOrder.indexOf(cacheClassParts[index]) > this.config.variantsOrder.indexOf(cacheClassParts[
+                        index])) {
+
+                    // add class to cache and add styles to stylesheet
+                    this.cache[cls] = this.cache[cacheClass];
+                    this.styleSheet.addRule(rule[0], rule[1], this.cache[cacheClass]);
+                    this.cache[cacheClass] += 1;
+                    return;
+                }
+            });
+        });
+
+        // default: append styles to stylesheet
+        this.styleSheet.addRule(rule[0], rule[1], this.styleSheet.cssRules.length);
+        this.cache[cls] = this.styleSheet.cssRules.length;
+    }
+
+    moonHare.processVariants = function(cls) {
+        if (!(cls in this.cache)) {
             var parts = cls.split(':');
-            styleSheet = (this.variants[parts[0]] || this.defaultVariant).call(this, parts, styleSheet);
-        }, this);
-
-        return styleSheet;
+            this.cacheCheck(this.variants([parts[0]] || this.defaultVariant).call(this, parts, cls), parts, cls);
+        }
     }
 
     moonHare.generateCSS = function(styleSheet) {
