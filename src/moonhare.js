@@ -38,20 +38,28 @@
 
     moonHare.cache = {};
 
-    moonHare.plugins = {};
+    moonHare.plugins = {
+        'bg-': function(baseClass) {
+            var s = baseClass.slice(3);
+            var property;
+
+            if (['scroll', 'fixed', 'local'].indexOf(s)) property = 'background-attachment';
+            else if (['border', 'padding', 'content', 'text'].indexOf(s)) {
+                property = 'background-clip';
+                s = (s === 'text') ? s : s + '-box';
+            }
+            else if (['border', 'padding', 'content', 'text'].indexOf(s)) {
+        }
+    };
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
-        moonHare.variants[screen] = function(parts, styleSheet) {
-            var css = this.runPlugins('.' + this.escapeSelector(parts.join(':')), parts.slice(1), styleSheet);
+        moonHare.variants[screen] = function(parts, cls) {
+            var css = this.runVariants(parts.slice(1), cls);
 
-            if (css) {
-                if (!styleSheet[-1] || styleSheet[-1] /* last style block */ [0] /* selector */ !== '@media(min-width:breakpoint)'.replace(
-                        'breakpoint', moonHare.theme.screens[screen]))
-                    styleSheet.push(['@media(min-width:breakpoint)'.replace('breakpoint', moonHare.theme.screens[screen]), css]);
-                else [].push.apply(styleSheet[-1] /* last style block */ [1] /* rules */ , css);
-            }
+            css[1] = css[0] + '{' + css[1] + '}';
+            css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.theme.screens[screen]);
 
-            return styleSheet;
+            return css;
         }
     });
 
@@ -85,12 +93,10 @@
     moonHare.defaultVariant = function(parts, cls) {
         if (parts.length === 1) {
             Object.keys(this.plugins).map(function(pluginName) {
-                if (parts[0].startsWith(pluginName)) return [cls, this.plugins[pluginName].call(this, parts)];
+                if (parts[0].startsWith(pluginName)) return [cls, this.plugins[pluginName].call(this, parts[0])];
             }, this);
         }
-        if (parts.length === 2) return [
-            [cls, parts[0] + ':' + parts[1] + ';']
-        ];
+        if (parts.length === 2) return [cls, parts[0] + ':' + parts[1] + ';'];
     }
 
     moonHare.getClasses = function() {
@@ -132,10 +138,14 @@
         this.cache[cls] = this.styleSheet.cssRules.length;
     }
 
-    moonHare.processVariants = function(cls, parts) {
+    moonHare.runVariants = function(parts, cls) {
+        return (this.variants[parts[0]] || this.defaultVariant).call(this, parts, cls);
+    }
+
+    moonHare.processVariants = function(cls) {
         if (!(cls in this.cache)) {
-            parts = parts || cls.split(':');
-            var style = (this.variants[parts[0]] || this.defaultVariant).call(this, parts, '.' + this.escapeSelector(cls));
+            var parts = cls.split(':');
+            var style = this.runVariants(parts, '.' + this.escapeSelector(cls))
             this.cacheCheck(style[0], style[1], parts, cls);
         }
     }
