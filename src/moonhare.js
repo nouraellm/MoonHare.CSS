@@ -39,32 +39,45 @@
     moonHare.cache = {};
 
     moonHare.plugins = {
-        decoration: cls => 'box-decoration-break' + ':' + cls.slice(11),
-        box: cls => 'box-sizing' + ':' + cls.slice(4) + '-box',
+        decoration: parts => 'box-decoration-break' + ':' + parts[0],
+        box: parts => 'box-sizing' + ':' + parts[0] + '-box',
         hidden: () => 'display:none',
-        inline: (cls) => 'display:' + cls,
+        inline: (p, cls) => 'display:' + cls,
         block: () => 'display:block',
         contents: () => 'display:contents',
         flow: () => 'display:flow',
-        
-        table: (cls) => 'display:' + cls,
-        
+
+        table: (p, cls) => 'display:' + cls,
+
         flex: () => 'display:flex', // TODO: handle other flex classes
 
         'flow-root': () => 'display:flow-root',
         grid: () => 'display:grid',
         'list-item': () => 'display:list-item',
-        
-        float: (cls) => 'float:'+ cls.slice(6),
-        
-        clear: (cls) => 'clear:'+ cls.slice(5),
-        
+
+        float: (parts) => 'float:' + parts[0],
+
+        clear: (parts) => 'clear:' + parts[0],
+
         isolate: () => 'isolation:isolate',
         'isolation-auto': () => 'isolation:auto',
-        
-        object: (cls) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(cls.slice(7)) ? 'object-fit:' + cls.slice(7) : 'object-position:' + cls.slice(7).replace('-', ' '),
-        
-        overflow: (cls) => cls.slice(0, cls.lastIndexOf('-')) + ':' + cls.slice(cls.lastIndexOf('-')+1)
+
+        object: (parts) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(parts[0]) ? 'object-fit:' + parts[0] : 'object-position:' + parts[
+            0].replace('-', ' '),
+
+        overflow: (parts) => 'overflow' + ':' + parts[0],
+        'overflow-x': (parts) => 'overflow-x' + ':' + parts[0],
+        'overflow-y': (parts) => 'overflow-y' + ':' + parts[0],
+
+        overscroll: (parts) => 'overscroll-behavior' + ':' + parts[0],
+        'overscroll-x': (parts) => 'overscroll-behavior-x' + ':' + parts[0],
+        'overscroll-y': (parts) => 'overscroll-behavior-y' + ':' + parts[0],
+
+        static: () => 'position:static',
+        fixed: () => 'position:fixed',
+        absolute: () => 'position:absolute',
+        relative: () => 'position:relative',
+        sticky: () => 'position:sticky',
     };
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
@@ -108,9 +121,12 @@
     moonHare.defaultVariant = function(parts, cls) {
         if (parts.length === 1) {
             var pluginParts = parts[0].split('-');
-            Object.keys(this.plugins).map(function(pluginName) {
-                if (parts[0].startsWith(pluginName)) return [cls, this.plugins[pluginName].call(this, parts[0])];
-            }, this);
+            for (var index = 0; index < pluginParts.length; index++) {
+                for (var pluginName in this.plugins) {
+                    if (pluginParts.slice(0, pluginParts.length - index).join('-') === pluginName) return [cls, this.plugins[pluginName].call(
+                        this, pluginParts.slice(pluginParts.length - index), parts[0])];
+                }
+            }
         }
         if (parts.length === 2) return [cls, parts[0] + ':' + parts[1] + ';'];
     }
