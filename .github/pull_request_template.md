@@ -1,9 +1,4 @@
----
-name: Pull request
-about: Create a pull request to help us improve
-title: ''
-assignees: Ksengine
----
+
 Description of PR that completes issue here...
 
 ## Changes
