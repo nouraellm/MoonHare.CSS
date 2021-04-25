@@ -62,7 +62,9 @@
         isolate: () => 'isolation:isolate',
         'isolation-auto': () => 'isolation:auto',
         
-        object: (cls) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(cls.slice(7)) ? 'object-fit:' + cls.slice(7) : 'object-position:' + cls.slice(7).replace('-', ' ')
+        object: (cls) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(cls.slice(7)) ? 'object-fit:' + cls.slice(7) : 'object-position:' + cls.slice(7).replace('-', ' '),
+        
+        overflow: (cls) => cls.slice(0, cls.lastIndexOf('-')) + ':' + cls.slice(cls.lastIndexOf('-')+1)
     };
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
@@ -105,6 +107,7 @@
 
     moonHare.defaultVariant = function(parts, cls) {
         if (parts.length === 1) {
+            var pluginParts = parts[0].split('-');
             Object.keys(this.plugins).map(function(pluginName) {
                 if (parts[0].startsWith(pluginName)) return [cls, this.plugins[pluginName].call(this, parts[0])];
             }, this);
