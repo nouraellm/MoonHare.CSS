@@ -39,36 +39,31 @@
     moonHare.cache = {};
 
     moonHare.plugins = {
-        'decoration': function(baseClass) {
-            return 'box-decoration-break' + ':' + baseClass.slice(11);
-        },
-        'box': function(baseClass) {
-            return 'box-sizing' + ':' + baseClass.slice(4) + '-box';
-        },
-    };
+        decoration: cls => 'box-decoration-break' + ':' + cls.slice(11),
+        box: cls => 'box-sizing' + ':' + cls.slice(4) + '-box',
+        hidden: () => 'display:none',
+        inline: (cls) => 'display:' + cls,
+        block: () => 'display:block',
+        contents: () => 'display:contents',
+        flow: () => 'display:flow',
+        
+        table: (cls) => 'display:' + cls,
+        
+        flex: () => 'display:flex', // TODO: handle other flex classes
 
-    moonHare.fallbackPlugins = {
-        'flex': ['-webkit-box', '-webkit-flex', '-moz-box', '-ms-flexbox', 'flex'],
-        'inline-flex': ['-webkit-inline-box', '-webkit-inline-flex', '-moz-inline-box', '-ms-inline-flexbox', 'inline-flex'],
-        'grid': ['-ms-grid', 'grid'],
-        'inline-grid': ['-ms-inline-grid', 'inline-grid'],
-        'hidden': ['none']
+        'flow-root': () => 'display:flow-root',
+        grid: () => 'display:grid',
+        'list-item': () => 'display:list-item',
+        
+        float: (cls) => 'float:'+ cls.slice(6),
+        
+        clear: (cls) => 'clear:'+ cls.slice(5),
+        
+        isolate: () => 'isolation:isolate',
+        'isolation-auto': () => 'isolation:auto',
+        
+        object: (cls) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(cls.slice(7)) ? 'object-fit:' + cls.slice(7) : 'object-position:' + cls.slice(7).replace('-', ' ')
     };
-    Object.keys(moonHare.fallbackPlugins).forEach(function(name) {
-        moonHare.plugins[name] = function(baseClass) {
-            return moonHare.fallbackPlugins[baseClass].map(function(value) {
-                return 'display' + ':' + value;
-            }).join(';');
-        }
-    });
-
-    ['block', 'inline', 'inline-block', 'flow-root', 'contents', 'table', 'inline-table', 'table-caption', 'table-cell', 'table-column',
-        'table-column-group', 'table-footer-group', 'table-header-group', 'table-row-group', 'table-row', 'table-row', 'list-item'
-    ].forEach(function(name) {
-        moonHare.plugins[name] = function(baseClass) {
-            return 'display' + ':' + name;
-        }
-    });
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
         moonHare.variants[screen] = function(parts, cls) {
