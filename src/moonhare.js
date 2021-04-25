@@ -39,18 +39,11 @@
     moonHare.cache = {};
 
     moonHare.plugins = {
-        'bg-': function(baseClass) {
-            var s = baseClass.slice(3);
-            var property;
-
-            if (['scroll', 'fixed', 'local'].indexOf(s)) property = 'background-attachment';
-            else if (['border', 'padding', 'content', 'text'].indexOf(s)) {
-                property = 'background-clip';
-                s = (s === 'text') ? s : s + '-box';
-            }
-            else if (['border', 'padding', 'content', 'text'].indexOf(s)) {
-        }
+        'decoration': function(baseClass) { return 'box-decoration-break' + ':' + baseClass.slice(11); },
+        'box': function(baseClass) { return 'box-sizing' + ':' + baseClass.slice(4) + '-box'; },
     };
+
+    ['block', 'inline-block', 'inline', flex, inline-flex, table, inline-table, table-caption,
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
         moonHare.variants[screen] = function(parts, cls) {
