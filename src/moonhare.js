@@ -51,7 +51,8 @@
         'flex': ['-webkit-box', '-webkit-flex', '-moz-box', '-ms-flexbox', 'flex'],
         'inline-flex': ['-webkit-inline-box', '-webkit-inline-flex', '-moz-inline-box', '-ms-inline-flexbox', 'inline-flex'],
         'grid': ['-ms-grid', 'grid'],
-        'inline-grid': ['-ms-inline-grid', 'inline-grid']
+        'inline-grid': ['-ms-inline-grid', 'inline-grid'],
+        'hidden': ['none']
     };
     Object.keys(moonHare.fallbackPlugins).forEach(function(name) {
         moonHare.plugins[name] = function(baseClass) {
