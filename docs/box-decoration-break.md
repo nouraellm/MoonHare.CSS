@@ -6,8 +6,8 @@ Utilities for controlling how element fragments should be rendered across multip
 
 Class|Properties
 -|-
-`decoration-slice`|`box-decoration-break: slice;`
-`decoration-clone`|`box-decoration-break: clone;`
+`decoration-slice`|`-webkit-box-decoration-break: slice;`<br>`box-decoration-break: slice;`
+`decoration-clone`|`-webkit-box-decoration-break: slice;`<br>`box-decoration-break: clone;`
 
 ## Usage
 
