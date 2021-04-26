@@ -33,7 +33,7 @@ To control the box-decoration-break property at a specific breakpoint, add a  `{
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the  [Responsive Design](https://tailwindcss.com/docs/responsive-design)  documentation.
+For more information about MoonHare's responsive design features, check out the  [Responsive Design](https://tailwindcss.com/docs/responsive-design)  documentation.
 
 ## Browser Support
 <picture>
