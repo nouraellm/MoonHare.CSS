@@ -84,7 +84,7 @@
                 case 'fixed':
                 case 'local':
                 case 'scroll':
-                    return 'background-attachment:' + parts.join(' ')
+                    return 'background-attachment:' + parts.join(',')
 
                 case 'bottom':
                 case 'center':
