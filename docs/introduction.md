@@ -44,7 +44,7 @@ Be sure to have your pages set up with the latest design and development standar
     <h1>Hello, world!</h1>
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Option 1: MoonHare library -->
     <script src="https://cdn.jsdelivr.net/npm/moonhare@2.0.0/dist/js/moonhare.min.js" crossorigin="anonymous"></script>
 
   </body>
