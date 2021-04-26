@@ -39,7 +39,7 @@
     moonHare.cache = {};
 
     moonHare.plugins = {
-        decoration: parts => 'box-decoration-break' + ':' + parts[0],
+        decoration: parts => '-webkit-box-decoration-break:' + parts[0] + ';box-decoration-break:' + parts[0],
         box: parts => 'box-sizing' + ':' + parts[0] + '-box',
         hidden: () => 'display:none',
         inline: (p, cls) => 'display:' + cls,
