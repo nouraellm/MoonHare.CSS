@@ -78,6 +78,47 @@
         absolute: () => 'position:absolute',
         relative: () => 'position:relative',
         sticky: () => 'position:sticky',
+        
+        bg: (parts) => {
+            switch (parts[0]) {
+                case 'fixed':
+                case 'local':
+                case 'scroll':
+                    return 'background-attachment:' + parts.join(' ')
+
+                case 'bottom':
+                case 'center':
+                case 'left':
+                case 'right':
+                case 'top':
+                    return 'background-position:' + parts.join(' ')
+
+                case 'no':
+                    return parts[1] == 'repeat' && 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat')
+
+                case 'repeat':
+                    if (parts.length === 1) return 'background-repeat:' + parts[0];
+                    else if (parts[1] === 'x' || parts[1] === 'y') return 'background-repeat:' + parts.join('-');
+                    else if (parts.length === 2) return 'background-repeat:' + parts[1];
+                    else return 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat');
+
+                case 'clip':
+                case 'origin':
+                    return parts[1] && 'background-' + parts[0] + ':' + parts[1] + (parts[1] == 'text' ? '' : '-box')
+
+                case 'blend':
+                    return // TODO
+
+                // .bg-gradient-to-r => linear-gradient(to right, ...)
+                // .bg-gradient-to-r => linear-gradient(to right, ...)
+                case 'gradient':
+                    return // TODO
+            }
+
+            if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts[0];
+            
+            return 'background-size:' + parts[0];
+        },
     };
 
     Object.keys(moonHare.theme.screens).forEach(function(screen) {
