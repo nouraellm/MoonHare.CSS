@@ -58,46 +58,6 @@ moonHare.config = moonHare.deepExtend({
     ],
     variants: {},
     plugins: {
-        decoration: parts => '-webkit-box-decoration-break:' + parts[0] + ';box-decoration-break:' + parts[0],
-        box: parts => 'box-sizing' + ':' + parts[0] + '-box',
-        hidden: () => 'display:none',
-        inline: (p, cls) => 'display:' + cls,
-        block: () => 'display:block',
-        contents: () => 'display:contents',
-        flow: () => 'display:flow',
-
-        table: (p, cls) => 'display:' + cls,
-
-        flex: () => 'display:flex', // TODO: handle other flex classes
-
-        'flow-root': () => 'display:flow-root',
-        grid: () => 'display:grid',
-        'list-item': () => 'display:list-item',
-
-        float: (parts) => 'float:' + parts[0],
-
-        clear: (parts) => 'clear:' + parts[0],
-
-        isolate: () => 'isolation:isolate',
-        'isolation-auto': () => 'isolation:auto',
-
-        object: (parts) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(parts[0]) ? 'object-fit:' + parts[0] : 'object-position:' + parts[
-            0].replace('-', ' '),
-
-        overflow: (parts) => 'overflow' + ':' + parts[0],
-        'overflow-x': (parts) => 'overflow-x' + ':' + parts[0],
-        'overflow-y': (parts) => 'overflow-y' + ':' + parts[0],
-
-        overscroll: (parts) => 'overscroll-behavior' + ':' + parts[0],
-        'overscroll-x': (parts) => 'overscroll-behavior-x' + ':' + parts[0],
-        'overscroll-y': (parts) => 'overscroll-behavior-y' + ':' + parts[0],
-
-        static: () => 'position:static',
-        fixed: () => 'position:fixed',
-        absolute: () => 'position:absolute',
-        relative: () => 'position:relative',
-        sticky: () => 'position:sticky',
-
         bg: (parts) => {
             switch (parts[0]) {
                 case 'fixed':
@@ -134,9 +94,9 @@ moonHare.config = moonHare.deepExtend({
                     return // TODO
             }
 
-            if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts[0];
+            if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts.join('-');
 
-            return 'background-size:' + parts[0];
+            return 'background-size:' + parts.join(' ');
         },
     }
 }, window.MOONHARECONFIG || {});
