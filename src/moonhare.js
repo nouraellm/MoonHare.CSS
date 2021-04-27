@@ -1,4 +1,7 @@
-var moonHare = window.moonHare = window.moonHare || {};
+var moonHare = window.moonHare = {};
+
+moonHare.config = {
+};
 
 moonHare.theme = {
     screens: {
