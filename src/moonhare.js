@@ -155,12 +155,9 @@ Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
 });
 
 moonHare.styleEl = document.createElement('style');
-
 moonHare.styleEl.id = 'MOONHARE_STYLE_ELEMENT'
-
-// Append <style> element to <head>
+moonHare.styleEl.innerHTML = ' ';
 document.head.appendChild(moonHare.styleEl);
-
 moonHare.styleSheet = moonHare.styleEl.sheet;
 
 // @copyright - jQuery(https://tldrlegal.com/license/mit-license)
