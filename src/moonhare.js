@@ -1,4 +1,4 @@
-var moonHare = window.moonHare = {};
+var moonHare {};
 
 moonHare.config = {
 };
@@ -225,10 +225,8 @@ moonHare.processVariants = function(cls) {
 }
 
 moonHare.start = function() {
-    this.getClasses()
+    if (window.document.readyState != 'loading') moonHare.getClasses();
+    else window.document.addEventListener('DOMContentLoaded', function() {
+        moonHare.getClasses()
+    });
 };
-
-if (window.document.readyState != 'loading') moonHare.start();
-else window.document.addEventListener('DOMContentLoaded', function() {
-    moonHare.start()
-});
