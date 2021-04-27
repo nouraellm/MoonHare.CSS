@@ -1,169 +1,165 @@
-var moonHare {};
+var moonHare = {};
 
 moonHare.deepExtend = function(out) {
-  out = out || {};
+    out = out || {};
 
-  for (var i = 1; i < arguments.length; i++) {
-    var obj = arguments[i];
+    for (var i = 1; i < arguments.length; i++) {
+        var obj = arguments[i];
 
-    if (!obj)
-      continue;
+        if (!obj)
+            continue;
 
-    for (var key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        if (typeof obj[key] === 'object'){
-          if(obj[key] instanceof Array == true)
-            out[key] = obj[key].slice(0);
-          else
-            out[key] = this.deepExtend(out[key], obj[key]);
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                if (typeof obj[key] === 'object') {
+                    if (obj[key] instanceof Array == true)
+                        out[key] = obj[key].slice(0);
+                    else
+                        out[key] = this.deepExtend(out[key], obj[key]);
+                } else
+                    out[key] = obj[key];
+            }
         }
-        else
-          out[key] = obj[key];
-      }
     }
-  }
 
-  return out;
+    return out;
 };
 
-moonHare.config = {};
-
-moonHare.theme = {
-    screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        xxl: '1536px',
+moonHare.config = moonHare.deepExtend({
+    theme: {
+        screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            xxl: '1536px',
+        },
     },
-};
+    variantOrder: [
+        'first',
+        'last',
+        'odd',
+        'even',
+        'visited',
+        'checked',
+        'group-hover',
+        'group-focus',
+        'focus-within',
+        'hover',
+        'focus',
+        'focus-visible',
+        'active',
+        'disabled',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        'xxl',
+    ],
+    variants: {},
+    plugins: {
+        decoration: parts => '-webkit-box-decoration-break:' + parts[0] + ';box-decoration-break:' + parts[0],
+        box: parts => 'box-sizing' + ':' + parts[0] + '-box',
+        hidden: () => 'display:none',
+        inline: (p, cls) => 'display:' + cls,
+        block: () => 'display:block',
+        contents: () => 'display:contents',
+        flow: () => 'display:flow',
 
-moonHare.variantOrder = [
-    'first',
-    'last',
-    'odd',
-    'even',
-    'visited',
-    'checked',
-    'group-hover',
-    'group-focus',
-    'focus-within',
-    'hover',
-    'focus',
-    'focus-visible',
-    'active',
-    'disabled',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl',
-];
+        table: (p, cls) => 'display:' + cls,
 
-moonHare.variants = {};
+        flex: () => 'display:flex', // TODO: handle other flex classes
+
+        'flow-root': () => 'display:flow-root',
+        grid: () => 'display:grid',
+        'list-item': () => 'display:list-item',
+
+        float: (parts) => 'float:' + parts[0],
+
+        clear: (parts) => 'clear:' + parts[0],
+
+        isolate: () => 'isolation:isolate',
+        'isolation-auto': () => 'isolation:auto',
+
+        object: (parts) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(parts[0]) ? 'object-fit:' + parts[0] : 'object-position:' + parts[
+            0].replace('-', ' '),
+
+        overflow: (parts) => 'overflow' + ':' + parts[0],
+        'overflow-x': (parts) => 'overflow-x' + ':' + parts[0],
+        'overflow-y': (parts) => 'overflow-y' + ':' + parts[0],
+
+        overscroll: (parts) => 'overscroll-behavior' + ':' + parts[0],
+        'overscroll-x': (parts) => 'overscroll-behavior-x' + ':' + parts[0],
+        'overscroll-y': (parts) => 'overscroll-behavior-y' + ':' + parts[0],
+
+        static: () => 'position:static',
+        fixed: () => 'position:fixed',
+        absolute: () => 'position:absolute',
+        relative: () => 'position:relative',
+        sticky: () => 'position:sticky',
+
+        bg: (parts) => {
+            switch (parts[0]) {
+                case 'fixed':
+                case 'local':
+                case 'scroll':
+                    return 'background-attachment:' + parts.join(',')
+
+                case 'bottom':
+                case 'center':
+                case 'left':
+                case 'right':
+                case 'top':
+                    return 'background-position:' + parts.join(' ')
+
+                case 'no':
+                    return parts[1] == 'repeat' && 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat')
+
+                case 'repeat':
+                    if (parts.length === 1) return 'background-repeat:' + parts[0];
+                    else if (parts[1] === 'x' || parts[1] === 'y') return 'background-repeat:' + parts.join('-');
+                    else if (parts.length === 2) return 'background-repeat:' + parts[1];
+                    else return 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat');
+
+                case 'clip':
+                case 'origin':
+                    return parts[1] && 'background-' + parts[0] + ':' + parts[1] + (parts[1] == 'text' ? '' : '-box')
+
+                case 'blend':
+                    return // TODO
+
+                    // .bg-gradient-to-r => linear-gradient(to right, ...)
+                    // .bg-gradient-to-r => linear-gradient(to right, ...)
+                case 'gradient':
+                    return // TODO
+            }
+
+            if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts[0];
+
+            return 'background-size:' + parts[0];
+        },
+    }
+}, window.MOONHARECONFIG || {});
 
 moonHare.cache = {};
 
-moonHare.plugins = {
-    decoration: parts => '-webkit-box-decoration-break:' + parts[0] + ';box-decoration-break:' + parts[0],
-    box: parts => 'box-sizing' + ':' + parts[0] + '-box',
-    hidden: () => 'display:none',
-    inline: (p, cls) => 'display:' + cls,
-    block: () => 'display:block',
-    contents: () => 'display:contents',
-    flow: () => 'display:flow',
-
-    table: (p, cls) => 'display:' + cls,
-
-    flex: () => 'display:flex', // TODO: handle other flex classes
-
-    'flow-root': () => 'display:flow-root',
-    grid: () => 'display:grid',
-    'list-item': () => 'display:list-item',
-
-    float: (parts) => 'float:' + parts[0],
-
-    clear: (parts) => 'clear:' + parts[0],
-
-    isolate: () => 'isolation:isolate',
-    'isolation-auto': () => 'isolation:auto',
-
-    object: (parts) => ['contain', 'cover', 'fill', 'none', 'scale-down'].indexOf(parts[0]) ? 'object-fit:' + parts[0] : 'object-position:' + parts[
-        0].replace('-', ' '),
-
-    overflow: (parts) => 'overflow' + ':' + parts[0],
-    'overflow-x': (parts) => 'overflow-x' + ':' + parts[0],
-    'overflow-y': (parts) => 'overflow-y' + ':' + parts[0],
-
-    overscroll: (parts) => 'overscroll-behavior' + ':' + parts[0],
-    'overscroll-x': (parts) => 'overscroll-behavior-x' + ':' + parts[0],
-    'overscroll-y': (parts) => 'overscroll-behavior-y' + ':' + parts[0],
-
-    static: () => 'position:static',
-    fixed: () => 'position:fixed',
-    absolute: () => 'position:absolute',
-    relative: () => 'position:relative',
-    sticky: () => 'position:sticky',
-
-    bg: (parts) => {
-        switch (parts[0]) {
-            case 'fixed':
-            case 'local':
-            case 'scroll':
-                return 'background-attachment:' + parts.join(',')
-
-            case 'bottom':
-            case 'center':
-            case 'left':
-            case 'right':
-            case 'top':
-                return 'background-position:' + parts.join(' ')
-
-            case 'no':
-                return parts[1] == 'repeat' && 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat')
-
-            case 'repeat':
-                if (parts.length === 1) return 'background-repeat:' + parts[0];
-                else if (parts[1] === 'x' || parts[1] === 'y') return 'background-repeat:' + parts.join('-');
-                else if (parts.length === 2) return 'background-repeat:' + parts[1];
-                else return 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat');
-
-            case 'clip':
-            case 'origin':
-                return parts[1] && 'background-' + parts[0] + ':' + parts[1] + (parts[1] == 'text' ? '' : '-box')
-
-            case 'blend':
-                return // TODO
-
-                // .bg-gradient-to-r => linear-gradient(to right, ...)
-                // .bg-gradient-to-r => linear-gradient(to right, ...)
-            case 'gradient':
-                return // TODO
-        }
-
-        if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts[0];
-
-        return 'background-size:' + parts[0];
-    },
-};
-
-Object.keys(moonHare.theme.screens).forEach(function(screen) {
-    moonHare.variants[screen] = function(parts, cls) {
+Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
+    moonHare.config.variants[screen] = function(parts, cls) {
         var css = this.runVariants(parts.slice(1), cls);
 
         css[1] = css[0] + '{' + css[1] + '}';
-        css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.theme.screens[screen]);
+        css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.config.theme.screens[screen]);
 
         return css;
     }
 });
 
-moonHare.styleEl = window.document.createElement('style');
+moonHare.styleEl = document.createElement('style');
 
 moonHare.styleEl.id = 'MOONHARE_STYLE_ELEMENT'
 
 // Append <style> element to <head>
-window.document.head.appendChild(moonHare.styleEl);
+document.head.appendChild(moonHare.styleEl);
 
 moonHare.styleSheet = moonHare.styleEl.sheet;
 
@@ -189,8 +185,8 @@ moonHare.defaultVariant = function(parts, cls) {
     if (parts.length === 1) {
         var pluginParts = parts[0].split('-');
         for (var index = 0; index < pluginParts.length; index++) {
-            for (var pluginName in this.plugins) {
-                if (pluginParts.slice(0, pluginParts.length - index).join('-') === pluginName) return [cls, this.plugins[pluginName].call(
+            for (var pluginName in this.config.plugins) {
+                if (pluginParts.slice(0, pluginParts.length - index).join('-') === pluginName) return [cls, this.config.plugins[pluginName].call(
                     this, pluginParts.slice(pluginParts.length - index), parts[0])];
             }
         }
@@ -229,8 +225,8 @@ moonHare.cacheCheck = function(className, styles, parts, cls) {
                 this.cache[cacheClass] += 1;
                 return;
             }
-        });
-    });
+        }, this);
+    }, this);
 
     // default: append styles to stylesheet
     this.styleSheet.addRule(className, styles, this.styleSheet.cssRules.length);
@@ -238,7 +234,7 @@ moonHare.cacheCheck = function(className, styles, parts, cls) {
 }
 
 moonHare.runVariants = function(parts, cls) {
-    return (this.variants[parts[0]] || this.defaultVariant).call(this, parts, cls);
+    return (this.config.variants[parts[0]] || this.defaultVariant).call(this, parts, cls);
 }
 
 moonHare.processVariants = function(cls) {
@@ -250,8 +246,8 @@ moonHare.processVariants = function(cls) {
 }
 
 moonHare.start = function() {
-    if (window.document.readyState != 'loading') moonHare.getClasses();
+    if (window.document.readyState != 'loading') this.getClasses();
     else window.document.addEventListener('DOMContentLoaded', function() {
-        moonHare.getClasses()
+        this.getClasses()
     });
 };
