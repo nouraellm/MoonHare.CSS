@@ -57,7 +57,47 @@ moonHare.config = moonHare.deepExtend({
         'xxl',
     ],
     variants: {},
-    plugins: {},
+    plugins: {
+        bg: (params) => {
+            switch (params[0]) {
+                case 'fixed':
+                case 'local':
+                case 'scroll':
+                    'background-attachment:' + params.join(',')
+
+                case 'bottom':
+                case 'center':
+                case 'left':
+                case 'right':
+                case 'top':
+                    'background-position:' + params.join(' ')
+
+               case 'no':
+                   return params[1] == 'repeat' && 'background-repeat:' + params[1]
+
+           case 'repeat':
+               return (params[1] === 'x' || params[1] === 'y')
+                   ? 'background-repeat:' + params.join(' ')
+                   : 'background-repeat:' + (params[1] || params[0])
+
+          case 'opacity':
+              return '--mh-bg-opacity:' + parseInt(params)/100
+
+          case 'clip':
+          case 'origin':
+              return 'background-' + params[0] + ':' + params[1] + (params[1] == 'text' ? '' : '-box')
+
+          case 'blend':
+              return 'background-blend-mode:' + params.slice(1).join('-')
+
+          // .bg-gradient-to-r => linear-gradient(to right, ...)
+          // .bg-gradient-to-r => linear-gradient(to right, ...)
+          case 'gradient':
+              return // TODO
+    }
+
+    return 
+    },
 }, window.MOONHARECONFIG || {});
 
 moonHare.cache = {};
