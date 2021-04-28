@@ -57,61 +57,20 @@ moonHare.config = moonHare.deepExtend({
         'xxl',
     ],
     variants: {},
-    plugins: {
-        bg: (parts) => {
-            switch (parts[0]) {
-                case 'fixed':
-                case 'local':
-                case 'scroll':
-                    return 'background-attachment:' + parts.join(',')
-
-                case 'bottom':
-                case 'center':
-                case 'left':
-                case 'right':
-                case 'top':
-                    return 'background-position:' + parts.join(' ')
-
-                case 'no':
-                    return parts[1] == 'repeat' && 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat')
-
-                case 'repeat':
-                    if (parts.length === 1) return 'background-repeat:' + parts[0];
-                    else if (parts[1] === 'x' || parts[1] === 'y') return 'background-repeat:' + parts.join('-');
-                    else if (parts.length === 2) return 'background-repeat:' + parts[1];
-                    else return 'background-repeat:' + parts.join(' ').replace('no repeat', 'no-repeat');
-
-                case 'clip':
-                case 'origin':
-                    return parts[1] && 'background-' + parts[0] + ':' + parts[1] + (parts[1] == 'text' ? '' : '-box')
-
-                case 'blend':
-                    return // TODO
-
-                    // .bg-gradient-to-r => linear-gradient(to right, ...)
-                    // .bg-gradient-to-r => linear-gradient(to right, ...)
-                case 'gradient':
-                    return // TODO
-            }
-
-            if (parts[0].startsWith('#') || parts[0].startsWith('rgb') || parts[0].startsWith('hsl')) return 'background-color:' + parts.join('-');
-
-            return 'background-size:' + parts.join(' ');
-        },
-    }
+    plugins: {},
 }, window.MOONHARECONFIG || {});
 
 moonHare.cache = {};
 
 Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
-    moonHare.config.variants[screen] = function(parts, cls) {
+    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = function(parts, cls) {
         var css = this.runVariants(parts.slice(1), cls);
 
         css[1] = css[0] + '{' + css[1] + '}';
         css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.config.theme.screens[screen]);
 
         return css;
-    }
+    };
 });
 
 moonHare.styleEl = document.createElement('style');
