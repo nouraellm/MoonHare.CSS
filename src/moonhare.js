@@ -157,7 +157,7 @@ moonHare.processVariants = function(cls) {
     if (!(cls in this.cache)) {
         var parts = cls.split(':');
         var style = this.runVariants(parts, '.' + this.escapeSelector(cls))
-        this.cacheCheck(style[0], style[1], parts, cls);
+        if (style) this.cacheCheck(style[0], style[1], parts, cls);
     }
 }
 
@@ -167,3 +167,5 @@ moonHare.start = function() {
         this.getClasses()
     });
 };
+
+moonHare.start();
