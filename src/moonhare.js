@@ -25,6 +25,12 @@ moonHare.deepExtend = function(out) {
     return out;
 };
 
+moonHare.variantHelper = (start, end) => function(parts, cls) {
+    var css = this.runVariants(parts.slice(1), cls);
+    css[0] = start + css[0] + end;
+    return css;
+};
+
 moonHare.config = moonHare.deepExtend({
     theme: {
         screens: {
@@ -56,7 +62,22 @@ moonHare.config = moonHare.deepExtend({
         'xl',
         'xxl',
     ],
-    variants: {},
+    variants: {
+        'first': moonHare.variantHelper('', ':first'),
+        'last': moonHare.variantHelper('', ':last'),
+        'odd': moonHare.variantHelper('', ':nth-child(odd)'),
+        'even': moonHare.variantHelper('', ':nth-child(even)'),
+        'visited': moonHare.variantHelper('', ':visited'),
+        'checked': moonHare.variantHelper('', ':checked'),
+        'group-hover': moonHare.variantHelper('.group:hover ', ''),
+        'group-focus': moonHare.variantHelper('.group:focus ', ''),
+        'focus-within': moonHare.variantHelper('', ':focus-within'),
+        'hover': moonHare.variantHelper('', ':hover'),
+        'focus': moonHare.variantHelper('', ':focus'),
+        'focus-visible': moonHare.variantHelper('', ':focus-visible'),
+        'active': moonHare.variantHelper('', ':active'),
+        'disabled': moonHare.variantHelper('', ':disabled'),
+    },
     plugins: {},
 }, window.MOONHARECONFIG || {});
 
@@ -67,7 +88,7 @@ Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
         var css = this.runVariants(parts.slice(1), cls);
 
         css[1] = css[0] + '{' + css[1] + '}';
-        css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', moonHare.config.theme.screens[screen]);
+        css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', this.config.theme.screens[screen]);
 
         return css;
     };
@@ -132,8 +153,7 @@ moonHare.cacheCheck = function(className, styles, parts, cls) {
         parts.forEach(function(part, index) {
 
             // Correct the order of variants.
-            if (this.config.variantsOrder.indexOf(cacheClassParts[index]) > this.config.variantsOrder.indexOf(cacheClassParts[
-                    index])) {
+            if (this.config.variantsOrder.indexOf(part) > this.config.variantsOrder.indexOf(cacheClassParts[index])) {
 
                 // add class to cache and add styles to stylesheet
                 this.cache[cls] = this.cache[cacheClass];
@@ -167,5 +187,3 @@ moonHare.start = function() {
         this.getClasses()
     });
 };
-
-moonHare.start();
