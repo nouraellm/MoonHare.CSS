@@ -93,8 +93,20 @@ moonHare.config = moonHare.deepExtend({
 moonHare.cache = {};
 
 Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
-    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint',
-        moonHare.config.theme.screens[screen]));
+    var config = moonHare.config,
+        theme = config.theme, // Theme
+        screenSize = theme.screens[screen], // Current screen size
+        mxScreenSize = screenSize.replace(parseFloat(screenSize), parseFloat(screenSize) - 0.1), // Current screen size - 0.1
+        nextScreenSize = theme.screens[config.variantOrder[config.variantOrder.indexOf(screen) + 1]], // Size of next breakpoint
+        atScreenSize = nextScreenSize.replace(parseFloat(nextScreenSize), parseFloat(nextScreenSize) - 0.1); // Size of next breakpoint - 0.1
+
+    if (!config.variants[screen]) config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint', screenSize));
+
+    if (!config.variants['<' + screen]) config.variants[screen] = moonHare.mediaVariant('@media(max-width:breakpoint)'.replace('breakpoint',
+        mxScreenSize));
+
+    if (!config.variants['@' + screen]) config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)and(min-width:next)'.replace(
+        'breakpoint', screenSize).replace('next', nextScreenSize));
 });
 
 if (moonHare.config.darkMode === 'media') moonHare.config.variants.dark = moonHare.mediaVariant('@media(prefers-color-scheme:dark)');
