@@ -38,6 +38,8 @@ moonHare.mediaVariant = (query) => function(parts, cls) {
     return css;
 };
 
+moonHare.property = (prop, sep) => parts => prop + ':' + parts.join(sep);
+
 moonHare.config = moonHare.deepExtend({
     darkMode: 'class',
     theme: {
@@ -87,7 +89,12 @@ moonHare.config = moonHare.deepExtend({
         'active': moonHare.pseudoVariant('', ':active'),
         'disabled': moonHare.pseudoVariant('', ':disabled'),
     },
-    plugins: {},
+    plugins: {
+        object: params => ['fill', 'contain', 'cover', 'none' 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' + params.join(' '),
+        overflow: params => 'overflow:' + params.join(' '),
+        'overflow-x': params => 'overflow-x:' + params.join(' '),
+        'overflow-y': params => 'overflow-y:' + params.join(' '),
+    },
 }, window.MOONHARECONFIG || {});
 
 moonHare.cache = {};
