@@ -93,8 +93,8 @@ moonHare.config = moonHare.deepExtend({
 moonHare.cache = {};
 
 Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
-    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint', moonHare
-        .config.theme.screens[screen]));
+    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint',
+        moonHare.config.theme.screens[screen]));
 });
 
 if (moonHare.config.darkMode === 'media') moonHare.config.variants.dark = moonHare.mediaVariant('@media(prefers-color-scheme:dark)');
@@ -135,16 +135,14 @@ moonHare.defaultVariant = function(parts, cls) {
         var pluginParts = parts[0].split('-');
         for (var index = 0; index < pluginParts.length; index++) {
             for (var pluginName in this.config.plugins) {
-                if (pluginParts.slice(0, pluginParts.length - index).join('-') === pluginName) return [cls, this.config.plugins[pluginName].call(
-                    this, pluginParts.slice(pluginParts.length - index), parts[0])];
+                if (pluginParts.slice(0, pluginParts.length - index).join('-') === pluginName) return [cls, this.config.plugins[pluginName].call(this,
+                    pluginParts.slice(pluginParts.length - index), parts[0])];
             }
         }
 
-        if (pluginParts.length === 2) return [cls, pluginParts[0] + ':' + pluginParts[1] + ';'];
-
         var nParts = parts[0].split('[');
         if (nParts.length === 2 && CSS.supports(nParts[0].slice(0, -1), nParts[1].slice(0, -1).replace(/\|/g, ' '))) return [cls, nParts[0].slice(0, -1) +
-            ':' + nParts[1].slice(0, -1).replace(/\|/g ' ') + ';'
+            ':' + nParts[1].slice(0, -1).replace(/\|/g, ' ') + ';'
         ];
     }
 }
