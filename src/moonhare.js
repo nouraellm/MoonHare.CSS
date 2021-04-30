@@ -90,10 +90,14 @@ moonHare.config = moonHare.deepExtend({
         'disabled': moonHare.pseudoVariant('', ':disabled'),
     },
     plugins: {
-        object: params => ['fill', 'contain', 'cover', 'none' 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' + params.join(' '),
+        object: params => ['fill', 'contain', 'cover', 'none', 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' + params.join(' '),
         overflow: params => 'overflow:' + params.join(' '),
         'overflow-x': params => 'overflow-x:' + params.join(' '),
         'overflow-y': params => 'overflow-y:' + params.join(' '),
+        'z': params => 'z-index:' + params[0],
+        'visible': params => 'visibility:visible',
+        'invisible': params => 'visibility:hidden',
+        'text': params => (['left', 'center', 'right', 'justify'].indexOf(params[0]) ? 'text-align:' : 'color:') + params[0],
     },
 }, window.MOONHARECONFIG || {});
 
