@@ -25,13 +25,21 @@ moonHare.deepExtend = function(out) {
     return out;
 };
 
-moonHare.variantHelper = (start, end) => function(parts, cls) {
+moonHare.pseudoVariant = (start, end) => function(parts, cls) {
+    return this.runVariants(parts.slice(1), start + cls + end);
+};
+
+moonHare.mediaVariant = (query) => function(parts, cls) {
     var css = this.runVariants(parts.slice(1), cls);
-    css[0] = start + css[0] + end;
+
+    css[1] = css[0] + '{' + css[1] + '}';
+    css[0] = query;
+
     return css;
 };
 
 moonHare.config = moonHare.deepExtend({
+    darkMode: 'class',
     theme: {
         screens: {
             sm: '640px',
@@ -56,6 +64,7 @@ moonHare.config = moonHare.deepExtend({
         'focus-visible',
         'active',
         'disabled',
+        'dark',
         'sm',
         'md',
         'lg',
@@ -63,20 +72,20 @@ moonHare.config = moonHare.deepExtend({
         'xxl',
     ],
     variants: {
-        'first': moonHare.variantHelper('', ':first'),
-        'last': moonHare.variantHelper('', ':last'),
-        'odd': moonHare.variantHelper('', ':nth-child(odd)'),
-        'even': moonHare.variantHelper('', ':nth-child(even)'),
-        'visited': moonHare.variantHelper('', ':visited'),
-        'checked': moonHare.variantHelper('', ':checked'),
-        'group-hover': moonHare.variantHelper('.group:hover ', ''),
-        'group-focus': moonHare.variantHelper('.group:focus ', ''),
-        'focus-within': moonHare.variantHelper('', ':focus-within'),
-        'hover': moonHare.variantHelper('', ':hover'),
-        'focus': moonHare.variantHelper('', ':focus'),
-        'focus-visible': moonHare.variantHelper('', ':focus-visible'),
-        'active': moonHare.variantHelper('', ':active'),
-        'disabled': moonHare.variantHelper('', ':disabled'),
+        'first': moonHare.pseudoVariant('', ':first'),
+        'last': moonHare.pseudoVariant('', ':last'),
+        'odd': moonHare.pseudoVariant('', ':nth-child(odd)'),
+        'even': moonHare.pseudoVariant('', ':nth-child(even)'),
+        'visited': moonHare.pseudoVariant('', ':visited'),
+        'checked': moonHare.pseudoVariant('', ':checked'),
+        'group-hover': moonHare.pseudoVariant('.group:hover ', ''),
+        'group-focus': moonHare.pseudoVariant('.group:focus ', ''),
+        'focus-within': moonHare.pseudoVariant('', ':focus-within'),
+        'hover': moonHare.pseudoVariant('', ':hover'),
+        'focus': moonHare.pseudoVariant('', ':focus'),
+        'focus-visible': moonHare.pseudoVariant('', ':focus-visible'),
+        'active': moonHare.pseudoVariant('', ':active'),
+        'disabled': moonHare.pseudoVariant('', ':disabled'),
     },
     plugins: {},
 }, window.MOONHARECONFIG || {});
@@ -84,15 +93,18 @@ moonHare.config = moonHare.deepExtend({
 moonHare.cache = {};
 
 Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
-    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = function(parts, cls) {
-        var css = this.runVariants(parts.slice(1), cls);
-
-        css[1] = css[0] + '{' + css[1] + '}';
-        css[0] = '@media(min-width:breakpoint)'.replace('breakpoint', this.config.theme.screens[screen]);
-
-        return css;
-    };
+    if (!moonHare.config.variants[screen]) moonHare.config.variants[screen] = mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint', this
+        .config.theme.screens[screen]));
 });
+
+if (moonHare.config.darkMode === 'media') moonHare.config.variants.dark = mediaVariant('@media(prefers-color-scheme:dark)');
+else moonHare.config.variants.dark = function(parts, cls) {
+    var css = this.runVariants(parts.slice(1), cls);
+
+    css[0] = '.dark ' + css[0];
+
+    return css;
+}
 
 moonHare.styleEl = document.createElement('style');
 moonHare.styleEl.id = 'MOONHARE_STYLE_ELEMENT'
@@ -127,8 +139,14 @@ moonHare.defaultVariant = function(parts, cls) {
                     this, pluginParts.slice(pluginParts.length - index), parts[0])];
             }
         }
+
+        if (pluginParts.length === 2) return [cls, pluginParts[0] + ':' + pluginParts[1] + ';'];
+
+        var nParts = parts[0].split('[');
+        if (nParts.length === 2 && CSS.supports(nParts[0].slice(0, -1), nParts[1].slice(0, -1).replace('|', ' '))) return [cls, nParts[0].slice(0, -1) +
+            ':' + nParts[1].slice(0, -1).replace('|', ' ') + ';'
+        ];
     }
-    if (parts.length === 2) return [cls, parts[0] + ':' + parts[1] + ';'];
 }
 
 moonHare.getClasses = function() {
