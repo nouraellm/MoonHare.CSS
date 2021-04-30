@@ -90,7 +90,8 @@ moonHare.config = moonHare.deepExtend({
         'disabled': moonHare.pseudoVariant('', ':disabled'),
     },
     plugins: {
-        object: params => ['fill', 'contain', 'cover', 'none', 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' + params.join(' '),
+        object: params => ['fill', 'contain', 'cover', 'none', 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' +
+            params.join(' '),
         overflow: params => 'overflow:' + params.join(' '),
         'overflow-x': params => 'overflow-x:' + params.join(' '),
         'overflow-y': params => 'overflow-y:' + params.join(' '),
@@ -219,6 +220,28 @@ moonHare.processVariants = function(cls) {
         if (style) this.cacheCheck(style[0], style[1], parts, cls);
     }
 }
+
+moonHare.observer = function() {
+    var self = this;
+    if (typeof MutationObserver == 'function') {
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                // Get all classes.
+                [].forEach.call(mutation.target.classList, function(cls) {
+
+                    // Process suitable variants for class name.
+                    self.processVariants(cls)
+                });
+            })
+        });
+        observer.observe(target, {
+            attributes: true,
+            attributeFilter: ['class'],
+            subtree: true,
+            childList: true,
+        })
+    }
+};
 
 moonHare.start = function() {
     if (window.document.readyState != 'loading') this.getClasses();
