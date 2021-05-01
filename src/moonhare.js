@@ -170,6 +170,10 @@ moonHare.defaultVariant = function(parts, cls) {
         if (nParts.length === 2 && CSS.supports(nParts[0].slice(0, -1), nParts[1].slice(0, -1).replace(/\|/g, ' '))) return [cls, nParts[0].slice(0, -1) +
             ':' + nParts[1].slice(0, -1).replace(/\|/g, ' ') + ';'
         ];
+
+        if (CSS.supports(pluginParts.slice(0, -1), pluginParts.slice(-1).replace(/\|/g, ' '))) return [cls, pluginParts.slice(0, -1) +
+            ':' + pluginParts.slice(-1).replace(/\|/g, ' ') + ';'
+        ];
     }
 }
 
