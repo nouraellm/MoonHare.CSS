@@ -32,8 +32,10 @@ moonHare.pseudoVariant = (start, end) => function(parts, cls) {
 moonHare.mediaVariant = (query) => function(parts, cls) {
     var css = this.runVariants(parts.slice(1), cls);
 
-    css[1] = css[0] + '{' + css[1] + '}';
-    css[0] = query;
+    if (css) {
+        css[1] = css[0] + '{' + css[1] + '}';
+        css[0] = query;
+    }
 
     return css;
 };
@@ -110,15 +112,15 @@ Object.keys(moonHare.config.theme.screens).forEach(function(screen) {
         screenSize = theme.screens[screen], // Current screen size
         mxScreenSize = screenSize.replace(parseFloat(screenSize), parseFloat(screenSize) - 0.1), // Current screen size - 0.1
         nextScreenSize = theme.screens[config.variantOrder[config.variantOrder.indexOf(screen) + 1]], // Size of next breakpoint
-        atScreenSize = nextScreenSize.replace(parseFloat(nextScreenSize), parseFloat(nextScreenSize) - 0.1); // Size of next breakpoint - 0.1
+        atScreenSize = nextScreenSize ? nextScreenSize.replace(parseFloat(nextScreenSize), parseFloat(nextScreenSize) - 0.1) : undefined; // Size of next breakpoint - 0.1
 
     if (!config.variants[screen]) config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)'.replace('breakpoint', screenSize));
 
-    if (!config.variants['<' + screen]) config.variants[screen] = moonHare.mediaVariant('@media(max-width:breakpoint)'.replace('breakpoint',
+    if (!config.variants['<' + screen]) config.variants['<' + screen] = moonHare.mediaVariant('@media(max-width:breakpoint)'.replace('breakpoint',
         mxScreenSize));
 
-    if (!config.variants['@' + screen]) config.variants[screen] = moonHare.mediaVariant('@media(min-width:breakpoint)and(min-width:next)'.replace(
-        'breakpoint', screenSize).replace('next', nextScreenSize));
+    if (!config.variants['@' + screen] && atScreenSize) config.variants['@' + screen] = moonHare.mediaVariant('@media(min-width:breakpoint) and (max-width:next)'.replace(
+        'breakpoint', screenSize).replace('next', atScreenSize));
 });
 
 if (moonHare.config.darkMode === 'media') moonHare.config.variants.dark = moonHare.mediaVariant('@media(prefers-color-scheme:dark)');
@@ -193,7 +195,7 @@ moonHare.cacheCheck = function(className, styles, parts, cls) {
         parts.forEach(function(part, index) {
 
             // Correct the order of variants.
-            if (this.config.variantsOrder.indexOf(part) > this.config.variantsOrder.indexOf(cacheClassParts[index])) {
+            if (this.config.variantOrder.indexOf(part) > this.config.variantOrder.indexOf(cacheClassParts[index])) {
 
                 // add class to cache and add styles to stylesheet
                 this.cache[cls] = this.cache[cacheClass];
@@ -216,7 +218,7 @@ moonHare.runVariants = function(parts, cls) {
 moonHare.processVariants = function(cls) {
     if (!(cls in this.cache)) {
         var parts = cls.split(':');
-        var style = this.runVariants(parts, '.' + this.escapeSelector(cls))
+        var style = this.runVariants(parts, '.' + this.escapeSelector(cls));
         if (style) this.cacheCheck(style[0], style[1], parts, cls);
     }
 }
@@ -234,7 +236,7 @@ moonHare.observer = function() {
                 });
             })
         });
-        observer.observe(target, {
+        observer.observe(document.documentElement, {
             attributes: true,
             attributeFilter: ['class'],
             subtree: true,
