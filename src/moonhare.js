@@ -171,8 +171,8 @@ moonHare.defaultVariant = function(parts, cls) {
             ':' + nParts[1].slice(0, -1).replace(/\|/g, ' ') + ';'
         ];
 
-        if (CSS.supports(pluginParts.slice(0, -1), pluginParts.slice(-1).replace(/\|/g, ' '))) return [cls, pluginParts.slice(0, -1) +
-            ':' + pluginParts.slice(-1).replace(/\|/g, ' ') + ';'
+        if (CSS.supports(pluginParts.slice(0, -1).join('-'), pluginParts[-1].replace(/\|/g, ' '))) return [cls, pluginParts.slice(0, -1).join('-') +
+            ':' + pluginParts[-1].replace(/\|/g, ' ') + ';'
         ];
     }
 }
