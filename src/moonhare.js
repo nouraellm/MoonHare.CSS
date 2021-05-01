@@ -46,11 +46,11 @@ moonHare.config = moonHare.deepExtend({
     darkMode: 'class',
     theme: {
         screens: {
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            xxl: '1536px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            'xxl': '1536px',
         },
     },
     variantOrder: [
@@ -92,9 +92,9 @@ moonHare.config = moonHare.deepExtend({
         'disabled': moonHare.pseudoVariant('', ':disabled'),
     },
     plugins: {
-        object: params => ['fill', 'contain', 'cover', 'none', 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' +
+        'object': params => ['fill', 'contain', 'cover', 'none', 'scale'].indexOf(params[0]) ? 'object-fit:' + params.join('-') : 'object-position:' +
             params.join(' '),
-        overflow: params => 'overflow:' + params.join(' '),
+        'overflow': params => 'overflow:' + params.join(' '),
         'overflow-x': params => 'overflow-x:' + params.join(' '),
         'overflow-y': params => 'overflow-y:' + params.join(' '),
         'z': params => 'z-index:' + params[0],
